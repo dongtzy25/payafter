@@ -8,15 +8,16 @@ const Header  = () => {
         <>
         <nav
         className="
+          fixed
           flex flex-wrap
           items-center
           justify-between
+          bg-white
           mb-3
           w-full
           z-10
           top-0
         "
-        style={{'position':'fixed','backgroundColor':'white'}}
       >
         <div className="
             container

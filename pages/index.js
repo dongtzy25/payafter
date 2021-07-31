@@ -16,7 +16,7 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header></Header>
-    <main className="mt-28">
+    <main className="mt-24">
       <div className="w-full py-12">
         <div className="container mx-auto flex flex-row items-center justify-between">
           <div className="w-6/12 px-20">
