@@ -30,8 +30,8 @@ const Header  = () => {
             "
         >
             <div className="relative">
-                <ul className="list-none flex items-center space-x-8">
-                    <li className="inline-block">
+                <ul className="list-none flex items-center ">
+                    <li className="inline-block mr-8">
                      <Link href="/"> 
                         <a>
                             <Image
@@ -43,10 +43,10 @@ const Header  = () => {
                         </a>
                      </Link>
                     </li>
-                    <li className="inline-block"><Link href="/merchant">Merchant</Link></li>
-                    <li className="inline-block"><Link href="/contactus">Contact Us</Link></li>
-                    <li className="inline-block"><Link href="/terms">Terms</Link></li>
-                    <li className="inline-block"><Link href="/privacy">Privacy</Link></li>
+                    <li className="inline-block mr-8"><Link href="/merchant">Merchant</Link></li>
+                    <li className="inline-block mr-8"><Link href="/contactus">Contact Us</Link></li>
+                    <li className="inline-block mr-8"><Link href="/terms">Terms</Link></li>
+                    <li className="inline-block mr-8"><Link href="/privacy">Privacy</Link></li>
                 </ul>
             </div>
             <div className="space-x-6">
