@@ -17,8 +17,7 @@ const Header  = () => {
         }
         }
         document.addEventListener("keyup", handleEscape);
-        console.log(mobileOpen)
-
+        document.querySelector("body").style.overflow = !mobileOpen ? "auto" :"hidden";
         return () => document.removeEventListener("keyup", handleEscape);
     }, [mobileOpen]);
 
@@ -85,7 +84,7 @@ const Header  = () => {
             </div> 
         </div>    
       </nav>
-      <div className="absolute top-0 left-0 z-10 h-screen flex transition duration-300 ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0"}}>
+      <div className="fixed top-0 left-0 z-10 h-screen flex transition duration-300 ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0"}}>
         <div className="bg-white p-12 w-10/12 h-screen shadow-2xl" style={{ "display": mobileOpen ? "block" : "none"}}>
             <ul className="list-none flex items-start flex-col space-y-4">
                 <li className="inline-block lg:mr-8 mr-4 relative">
