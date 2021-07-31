@@ -21,8 +21,7 @@ const Header  = () => {
       >
         <div className="
             container
-            pt-4
-            pb-2
+            py-4
             mx-auto
             flex flex-wrap flex-row
             items-center
