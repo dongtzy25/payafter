@@ -33,12 +33,14 @@ const Header  = () => {
                 <ul className="list-none flex items-center space-x-8">
                     <li className="inline-block">
                      <Link href="/"> 
-                        <Image
-                            src={Logo}
-                            alt="Logo"
-                            width={65}
-                            height={65}
-                        />
+                        <a>
+                            <Image
+                                src={Logo}
+                                alt="Logo"
+                                width={65}
+                                height={65}
+                            />
+                        </a>
                      </Link>
                     </li>
                     <li className="inline-block"><Link href="/merchant">Merchant</Link></li>

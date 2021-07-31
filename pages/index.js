@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Footer from '../component/footer'
 import Header from '../component/header'
 import Logo from '../public/assets/images/PayAfter-Logo.svg'
+import Mail from '../public/assets/images/mail.svg'
+
 
 
 export default function Home() {
@@ -110,7 +112,7 @@ export default function Home() {
             <p className="mt-8">Or send us a direct email at</p>
             <div className="mt-4 flex items-center space-x-2">
             <Image
-                src={"https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d9b88ec9-9b61-421c-b665-725d056ba09b;revision=0?component_id=1f65b539-9a33-4656-b66b-0d4387f0eaa9&api_key=CometServer1&access_token=1627769211_urn%3Aaaid%3Asc%3AUS%3Ad9b88ec9-9b61-421c-b665-725d056ba09b%3Bpublic_47697d60536b966349807188cd9effdca51a26e3"}
+                src={Mail}
                 alt="Logo"
                 width={30}
                 height={20}
