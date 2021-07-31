@@ -150,7 +150,7 @@ const Header  = () => {
                 </button>
             </div> 
         </div>
-        <div className="w-2/12 bg-transaprent h-screen cursor-pointer"></div>
+        <div className="w-2/12 bg-transaprent h-screen cursor-pointer" onClick={() => setMobileOpen(false) }></div>
       </div>
       </>
     )

@@ -41,7 +41,7 @@ export default function Home() {
       <div className="w-full custom-bg-color text-white">
         <div className="container mx-auto lg:px-20 px-12 py-8 flex lg:flex-row flex-col justify-between">
           <div className="lg:w-6/12 w-full flex items-center">
-            <span className="mr-8 relative lg:w-auto w-8/12 lg:h-full h-12">
+            <span className="mr-8 relative lg:w-16 w-8/12 lg:h-full h-12">
             <Image
                 src={"https://www.torproject.org/static/fonts/fontawesome/png/white/solid/arrow-down.png"}
                 alt="Logo"
