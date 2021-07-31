@@ -8,7 +8,6 @@ const Header  = () => {
         <>
         <nav
         className="
-          fixed
           flex flex-wrap
           items-center
           justify-between
@@ -18,6 +17,7 @@ const Header  = () => {
           z-10
           top-0
         "
+        style={{'position':'fixed'}}
       >
         <div className="
             container
