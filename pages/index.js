@@ -34,16 +34,40 @@ export default function Home() {
         <div className="container mx-auto px-20 py-8 flex flex-row justify-between">
           <div className="w-6/12 flex items-center">
             <span className="mr-8">
-             <img src="https://www.torproject.org/static/fonts/fontawesome/png/white/solid/arrow-down.png" className="w-16"/>   
+            <Image
+                src={"https://www.torproject.org/static/fonts/fontawesome/png/white/solid/arrow-down.png"}
+                alt="Logo"
+                width={40}
+                height={40}
+            />
             </span>
             <span className="w-72"> 
               Building a stronger and more trusted financing industry in the Philippines with the following affiliates
             </span>
           </div>
-          <div className="w-6/12 flex items-center space-x-12 justify-end">
-           <img src="https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png" className="w-40"/>   
-           <img src="https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png" className="w-40"/>   
-           <img src="https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png" className="w-40"/>   
+          <div className="w-6/12 flex items-center space-x-12 justify-end relative">
+           
+           <div className="w-44 relative h-full">
+           <Image
+                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                alt="Logo"
+                layout="fill"
+            />
+           </div>
+           <div className="w-44 relative h-full">
+           <Image
+                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                alt="Logo"
+                layout="fill"
+            />
+           </div>
+           <div className="w-44 relative h-full">
+           <Image
+                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                alt="Logo"
+                layout="fill"
+            />
+           </div>
           </div>
         </div>
       </div>
@@ -85,7 +109,12 @@ export default function Home() {
             <p className="mt-8">Your concerns are important to us. Complete the <br/> form and we will get back to you as soon as possible.</p>
             <p className="mt-8">Or send us a direct email at</p>
             <div className="mt-4 flex items-center space-x-2">
-              <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d9b88ec9-9b61-421c-b665-725d056ba09b;revision=0?component_id=1f65b539-9a33-4656-b66b-0d4387f0eaa9&api_key=CometServer1&access_token=1627769211_urn%3Aaaid%3Asc%3AUS%3Ad9b88ec9-9b61-421c-b665-725d056ba09b%3Bpublic_47697d60536b966349807188cd9effdca51a26e3"/>
+            <Image
+                src={"https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d9b88ec9-9b61-421c-b665-725d056ba09b;revision=0?component_id=1f65b539-9a33-4656-b66b-0d4387f0eaa9&api_key=CometServer1&access_token=1627769211_urn%3Aaaid%3Asc%3AUS%3Ad9b88ec9-9b61-421c-b665-725d056ba09b%3Bpublic_47697d60536b966349807188cd9effdca51a26e3"}
+                alt="Logo"
+                width={30}
+                height={20}
+            />
                <p>help@payafter.ph</p>
             </div>
           </div>
