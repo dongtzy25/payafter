@@ -22,7 +22,7 @@ const Header  = () => {
         <div className="
             container
             pt-4
-            p-2
+            pb-2
             mx-auto
             flex flex-wrap flex-row
             items-center
