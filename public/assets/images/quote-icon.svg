@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105" height="91" viewBox="0 0 105 91">
+  <defs>
+    <clipPath id="clip-Quote-icon">
+      <rect width="105" height="91"/>
+    </clipPath>
+  </defs>
+  <g id="Quote-icon" clip-path="url(#clip-Quote-icon)">
+    <path id="Icon_awesome-quote-left" data-name="Icon awesome-quote-left" d="M87.006,44.253h-15v-12a12.012,12.012,0,0,1,12-12h1.5a4.49,4.49,0,0,0,4.5-4.5v-9a4.49,4.49,0,0,0-4.5-4.5h-1.5a29.994,29.994,0,0,0-30,30v45a9,9,0,0,0,9,9h24a9,9,0,0,0,9-9v-24A9,9,0,0,0,87.006,44.253Zm-54,0H18v-12a12.012,12.012,0,0,1,12-12h1.5a4.49,4.49,0,0,0,4.5-4.5v-9a4.49,4.49,0,0,0-4.5-4.5H30a29.994,29.994,0,0,0-30,30v45a9,9,0,0,0,9,9H33a9,9,0,0,0,9-9v-24A9,9,0,0,0,33,44.253Z" transform="translate(4.497 1.247)" fill="#004260" opacity="0.5"/>
+  </g>
+</svg>
