@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                   
                 </div>
-                <div style={{'borderTop':'2px solid rgba(0,0,0,0.12)'}}>
+                <div className="border-t-2">
                     <div className="container mx-auto py-8">
                         <div className="flex flex-row items-center justify-between">
                             <div>Copyright © 2021 PayAfter by Cebuana Lhuillier Finance Corp. an SEC Licensed Financing Company</div>
