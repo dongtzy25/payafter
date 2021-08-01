@@ -133,10 +133,26 @@ const Header  = ()  => {
                     </div>
                     
                 </li>
-                <li className="inline-block mr-8"><Link href="/merchant">Merchant</Link></li>
-                <li className="inline-block mr-8"><Link href="/contactus">Contact Us</Link></li>
-                <li className="inline-block mr-8"><Link href="/terms">Terms</Link></li>
-                <li className="inline-block mr-8"><Link href="/privacy">Privacy</Link></li>
+                <li 
+                    className={currentPath === '/merchant' ? 
+                    'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mr-8 '}
+                ><Link href="/merchant">Merchant</Link></li>
+                <li
+                    className={currentPath === '/contactus' ? 
+                    'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mr-8 '}
+                ><Link href="/">Contact Us</Link></li>
+                <li
+                  className={currentPath === '/terms' ? 
+                  'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                  'inline-block mr-8 '}
+                ><Link href="/">Terms</Link></li>
+                <li 
+                 className={currentPath === '/privacy' ? 
+                 'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                 'inline-block mr-8 '}
+                ><Link href="/privacy">Privacy</Link></li>
             </ul>
             <button
                 className="
@@ -169,6 +185,7 @@ const Header  = ()  => {
             </button>
             <div className="mt-4">
                 <button 
+                onClick={() =>openModal()}
                 className="
                     block 
                     px-4 
