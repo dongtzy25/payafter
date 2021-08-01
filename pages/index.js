@@ -1,22 +1,26 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../component/footer'
-import Header from '../component/header'
 import Logo from '../public/assets/images/PayAfter-Logo.svg'
+import eccp from '../public/assets/images/merchants/eccp.png'
+import affi from '../public/assets/images/merchants/affi.png'
+import fa from '../public/assets/images/merchants/fa.png'
+
+
 import Mail from '../public/assets/images/mail.svg'
+import Layout from '../layout/layout'
+import React, {useState} from 'react'
+import { Modal } from '../component/modal'
 
+const Home = () => {
+  const [showModal, setShowModal] = useState(false);
 
-
-export default function Home() {
+  const openModal = () => {
+      setShowModal(prev => !prev);
+      document.querySelector("body").style.overflow = "hidden";
+  };
   return (
     <>
-    <Head>
-      <title>PayAfter</title>
-      <meta name="description" content="Cebuanna Lhuillier PayAfter." />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Header></Header>
-    <main className="mt-24">
+      <Layout>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
       <div className="w-full py-12">
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
         <div className="lg:hidden block  lg:w-6/12 w-full text-center lg:px-0 px-20 ">
@@ -27,7 +31,7 @@ export default function Home() {
           </div>
           <div className="lg:w-6/12 w-full lg:px-20 px-12 lg:mt-0 mt-12">
             <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
-            <p className="lg:text-xl text-lg mt-8">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
+            <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
           </div>
           <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">
             <Image
@@ -54,23 +58,23 @@ export default function Home() {
           </div>
           <div className="lg:w-6/12 w-full flex lg:flex-row flex-col items-center lg:space-x-12 justify-end relative ">
            
-           <div className="lg:w-44 w-10/12 relative lg:h-full h-20 lg:mt-0 mt-8">
+           <div className="lg:w-44 w-10/12 relative lg:h-full h-20 lg:mt-0 mt-8 filter grayscale">
            <Image
-                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                src={eccp}
                 alt="Logo"
                 layout="fill"
             />
            </div>
-           <div className="lg:w-44 w-10/12 relative lg:h-full h-20 lg:mt-0 mt-8">
+           <div className="lg:w-44 w-10/12 relative lg:h-full h-20 lg:mt-0 mt-8 filter grayscale">
            <Image
-                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                src={affi}
                 alt="Logo"
                 layout="fill"
             />
            </div>
-           <div className="lg:w-44 w-10/12 relative lg:h-full h-20 lg:mt-0 mt-8">
+           <div className="lg:w-44 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale">
            <Image
-                src={"https://www.eccp.com/themes/ds-eccp-2021/assets/images/logo.png"}
+                src={fa}
                 alt="Logo"
                 layout="fill"
             />
@@ -83,16 +87,16 @@ export default function Home() {
           <h1 className="text-4xl font-bold">Merchants</h1>
           <p className="text-lg mt-4">Shop from your favourite merchants across the country and <br/> enjoy 0% interest for 5 monthly installment.</p>
           <div className="lg:flex flex-row justify-center lg:space-x-12 mt-12 lg:text-auto text-center">
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 1</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 2</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 3</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 4</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 1</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 2</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 3</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 4</div>
           </div>
           <div className="lg:flex flex-row justify-center lg:space-x-12 mt-12">
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 5</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 6</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4 ">Merchant 7</div>
-            <div className="w-60 h-40 shadow-md flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 8</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 5</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 6</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4 ">Merchant 7</div>
+            <div className="w-60 h-40 shadow-lg flex items-center justify-center bg-gray-100 rounded lg:mx-0 mx-auto lg:mb-0 mb-4">Merchant 8</div>
           </div>
           <button 
             className="
@@ -135,10 +139,10 @@ export default function Home() {
                 required />
               </div> 
               <div className="mb-4 lg:flex flex-row items-center w-full justify-between">
-                <div >
+                <div className="lg:w-1/2 w-full">
                   <label htmlFor="email" className="block text-xl mb-2">Email address</label>
                   <input id="email" name="email" type="text" autoComplete="off" 
-                  className="lg:w-60 w-full rounded px-4 py-3 text-black"
+                  className="w-full rounded px-4 py-3 text-black"
                   placeholder="your@email.com"
                   required />
                 </div> 
@@ -192,10 +196,11 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full bg-gray-50 py-12 ">
-        <div className="container mx-auto  text-center ">
+        <div className="container mx-auto  text-center lg:px-0 px-12">
           <h1 className="text-4xl font-bold">Be our partner merchant</h1>
           <p className="text-lg mt-4">Get more customers and increase your sales by signing up now!</p>
           <button 
+            onClick={() =>openModal()}
             className="
                 inline-block 
                 px-6 
@@ -209,8 +214,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </main>
-    <Footer></Footer>
+      </Layout>
     </>
   )
 }
+
+export default Home;

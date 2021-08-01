@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <footer>
                 <div className="container mx-auto py-12">
-                    <div className="lg:flex flex-row items-start justify-start lg:space-x-12 text-center">
+                    <div className="lg:flex flex-row items-start justify-start lg:space-x-12 lg:text-left text-center">
                         <div className="mr-4 lg:w-1/3 w-full">
                             <Image
                                 src={Logo}

@@ -2,8 +2,10 @@ import React , { useEffect, useState }  from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../public/assets/images/PayAfter-Logo.svg'
+import { useRouter } from 'next/router'
+import { Modal } from '../component/modal';
 
-const Header  = () => {
+const Header  = ()  => {
 
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -21,8 +23,20 @@ const Header  = () => {
         return () => document.removeEventListener("keyup", handleEscape);
     }, [mobileOpen]);
 
+    const router = useRouter();
+    const [currentPath, setCurrentPath] = React.useState('');
+    useEffect(() => setCurrentPath(router.pathname), [router]);
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+        document.querySelector("body").style.overflow = "hidden";
+    };
+
     return (
         <>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
         <nav
         className="
           fixed
@@ -60,10 +74,26 @@ const Header  = () => {
                         </a>
                      </Link>
                     </li>
-                    <li className="lg:inline-block md:inline-block hidden mr-8"><Link href="/merchant">Merchant</Link></li>
-                    <li className="lg:inline-block md:inline-block hidden mr-8"><Link href="/contactus">Contact Us</Link></li>
-                    <li className="lg:inline-block md:inline-block hidden mr-8"><Link href="/terms">Terms</Link></li>
-                    <li className="lg:inline-block md:inline-block hidden mr-8"><Link href="/privacy">Privacy</Link></li>
+                    <li 
+                        className={currentPath === '/merchant' ? 
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
+                        'lg:inline-block md:inline-block hidden mr-8 '}
+                    ><Link href="/merchant" >Merchant</Link></li>
+                    <li 
+                        className={currentPath === '/contactus' ? 
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden mr-8 '}
+                    ><Link href="/">Contact Us</Link></li>
+                    <li 
+                        className={currentPath === '/terms' ? 
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden mr-8 '}
+                    ><Link href="/">Terms</Link></li>
+                    <li 
+                        className={currentPath === '/privacy' ? 
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden mr-8 '}
+                    ><Link href="/privacy">Privacy</Link></li>
                 </ul>
                 <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-gray-600 p-1" onClick={() => setMobileOpen(true) }>
                     <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
@@ -71,6 +101,7 @@ const Header  = () => {
             </div>
             <div className="space-x-6">
                 <button 
+                onClick={() =>openModal()}
                 className="
                     inline-block 
                     px-4 
