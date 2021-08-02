@@ -291,7 +291,7 @@ const Home = () => {
               <div className="lg:flex md:flex items-center justify-between lg:space-x-4 w-full ">
                 <div className={homestyle.formgroup}>
                   <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
-                  <label for="agree" className="flex items-center">
+                  <label htmlFor="agree" className="flex items-center">
                     <span className="ml-4">I agree with PayAfter’s <u>Terms & Conditions</u>  and <a href="/privacy"><u>Privacy Policy</u></a>.</span>
                   </label>
                 </div>
