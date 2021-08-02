@@ -25,7 +25,21 @@ const Header  = ()  => {
 
     const router = useRouter();
     const [currentPath, setCurrentPath] = React.useState('');
-    useEffect(() => setCurrentPath(router.pathname), [router]);
+    const [hashtag, sethash] = React.useState('');
+
+    useEffect(() => {
+        setCurrentPath(router.pathname)
+        const hashId = window.location.search;
+        if (hashId) {
+            sethash(hashId)
+            setTimeout(()=>{
+                window.scrollTo({ top: 1450, behavior: 'smooth' })
+            },10)
+        }else{
+            sethash("")
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+    }, [router]);
 
     const [showModal, setShowModal] = useState(false);
 
@@ -57,12 +71,12 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            lg:px-0 px-4
+            lg:px-0 md:px-0 px-4
             "
         >
             <div className="relative lg:flexs flex lg:items-centers items-center">
                 <ul className="list-none flex items-center ">
-                    <li className="inline-block lg:mr-8 mr-4">
+                    <li className="inline-block lg:mr-8  mr-4">
                      <Link href="/"> 
                         <a>
                             <Image
@@ -76,23 +90,23 @@ const Header  = ()  => {
                     </li>
                     <li 
                         className={currentPath === '/merchant' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
-                        'lg:inline-block md:inline-block hidden mr-8 '}
-                    ><Link href="/merchant" >Merchant</Link></li>
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
+                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
+                    ><Link href="/merchant" >Merchants</Link></li>
                     <li 
-                        className={currentPath === '/contactus' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden mr-8 '}
-                    ><Link href="/">Contact Us</Link></li>
+                        className={hashtag === '?contact' ? 
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
+                    ><Link href="/?contact">Contact us</Link></li>
                     <li 
                         className={currentPath === '/terms' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden mr-8 '}
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
                     ><Link href="/">Terms</Link></li>
                     <li 
                         className={currentPath === '/privacy' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden mr-8 '}
+                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
                     ><Link href="/privacy">Privacy</Link></li>
                 </ul>
                 <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-gray-600 p-1" onClick={() => setMobileOpen(true) }>
@@ -100,6 +114,7 @@ const Header  = ()  => {
                 </button>
             </div>
             <div className="space-x-6">
+                <a className="font-extrabold" href="mailto:hello@payafter.ph">hello@payafter.ph</a>
                 <button 
                 onClick={() =>openModal()}
                 className="
@@ -110,7 +125,7 @@ const Header  = ()  => {
                     rounded 
                     text-white
                 ">
-                    Apply as Merchant
+                    Apply as merchant
                 </button>
             </div> 
         </div>    
@@ -135,22 +150,22 @@ const Header  = ()  => {
                 </li>
                 <li 
                     className={currentPath === '/merchant' ? 
-                    'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
-                ><Link href="/merchant">Merchant</Link></li>
+                ><Link href="/merchant">Merchants</Link></li>
                 <li
                     className={currentPath === '/contactus' ? 
-                    'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
-                ><Link href="/">Contact Us</Link></li>
+                ><Link href="/">Contact us</Link></li>
                 <li
                   className={currentPath === '/terms' ? 
-                  'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                  'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                   'inline-block mr-8 '}
                 ><Link href="/">Terms</Link></li>
                 <li 
                  className={currentPath === '/privacy' ? 
-                 'inline-block mr-8 mr-8 text-red-500 border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                 'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                  'inline-block mr-8 '}
                 ><Link href="/privacy">Privacy</Link></li>
             </ul>
@@ -194,7 +209,7 @@ const Header  = ()  => {
                     rounded 
                     text-white
                 ">
-                    Apply as Merchant
+                    Apply as merchant
                 </button>
             </div> 
         </div>
