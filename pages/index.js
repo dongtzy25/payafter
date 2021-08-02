@@ -40,7 +40,7 @@ const Home = () => {
     <>
       <Layout>
       <Modal showModal={showModal} setShowModal={setShowModal} />
-      <div className="w-full py-12">
+      <div className="w-full py-12" className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
         <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center lg:px-0 px-20 ">
             <Image
@@ -73,48 +73,49 @@ const Home = () => {
             />
           </div>
         </div>
-      </div> 
+        </div>
 
-      <div className="w-full custom-bg-color text-white">
-        <div className="container mx-auto lg:px-20 px-12 py-8 flex lg:flex-row flex-col justify-between">
-          <div className="lg:w-6/12 w-full flex items-center">
-            <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale">
+        <div className="w-full custom-bg-color text-white">
+          <div className="container mx-auto lg:px-20 px-12 py-8 flex lg:flex-row flex-col justify-between">
+            <div className="lg:w-6/12 w-full flex items-center">
+              <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale">
+              <Image
+                  src={arrowDown}
+                  alt="Logo"
+                  layout="fill"
+              />
+              </span>
+              <span className="lg:w-72"> 
+                Building a stronger and more trusted financing industry in the Philippines with the following affiliates
+              </span>
+            </div>
+            <div className="lg:w-6/12 w-full flex lg:flex-row md:flex-row   flex-col items-center lg:space-x-12 md:space-x-4 justify-end relative ">
+            
+            <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale" >
             <Image
-                src={arrowDown}
-                alt="Logo"
-                layout="fill"
-            />
-            </span>
-            <span className="lg:w-72"> 
-              Building a stronger and more trusted financing industry in the Philippines with the following affiliates
-            </span>
-          </div>
-          <div className="lg:w-6/12 w-full flex lg:flex-row md:flex-row   flex-col items-center lg:space-x-12 md:space-x-4 justify-end relative ">
-           
-           <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale" >
-           <Image
-                src={eccp}
-                alt="Logo"
-                layout="fill"
-            />
-           </div>
-           <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale">
-           <Image
-                src={affi}
-                alt="Logo"
-                layout="fill"
-            />
-           </div>
-           <div className="lg:w-40 w-10/12 relative lg:h-4/6 md:h-16 h-20 lg:mt-0 mt-8 filter grayscale">
-           <Image
-                src={fa}
-                alt="Logo"
-                layout="fill"
-            />
-           </div>
+                  src={eccp}
+                  alt="Logo"
+                  layout="fill"
+              />
+            </div>
+            <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale">
+            <Image
+                  src={affi}
+                  alt="Logo"
+                  layout="fill"
+              />
+            </div>
+            <div className="lg:w-40 w-10/12 relative lg:h-4/6 md:h-16 h-20 lg:mt-0 mt-8 filter grayscale">
+            <Image
+                  src={fa}
+                  alt="Logo"
+                  layout="fill"
+              />
+            </div>
+            </div>
           </div>
         </div>
-      </div>
+      
       <div className="w-full bg-gray-50 py-12">
         <div className="container mx-auto  text-center ">
           <h1 className="text-4xl font-bold">Merchants</h1>

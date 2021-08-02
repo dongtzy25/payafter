@@ -92,3 +92,19 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) translateY(-50%);
 }
+.firstfold {
+  height: 73vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 1023px) {
+  .firstfold {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+}
