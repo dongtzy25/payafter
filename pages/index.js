@@ -40,7 +40,7 @@ const Home = () => {
     <>
       <Layout>
       <Modal showModal={showModal} setShowModal={setShowModal} />
-      <div className="w-full py-12" className={homestyle.firstfold}>
+      <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
         <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center lg:px-0 px-20 ">
             <Image
