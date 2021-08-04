@@ -36,7 +36,7 @@ const Home = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     const messageData = `
-          <h1><b>${data.subject}</b></h1>
+          <h1 style="text-transform:capitalize"><b>${data.subject}</b></h1>
           <p>Name: ${data.name}</p>
           <p>From: ${data.email}</p>
           <p>Mobile Number: ${data.number}</p>
@@ -44,7 +44,7 @@ const Home = () => {
           <p>${data.message}</p>
           <br/>
           <br/>
-          <span>Sent using Payafter webiste</span>
+          <span>Sent using PayAfter webiste.</span>
     `;
 
     const payload = {
@@ -71,44 +71,41 @@ const Home = () => {
     setisAlert(prev => !prev);
     document.querySelector("body").style.overflow = "hidden"
   };
-  useEffect(() => {
-      console.log(formState)
-      console.log(errors)
-
-  }, [formState])
   return (
     <>
       <Layout>
       <Modal showModal={showModal} setShowModal={setShowModal}/>
-      <Alert isAlert={isAlert} setIsAlert={setisAlert}/>
+      <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
       <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
-        <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center lg:px-0 px-20 ">
+        <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center">
             <Image
                 src={Illustration}
                 alt="Logo"
             />
           </div>
-          <div className="lg:w-6/12 w-full lg:px-20 px-12 lg:mt-0 mt-12 md:text-center lg:text-left text-center">
-            <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
-            <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
-            <div className="mt-12 ">
-              <button 
-                  onClick={() =>openModal()}
-                  className="
-                      inline-block 
-                      px-4 
-                      py-2
-                      custom-button-color
-                      rounded 
-                      text-white
-                  ">
-                      Apply as merchant
-                  </button>
+          <div className="lg:w-6/12 w-full lg:mt-0 mt-12 md:text-center lg:text-left text-center">
+            <div className="w-4/5 mx-auto">
+              <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
+              <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
+              <div className="mt-12 ">
+                <button 
+                    onClick={() =>openModal()}
+                    className="
+                        inline-block 
+                        px-4 
+                        py-2
+                        custom-button-color
+                        rounded 
+                        text-white
+                    ">
+                        Apply as merchant
+                    </button>
+              </div>
             </div>
           </div>
-          <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">
+          <div className="lg:block hidden lg:w-6/12 w-full text-center lg:mt-0 mt-12">
             <Image
                 src={Illustration}
                 alt="Logo"
@@ -117,37 +114,37 @@ const Home = () => {
         </div>
         </div>
 
-        <div className="w-full custom-bg-color text-white">
-          <div className="container mx-auto lg:px-20 px-12 py-8 flex lg:flex-row flex-col justify-between">
-            <div className="lg:w-6/12 w-full flex items-center">
-              <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale">
+        <div className="w-full custom-bg-color text-white px-4">
+          <div className="container mx-auto  py-8 flex lg:flex-row flex-col justify-between">
+            <div className="lg:w-6/12 w-full flex items-center lg:flex-row flex-col">
+              <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale opacity-75 lg:mb-0 mb-4">
               <Image
                   src={arrowDown}
                   alt="Logo"
                   layout="fill"
               />
               </span>
-              <span className="lg:w-72"> 
+              <span className="lg:w-72 opacity-75 lg:text-left text-center"> 
                 Building a stronger and more trusted financing industry in the Philippines with the following affiliates
               </span>
             </div>
-            <div className="lg:w-6/12 w-full flex lg:flex-row md:flex-row   flex-col items-center lg:space-x-12 md:space-x-4 justify-end relative ">
+            <div className="lg:w-6/12 w-full flex lg:flex-row md:flex-row flex-col items-center lg:space-x-12 md:space-x-4 justify-end relative ">
             
-            <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale" >
+            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative lg:h-4/6 md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75" >
             <Image
                   src={eccp}
                   alt="Logo"
                   layout="fill"
               />
             </div>
-            <div className="lg:w-40 w-10/12 relative lg:h-5/6 h-20 lg:mt-0 mt-8 filter grayscale">
+            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative  xl:h-4/6 md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75">
             <Image
                   src={affi}
                   alt="Logo"
                   layout="fill"
               />
             </div>
-            <div className="lg:w-40 w-10/12 relative lg:h-4/6 md:h-16 h-20 lg:mt-0 mt-8 filter grayscale">
+            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative lg:h-4/6  md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75">
             <Image
                   src={fa}
                   alt="Logo"
@@ -160,7 +157,7 @@ const Home = () => {
       
       <div className="w-full bg-gray-50 py-12">
         <div className="container mx-auto  text-center px-4">
-          <h1 className="text-4xl font-bold">Merchants</h1>
+          <h1 className="lg:text-6xl text-4xl font-bold">Merchants</h1>
           <p className="text-base mt-4">Shop from your favourite merchants across the country and <br/> enjoy 0% interest for 5 monthly installment.</p>
           <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#EADDBB'}}>
@@ -246,24 +243,27 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full custom-bg-color text-white" id="contact">
-        <div className="container mx-auto lg:px-20 px-12 py-20 lg:flex flex-row justify-between items-start">
-          <div className="lg:w-6/12 w-full lg:text-left text-center">
-            <h1 className="text-4xl">We’re always <br/> happy to help!</h1>
-            <p className="mt-8">Your concerns are important to us. Complete the <br/> form and we will get back to you as soon as possible.</p>
-            <p className="mt-8">Or send us a direct email at</p>
-            <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
-              <a href="mailto:hello@payafter.ph" className="flex items-center ">
-              <Image
-                  src={Mail}
-                  alt="Logo"
-                  width={30}
-                  height={20}
-              />
-             &nbsp; hello@payafter.ph</a>
+      <div className="w-full custom-bg-color text-white contact">
+        <div className="container mx-auto py-20 lg:flex flex-row justify-between items-start">
+          <div className="lg:w-6/12 w-full lg:text-left text-center mx-auto">
+            <div className="w-4/5 mx-auto">
+              <h1 className="text-4xl">We’re always <br/> happy to help!</h1>
+              <p className="mt-8">Your concerns are important to us. Complete the <br/> form and we will get back to you as soon as possible.</p>
+              <p className="mt-8">Or send us a direct email at</p>
+              <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
+                <a href="mailto:hello@payafter.ph" className="flex items-center ">
+                <Image
+                    src={Mail}
+                    alt="Logo"
+                    width={30}
+                    height={20}
+                />
+              &nbsp; hello@payafter.ph</a>
+              </div>
             </div>
           </div>
-          <div className="lg:w-2/5 w-full lg:mt-0 mt-8">
+          <div className="lg:w-2/5 w-full lg:mt-0 mt-8 mx-auto">
+          <div className="w-4/5 md:w-full mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4 w-full">
                 <label htmlFor="name" className="block text-md mb-2">Full Name</label>
@@ -386,10 +386,11 @@ const Home = () => {
                   lg:mx-0 mx-auto
                   lg:mt-0 mt-4
                   "> 
-                 {loading ? "Sending ....": "Submit"} 
+                 {loading ? "Sending....": "Submit"}
                 </button>
               </div>
             </form>
+          </div>
           </div>
         </div>
       </div>

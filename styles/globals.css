@@ -28,7 +28,24 @@ body {
   height: 218px;
   width: 260px;
 }
-
+.ModalWrapperAlert {
+  max-width: 60%;
+  height: 100%;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  padding: 3rem 0;
+  border-radius: 10px;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
+  .ModalWrapperAlert {
+    max-width: 80%;
+  }
+}
 .custom-select-arrow {
   -moz-appearance: none;
   -webkit-appearance: none;

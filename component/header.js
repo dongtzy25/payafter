@@ -31,10 +31,17 @@ const Header  = ()  => {
         setCurrentPath(router.pathname)
         const hashId = window.location.search;
         if (hashId) {
+            if(hashId == '?terms'){
+                setTimeout(()=>{
+                    window.scrollTo({ top: window.scrollY + document.querySelector('.terms-page').getBoundingClientRect().top - 120, behavior: 'smooth' })
+                },10)
+               
+            }else{
+                setTimeout(()=>{
+                    window.scrollTo({ top: window.scrollY + document.querySelector('.contact').getBoundingClientRect().top - 120, behavior: 'smooth' })
+                },10)
+            }
             sethash(hashId)
-            setTimeout(()=>{
-                window.scrollTo({ top: 1450, behavior: 'smooth' })
-            },10)
         }else{
             sethash("")
             window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -99,12 +106,12 @@ const Header  = ()  => {
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
                     ><Link href="/?contact">Contact us</Link></li>
                     <li 
-                        className={currentPath === '/terms' ? 
+                        className={hashtag === '?terms' ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
-                    ><Link href="/">Terms</Link></li>
+                    ><Link href="/privacy?terms">Terms</Link></li>
                     <li 
-                        className={currentPath === '/privacy' ? 
+                        className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
                     ><Link href="/privacy">Privacy</Link></li>
@@ -154,15 +161,15 @@ const Header  = ()  => {
                     'inline-block mr-8 '}
                 ><Link href="/merchant">Merchants</Link></li>
                 <li
-                    className={currentPath === '/contactus' ? 
+                    className={currentPath === '?contact' ? 
                     'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
-                ><Link href="/">Contact us</Link></li>
+                ><Link href="/?contact">Contact us</Link></li>
                 <li
                   className={currentPath === '/terms' ? 
                   'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                   'inline-block mr-8 '}
-                ><Link href="/">Terms</Link></li>
+                ><Link href="/?terms">Terms</Link></li>
                 <li 
                  className={currentPath === '/privacy' ? 
                  'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :

@@ -82,7 +82,7 @@ const Privacy = () => {
               arising out of any claim that you have breached any provision of
               these terms and conditions.
             </p>
-            <h1 className="lg:text-2xl text-xl font-bold mt-12">
+            <h1 className="lg:text-2xl text-xl font-bold mt-12 terms-page">
               Breaches of these Terms and Conditions
             </h1>
             <p className="mt-4 mb-2 text-justify lg:text-left">

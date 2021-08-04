@@ -1,12 +1,15 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import { useSpring, animated } from 'react-spring';
-import styled from 'styled-components';
+import React, { useRef, useEffect, useCallback,useState } from 'react'
+import { useSpring, animated } from 'react-spring'
+import styled from 'styled-components'
 import Illustration from '../public/assets/images/Illustration-modal.svg'
-import IllustrationAlert from '../public/assets/images/Illustration-Alert.svg'
 
-import Image from 'next/image';
-import { useForm } from "react-hook-form";
+import Image from 'next/image'
+import { useForm } from "react-hook-form"
 import homestyle from '../styles/Home.module.css'
+
+import { Alert } from '../component/alert'
+import axios from 'axios'
+
 
 const Background = styled.div`
   width: 100%;
@@ -31,17 +34,6 @@ const ModalWrapper = styled.div`
   z-index: 10;
 `;
 
-const ModalWrapperAlert = styled.div`
-  width: 30vw;
-  height: 65vh;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
-  display: fles;
-  position: relative;
-  z-index: 10;
-  border-radius:10px;
-`;
 
 const ModalContent = styled.div`
   display: flex;
@@ -76,7 +68,7 @@ export const Modal = ({ showModal, setShowModal }) => {
     }
   };
 
-  const { register,  handleSubmit, formState,formState:{errors}  } = useForm({ mode: 'onChange'});
+  const { register,  handleSubmit, formState,formState:{errors} ,reset } = useForm({ mode: 'onChange'});
 
   const keyPress = useCallback(
     e => {
@@ -95,12 +87,53 @@ export const Modal = ({ showModal, setShowModal }) => {
     },
     [keyPress]
   );
+  const [isAlert, setisAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    const messageData = `
+          <h1 style="text-transform:capitalize"><b>Application Form</b></h1>
+          <p><b>Name</b>: ${data.name}</p>
+          <p><b>From</b>: ${data.email}</p>
+          <p><b>Mobile Number</b>: ${data.number}</p>
+          <p><b>Company</b>: ${data.company}</p>
+          <p><b>Role</b>: ${data.role}</p>
+          <p><b>Website</b>: ${data.website}</p>
+          <p><b>Industry</b>: ${data.industry}</p>
+          <br/>
+          <span>Submitted from PayAfter webiste.</span>
+    `;
+
+    const payload = {
+      message: messageData,
+      subject: 'Merchant Registration'
+    }
+    const result = await axios.post("/api/email", payload);
+    if(result.status === 200){
+      openAlert();
+      document.querySelector("body").style.overflow = "hidden"
+      reset()
+      setLoading(false)
+    }else{
+      setLoading(false)
+      return false
+    }
+  };
+
+  const openAlert = () => {
+    setisAlert(prev => !prev);
+    document.querySelector("body").style.overflow = "hidden"
+  };
 
   return (
     <>
+    <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Thank you!'} message={'Your application has been sent and is still subject for review. We will get back to your application as soon as possible.'}/>
       {showModal ? (
         <Background onClick={closeModal} ref={modalRef}>
+
           <animated.div style={animation}>
+            
            
               <ModalWrapper showModal={showModal}>
                 {/* <ModalImg src={require('./modal.jpg')} alt='camera' /> */}
@@ -110,7 +143,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                   <div className="lg:w-6/12 w-full lg:text-left text-center">
                       <h1 className="lg:text-4xl text-2xl" style={{font:' normal normal 800 48px/66px Nunito Sans'}}>Join us now!</h1>
                       <p className="mt-4 lg:w-1/2 w-full ">Be our partner merchant and gain access to our Cebuana Lhuillier customer base.</p>
-                      <div className="w-full text-left lg:px-0 px-12 mt-12">
+                      <div className="w-full xl:text-left text-center lg:px-0 px-12 mt-12">
                       <Image
                           src={Illustration}
                           alt="Logo"
@@ -118,7 +151,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                   </div>
                   </div>
                   <div className="lg:w-1/2 w-full lg:mt-0 mt-8">
-                      <form >
+                      <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="mb-4 w-full">
                           <label htmlFor="name" className="block text-base mb-2">Full Name</label>
                           <input 
@@ -128,7 +161,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           {...register("name", { required: true })}
                           autoComplete="off" 
                           className= {errors.name 
-                            ? "w-full rounded px-4 py-3 text-black custom-border-color" 
+                            ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                             : "w-full rounded px-4 py-3 text-black border"}
                           placeholder="Maria Dela Cruz"
                           required />
@@ -146,8 +179,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                           {...register("email", { required: true,pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}
                           autoComplete="off" 
                           className= {errors.email 
-                            ? "w-full rounded px-4 py-3 text-black custom-border-color" 
-                            : "w-full rounded px-4 py-3 text-black border"}
+                            ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                            : "w-full rounded px-4 py-3 text-black border "}
                           placeholder="your@email.com"
                           required />
                           {errors.email 
@@ -160,9 +193,11 @@ export const Modal = ({ showModal, setShowModal }) => {
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                           <label htmlFor="number" className="block text-base mb-2">Mobile number</label>
                           <div className="flex items-center justify-between relative">
-                              <span className="bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center
-                              flex items-center
-                              ">+63</span>
+                              <span 
+                               className= {errors.number 
+                                ? "bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center flex items-center pointer-events-none border-red-500 border-2 border-r-0 rounded-r-none" 
+                                : "bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center flex items-center pointer-events-none"} 
+                             >+63</span>
                               <input 
                               {...register("number", { required: true,pattern: /^[789][0-9]{9}$/  })}
                               id="number" 
@@ -170,17 +205,18 @@ export const Modal = ({ showModal, setShowModal }) => {
                               type="text" 
                               autoComplete="off" 
                               className= {errors.number 
-                                ? "w-full rounded px-4 py-3 text-black custom-border-color" 
+                                ? "w-full rounded px-4 py-3 pl-14 text-black custom-border-color " 
                                 : "w-full rounded px-4 py-3 pl-14 text-black border"}
                               placeholder="9xxxxxxxxx"
                               required />
-                               {errors.number 
+                               
+                          </div>
+                          {errors.number 
                                   && errors.number.type === "required" 
                                   && <span className="custom-text-color font-semibold">Please enter mobile number</span>}
                                 {errors.number 
                                     && errors.number.type === "pattern" 
                                     && <span className="custom-text-color font-semibold">Please enter valid mobile number</span> }
-                          </div>
                           </div> 
                       </div>
                       <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
@@ -193,8 +229,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                               type="text" 
                               autoComplete="off" 
                               className= {errors.company 
-                                ? "w-full rounded px-4 py-3 text-black custom-border-color" 
-                                : "w-full rounded px-4 py-3 text-black border"}
+                                ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                                : "w-full rounded px-4 py-3 text-black border "}
                               placeholder="Your Company"
                               required />
                               {errors.company 
@@ -229,8 +265,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                               type="text" 
                               autoComplete="off" 
                               className= {errors.website 
-                                ? "w-full rounded px-4 py-3 text-black custom-border-color" 
-                                : "w-full rounded px-4 py-3 text-black border"}
+                                ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                                : "w-full rounded px-4 py-3 text-black border "}
                               placeholder="www.website.com"
                               required />
                                {errors.website 
@@ -246,8 +282,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                               type="text" 
                               autoComplete="off" 
                               className= {errors.website 
-                                ? "w-full rounded px-4 py-3 text-black custom-select-arrow custom-border-color" 
-                                : "w-full rounded px-4 py-3 text-black border custom-select-arrow"}
+                                ? "w-full rounded px-4 py-3 text-black custom-select-arrow custom-border-color " 
+                                : "w-full rounded px-4 py-3 text-black border custom-select-arrow "}
                               placeholder="Select industry"
                               required>
                                 <option value="IT">I.T</option>
@@ -284,7 +320,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               lg:mx-0 mx-auto
                               lg:mt-0 mt-4
                           ">
-                              Submit
+                              {loading ? "Sending....": "Submit"}
                           </button>
                       </div>
                       </form>

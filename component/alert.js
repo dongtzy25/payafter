@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import IllustrationAlert from '../public/assets/images/Illustration-Alert.svg'
 
 import Image from 'next/image';
-import { useForm } from "react-hook-form";
 
 const Background = styled.div`
   width: 100%;
@@ -14,20 +13,22 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 200;
+  z-index: 300;
   top: 0;
 `;
 
 const ModalWrapperAlert = styled.div`
-  width: 30vw;
-  height: 65vh;
+  min-width: 80%;
+  height: 100%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
   display: fles;
   position: relative;
   z-index: 10;
+  padding: 3rem 0;
   border-radius:10px;
+  margin: auto;
 `;
 
 const ModalContent = styled.div`
@@ -40,11 +41,10 @@ const ModalContent = styled.div`
   p {
     margin-bottom: 1rem;
   }
-
   width:100%
 `;
 
-export const Alert = ({ isAlert, setIsAlert, }) => {
+export const Alert = ({ isAlert, setIsAlert, message ,title }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -85,7 +85,7 @@ export const Alert = ({ isAlert, setIsAlert, }) => {
       {isAlert ? (
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
-                <ModalWrapperAlert isAlert={isAlert}>
+                <div className="ModalWrapperAlert" isAlert={isAlert}>
                   <ModalContent>
                     <div className="w-full text-center">
                       <Image
@@ -93,8 +93,10 @@ export const Alert = ({ isAlert, setIsAlert, }) => {
                           alt="Logo"
                       />
                     </div>
-                    <h1 className="text-4xl font-bold mt-8">Message sent!</h1>
-                    <p className="w-9/12 text-center">Thank you for reaching out to us. We will get back to your concern as soon as possible.</p>
+                    <h1 className="text-4xl font-bold mt-8">{title}</h1>
+                     <p className="w-9/12 text-center mt-8">
+                      {message}
+                     </p>
                       <button 
                           onClick={() => setIsAlert(prev => !prev)}
                           className="block 
@@ -108,7 +110,7 @@ export const Alert = ({ isAlert, setIsAlert, }) => {
                           Okay, thanks!
                       </button>
                   </ModalContent>
-                </ModalWrapperAlert>
+                </div>
           </animated.div>
         </Background>
       ) : null}
