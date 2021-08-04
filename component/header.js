@@ -71,7 +71,7 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            lg:px-0 md:px-0 px-4
+            px-4
             "
         >
             <div className="relative lg:flexs flex lg:items-centers items-center">

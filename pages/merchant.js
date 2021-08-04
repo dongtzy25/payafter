@@ -1,9 +1,11 @@
-import React , { useEffect, useState }  from 'react'
-import Layout from '../layout/layout';
-import Image from 'next/image';
-import Logo from '../public/assets/images/PayAfter-Logo.svg';
-import { Modal } from '../component/modal';
+import React , {  useState }  from 'react'
+import Layout from '../layout/layout'
+import Image from 'next/image'
+import { Modal } from '../component/modal'
 
+import merchant from '../public/assets/images/Illustration-merchant.svg'
+
+import homestyle from '../styles/Home.module.css'
 
 import ohCrop from '../public/assets/images/Merchant Brand Logos/oh-crop-logo.png'
 import chuwi from '../public/assets/images/Merchant Brand Logos/Chuwi_logo_2019.png'
@@ -24,26 +26,28 @@ const Merchant = () =>{
     return (
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
+            <div className={homestyle.firstfold}>
              <div className="w-full py-12">
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
                 <div className="lg:hidden block  lg:w-6/12 w-full text-center lg:px-0 px-20 ">
                     <Image
-                        src={Logo}
+                        src={merchant}
                         alt="Logo"
                     />
                 </div>
                 <div className="lg:w-6/12 w-full lg:px-20 px-12 lg:mt-0 mt-12">
-                    <h1 className="lg:text-6xl text-4xl font-bold">Now in stores</h1>
+                    <h1 className="lg:text-6xl text-4xl font-bold">Available stores</h1>
                     <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for 5 monthly installment.</p>
                 </div>
                 <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">
                     <Image
-                        src={Logo}
+                        src={merchant}
                         alt="Logo"
                     />
                 </div>
                 </div>
             </div> 
+            </div>
             <div className="w-full bg-gray-50 py-12 ">
                 <div className="container mx-auto lg:px-20 px-12">
                     <div className="block">

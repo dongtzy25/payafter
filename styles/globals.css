@@ -12,6 +12,14 @@ body {
   background-color: #f3333e;
 }
 
+.custom-text-color {
+  color: #f3333e;
+}
+
+.custom-border-color {
+  border: 2px solid #f3333e;
+}
+
 .custom-bg-color {
   background-color: rgb(0, 38, 62);
 }

@@ -7,9 +7,12 @@ const Layout = ({ children }) => {
      <>
     <Head>
       <title>PayAfter</title>
-      <meta name="description" content="Cebuanna Lhuillier PayAfter." />
       <link rel="icon" href="/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Cebuanna Lhuillier PayAfter"/>
+      <meta property="og:title" content="Cebuanna Lhuillier PayAfter"/>
+      <meta property="og:description" content="Cebuanna Lhuillier PayAfter"/>
+      <meta property="og:url" content="https://dev.payafter.ph/"/>
+      <meta property="og:type" content="website"/>
     </Head>
      <Header></Header>
         <main className="mt-24">{children}</main>

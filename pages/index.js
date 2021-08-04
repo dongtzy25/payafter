@@ -8,11 +8,12 @@ import Illustration from '../public/assets/images/Illustration-home.svg'
 
 import Mail from '../public/assets/images/mail.svg'
 import Layout from '../layout/layout'
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import { Modal } from '../component/modal'
 import { useForm } from "react-hook-form"
 import Router from 'next/router'
 import Link from 'next/link'
+import axios from 'axios';
 
 import homestyle from '../styles/Home.module.css'
 
@@ -24,22 +25,63 @@ import Haierlogo from '../public/assets/images/Merchant Brand Logos/Haier logo.p
 import freshbuyers from '../public/assets/images/Merchant Brand Logos/freshbuys-logo.png'
 import aiwa from '../public/assets/images/Merchant Brand Logos/download.png'
 import rosieposie from '../public/assets/images/Merchant Brand Logos/rosie posie.jpg'
+import { Alert } from '../component/alert'
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [isAlert, setisAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const { register,  handleSubmit, formState  } = useForm({ mode: 'onChange'});
-  const onSubmit = (data) => {
-    console.log(data)
+  const { register,  handleSubmit, formState ,reset ,formState:{errors}  } = useForm({ mode: 'onChange'});
+  const onSubmit = async (data) => {
+    setLoading(true);
+    const messageData = `
+          <h1><b>${data.subject}</b></h1>
+          <p>Name: ${data.name}</p>
+          <p>From: ${data.email}</p>
+          <p>Mobile Number: ${data.number}</p>
+          <br/>
+          <p>${data.message}</p>
+          <br/>
+          <br/>
+          <span>Sent using Payafter webiste</span>
+    `;
+
+    const payload = {
+      message: messageData,
+      subject: data.subject
+    }
+    const result = await axios.post("/api/email", payload);
+    if(result.status === 200){
+      openAlert();
+      document.querySelector("body").style.overflow = "hidden"
+      reset()
+      setLoading(false)
+    }else{
+      setLoading(false)
+      return false
+    }
   };
   const openModal = () => {
       setShowModal(prev => !prev);
-      document.querySelector("body").style.overflow = "hidden";
+      document.querySelector("body").style.overflow = "hidden"
   };
+
+  const openAlert = () => {
+    setisAlert(prev => !prev);
+    document.querySelector("body").style.overflow = "hidden"
+  };
+  useEffect(() => {
+      console.log(formState)
+      console.log(errors)
+
+  }, [formState])
   return (
     <>
       <Layout>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
+      <Alert isAlert={isAlert} setIsAlert={setisAlert}/>
+
       <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
         <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center lg:px-0 px-20 ">
@@ -117,7 +159,7 @@ const Home = () => {
         </div>
       
       <div className="w-full bg-gray-50 py-12">
-        <div className="container mx-auto  text-center ">
+        <div className="container mx-auto  text-center px-4">
           <h1 className="text-4xl font-bold">Merchants</h1>
           <p className="text-base mt-4">Shop from your favourite merchants across the country and <br/> enjoy 0% interest for 5 monthly installment.</p>
           <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
@@ -231,11 +273,16 @@ const Home = () => {
                 name="name" 
                 type="text" 
                 autoComplete="off" 
-                className="w-full rounded px-4 py-3 text-black"
+                className= {errors.name 
+                  ? "w-full rounded px-4 py-3 text-black custom-border-color" 
+                  : "w-full rounded px-4 py-3 text-black"} 
                 placeholder="Maria Dela Cruz"
                 required />
+                {errors.name 
+                  && errors.name.type === "required" 
+                  && <span className="custom-text-color font-semibold">Please enter your fullname</span>}
               </div> 
-              <div className="mb-4 lg:flex flex-row items-center w-full justify-between lg:space-x-4">
+              <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
                 <div className="lg:w-1/2 w-full">
                   <label htmlFor="email" className="block text-md mb-2">Email address</label>
                   <input 
@@ -244,26 +291,45 @@ const Home = () => {
                   name="email" 
                   type="text" 
                   autoComplete="off" 
-                  className="w-full rounded px-4 py-3 text-black"
+                  className= {errors.email 
+                    ? "w-full rounded px-4 py-3 text-black custom-border-color" 
+                    : "w-full rounded px-4 py-3 text-black"} 
                   placeholder="your@email.com"
                   required />
+                   {errors.email 
+                     && errors.email.type === "required" 
+                     && <span className="custom-text-color font-semibold">Please enter email</span>}
+                    {errors.email 
+                      && errors.email.type === "pattern" 
+                      && <span className="custom-text-color font-semibold">Please enter valid email</span> }
                 </div> 
                 <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                   <label htmlFor="number" className="block text-md mb-2">Mobile number</label>
                   <div className="flex items-center justify-between relative">
-                    <span className="bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center
-                    flex items-center
-                    ">+63</span>
+                    <span 
+                     className= {errors.number 
+                      ? "bg-gray-100 absolute top-0 left-0 pointer-e h-full rounded text-black px-2 text-center flex items-center pointer-events-none border-red-500 border-2 border-r-0 rounded-r-none" 
+                      : "bg-gray-100 absolute top-0 left-0 pointer-e h-full rounded text-black px-2 text-center flex items-center pointer-events-none"} 
+                    >+63</span>
                     <input 
                     {...register("number", { required: true,pattern: /^[789][0-9]{9}$/  })}
                     id="number"
                     name="number" 
                     type="text" 
                     autoComplete="off" 
-                    className=" w-full rounded py-3 pl-14 text-black"
+                    className= {errors.number 
+                      ? "w-full rounded px-4 py-3 pl-14 text-black custom-border-color" 
+                      : "w-full rounded px-4 py-3 pl-14 text-black"} 
                     placeholder="9xxxxxxxxx"
                     required />
+                    
                   </div>
+                  {errors.number 
+                      && errors.number.type === "required" 
+                      && <span className="custom-text-color font-semibold">Please enter mobile number</span>}
+                     {errors.number 
+                        && errors.number.type === "pattern" 
+                        && <span className="custom-text-color font-semibold">Please enter valid mobile number</span> }
                 </div> 
               </div>
               <div className="mb-4 w-full">
@@ -274,9 +340,14 @@ const Home = () => {
                 name="subject" 
                 type="text" 
                 autoComplete="off" 
-                className="w-full rounded px-4 py-3 text-black"
+                className= {errors.subject 
+                  ? "w-full rounded px-4 py-3 text-black custom-border-color" 
+                  : "w-full rounded px-4 py-3 text-black"} 
                 placeholder="What’s the subject of your concern?"
                 required />
+                {errors.subject 
+                  && errors.subject.type === "required" 
+                  && <span className="custom-text-color font-semibold">Please enter subject</span>}
               </div> 
               <div className="mb-4 w-full">
                 <label htmlFor="message" className="block text-md mb-2">How can we help you?</label>
@@ -286,9 +357,14 @@ const Home = () => {
                 name="message" 
                 type="text" 
                 autoComplete="off" 
-                className="w-full h-40 rounded px-4 py-4 text-black"
+                className= {errors.message 
+                  ? "w-full rounded px-4 py-3 h-32 text-black custom-border-color" 
+                  : "w-full rounded px-4 py-3 h-32 text-black"} 
                 placeholder="Let us know the details of your concern"
                 required />
+                {errors.message 
+                  && errors.message.type === "required" 
+                  && <span className="custom-text-color font-semibold">Please write your message</span>}
               </div> 
               <div className="lg:flex md:flex items-center justify-between lg:space-x-4 w-full ">
                 <div className={homestyle.formgroup}>
@@ -299,7 +375,7 @@ const Home = () => {
                 </div>
                 <button 
                   type="submit" 
-                  disabled={!formState.isValid}
+                  disabled={!formState.isValid || loading}
                   className="block 
                   px-8 
                   py-2
@@ -309,7 +385,8 @@ const Home = () => {
                   disabled:opacity-75
                   lg:mx-0 mx-auto
                   lg:mt-0 mt-4
-                  ">Submit
+                  "> 
+                 {loading ? "Sending ....": "Submit"} 
                 </button>
               </div>
             </form>
