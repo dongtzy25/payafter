@@ -128,7 +128,7 @@ export const Modal = ({ showModal, setShowModal }) => {
 
   return (
     <>
-    <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Thank you!'} message={'Your application has been sent and is still subject for review. We will get back to your application as soon as possible.'}/>
+    <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Thank you!'} great={'Yay, great!'} message={'Your application has been sent and is still subject for review. We will get back to your application as soon as possible.'}/>
       {showModal ? (
         <Background onClick={closeModal} ref={modalRef}>
 

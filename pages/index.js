@@ -75,7 +75,7 @@ const Home = () => {
     <>
       <Layout>
       <Modal showModal={showModal} setShowModal={setShowModal}/>
-      <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
+      <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'} great={'Okay, thanks!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
       <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">

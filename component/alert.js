@@ -44,7 +44,7 @@ const ModalContent = styled.div`
   width:100%
 `;
 
-export const Alert = ({ isAlert, setIsAlert, message ,title }) => {
+export const Alert = ({ isAlert, setIsAlert, message ,title,great }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -107,7 +107,7 @@ export const Alert = ({ isAlert, setIsAlert, message ,title }) => {
                           text-white
                           lg:mx-0 mx-auto
                       ">
-                          Okay, thanks!
+                         {great} 
                       </button>
                   </ModalContent>
                 </div>
