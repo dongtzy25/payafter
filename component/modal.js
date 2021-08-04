@@ -171,7 +171,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               autoComplete="off" 
                               className= {errors.number 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color" 
-                                : "w-full rounded px-4 py-3 text-black border"}
+                                : "w-full rounded px-4 py-3 pl-14 text-black border"}
                               placeholder="9xxxxxxxxx"
                               required />
                                {errors.number 
