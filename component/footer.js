@@ -3,35 +3,48 @@ import Link from 'next/link'
 import Logo from '../public/assets/images/PayAfter-Logo.svg'
 import FooterLogo from '../public/assets/images/logo_cl.png'
 
+import React, {useState} from 'react'
+import {Modal} from '../component/modal'
+
 const Footer = () => {
+    const [showModal, setShowModal] = useState(false);
+    const openModal = () => {
+        setShowModal(prev => !prev);
+        document.querySelector("body").style.overflow = "hidden"
+    };
     return (
         <>
+
             <footer>
+            <Modal showModal={showModal} setShowModal={setShowModal}/>
                 <div className="container mx-auto py-12 lg:px-20 px-4 ">
                     <div className="lg:flex flex-row items-start justify-start lg:space-x-12 lg:text-left text-center">
                         <div className="mr-4 lg:w-1/3 w-full">
-                            <Image
+                        <Link href="/"> 
+                        <a> <Image
                                 src={Logo}
                                 alt="Logo"
                                 width={90}
                                 height={90}
                             />
+                            </a>
+                            </Link>
                             <p className="mt-4">SEC Registration No. CS201820732 </p>
                             <p>Certificate of Authority No. 1228</p>
                         </div>
                         <div className="lg:w-1/3 w-full lg:mt-0 mt-8">
                             <h1 className="font-bold text-xl mb-2">Links</h1>
                             <ul>
-                                <li className="mb-2 text-md"><Link href="#">Apply as merchant</Link></li>
+                                <li className="mb-2 text-md" onClick={()=>openModal()}><Link href="javascript:void(0)">Apply as merchant</Link></li>
                                 <li className="mb-2 text-md"><Link href="/merchant">Merchants</Link></li>
-                                <li className="mb-2 text-md"><Link href="#contact">Contact us</Link></li>
+                                <li className="mb-2 text-md"><Link href="/?contact">Contact us</Link></li>
                             </ul>
                         </div>
                         <div className="lg:w-1/3 w-full  lg:mt-0 mt-8">
                             <h1 className="font-bold text-xl mb-2">Legal</h1>
                             <ul className="list-none">
                                 <li className="mb-2 text-md"><Link href="/privacy">Privacy Policy</Link></li>
-                                <li className="mb-2 text-md"><Link href="#">Terms & Conditions</Link></li>
+                                <li className="mb-2 text-md"><Link href="/privacy?terms">Terms & Conditions</Link></li>
                             </ul>
                         </div>
                     </div>
