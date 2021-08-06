@@ -79,39 +79,39 @@ const Home = () => {
 
       <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
-        <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
-            <Image
-                src={Illustration}
-                alt="Logo"
-            />
-          </div>
-          <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
-            <div className="w-4/5 mx-auto">
-              <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
-              <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
-              <div className="mt-12 ">
-                <button 
-                    onClick={() =>openModal()}
-                    className="
-                        inline-block 
-                        px-4 
-                        py-2
-                        custom-button-color
-                        rounded 
-                        text-white
-                    ">
-                        Apply as merchant
-                    </button>
+          <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
+              <Image
+                  src={Illustration}
+                  alt="Logo"
+              />
+            </div>
+            <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
+              <div className="w-4/5 mx-auto">
+                <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
+                <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
+                <div className="mt-12 ">
+                  <button 
+                      onClick={() =>openModal()}
+                      className="
+                          inline-block 
+                          px-4 
+                          py-2
+                          custom-button-color
+                          rounded 
+                          text-white
+                      ">
+                          Apply as merchant
+                      </button>
+                </div>
               </div>
             </div>
+            <div className="lg:block hidden lg:w-6/12 w-full  text-center lg:mt-0 mt-12">
+              <Image
+                  src={Illustration}
+                  alt="Logo"
+              />
+            </div>
           </div>
-          <div className="lg:block hidden lg:w-6/12 w-full  text-center lg:mt-0 mt-12">
-            <Image
-                src={Illustration}
-                alt="Logo"
-            />
-          </div>
-        </div>
         </div>
 
         <div className="w-full custom-bg-color text-white px-4">
@@ -256,7 +256,7 @@ const Home = () => {
           <div className="lg:w-6/12 w-full lg:text-left text-center mx-auto">
             <div className="w-4/5 mx-auto">
               <h1 className="text-4xl">We’re always <br/> happy to help!</h1>
-              <p className="mt-8">Your concerns are important to us. Complete the <br/> form and we will get back to you as soon as possible.</p>
+              <p className="mt-8 lg:mr-auto lg:w-4/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
               <p className="mt-8">Or send us a direct email at</p>
               <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
                 <a href="mailto:hello@payafter.ph" className="flex items-center ">
