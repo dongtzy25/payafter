@@ -27,17 +27,19 @@ const Merchant = () =>{
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className={homestyle.firstfold}>
-             <div className="w-full py-12">
+             <div className="w-full lg:py-12">
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
-                <div className="lg:hidden block  lg:w-6/12 w-full text-center lg:px-0 px-20 ">
+                <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
                     <Image
                         src={merchant}
                         alt="Logo"
                     />
                 </div>
-                <div className="lg:w-6/12 w-full lg:px-20 px-12 lg:mt-0 mt-12">
-                    <h1 className="lg:text-6xl text-4xl font-bold">Available stores</h1>
-                    <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for 5 monthly installment.</p>
+                <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
+                    <div className="w-4/5 mx-auto">
+                        <h1 className="lg:text-6xl text-4xl font-bold">Available stores</h1>
+                        <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for 5 monthly installment.</p>
+                    </div>
                 </div>
                 <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">
                     <Image
@@ -52,7 +54,7 @@ const Merchant = () =>{
                 <div className="container mx-auto lg:px-20 px-12">
                     <div className="block">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Beauty</h1>
-                        <div className="lg:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center ">
                             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
                                 <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
                                     <Image
@@ -73,7 +75,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics</h1>
-                        <div className="lg:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div className="shadow-lg flex bg-white items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
@@ -102,7 +104,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Food</h1>
-                        <div className="lg:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#EADDBB'}}>
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
@@ -123,7 +125,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Hotels and resorts</h1>
-                        <div className="lg:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#F0F0F0'}}>
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image

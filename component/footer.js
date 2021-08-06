@@ -35,7 +35,7 @@ const Footer = () => {
                         <div className="lg:w-1/3 w-full lg:mt-0 mt-8">
                             <h1 className="font-bold text-xl mb-2">Links</h1>
                             <ul>
-                                <li className="mb-2 text-md" onClick={()=>openModal()}><Link href="javascript:void(0)">Apply as merchant</Link></li>
+                                <li className="mb-2 text-md" onClick={()=>openModal()}><span className="cursor-pointer">Apply as merchant</span></li>
                                 <li className="mb-2 text-md"><Link href="/merchant">Merchants</Link></li>
                                 <li className="mb-2 text-md"><Link href="/?contact">Contact us</Link></li>
                             </ul>
@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
                 <div className="container mx-auto py-8 lg:px-20 px-4 border-t-2">
                     <div className="flex lg:flex-row flex-col items-center justify-between">
-                        <div className="lg:px-0 px-4 lg:text-left text-center">Copyright © 2021 PayAfter by Cebuana Lhuillier Finance Corp. an SEC Licensed Financing Company</div>
+                        <div className="lg:px-0 px-4 lg:text-left text-center"><span className="xl:inline-block lg:inline-block  block">Copyright © 2021</span> PayAfter by Cebuana Lhuillier Finance Corp. an SEC Licensed Financing Company</div>
                         <div className="relative lg:mt-0 mt-4">
                             <Image
                                 src={FooterLogo}

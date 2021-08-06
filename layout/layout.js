@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <meta property="og:type" content="website"/>
     </Head>
      <Header></Header>
-        <main className="xl:mt-24 lg:mt-32 mt-28">{children}</main>
+        <main className="xl:mt-24 lg:mt-32 mt-24">{children}</main>
      <Footer></Footer>
      </>
  )

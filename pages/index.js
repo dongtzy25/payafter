@@ -79,13 +79,13 @@ const Home = () => {
 
       <div className={homestyle.firstfold}>
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
-        <div className="lg:hidden block  lg:w-6/12 w-full lg:text-left text-center">
+        <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
             <Image
                 src={Illustration}
                 alt="Logo"
             />
           </div>
-          <div className="lg:w-6/12 w-full lg:mt-0 mt-12 md:text-center lg:text-left text-center">
+          <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
             <div className="w-4/5 mx-auto">
               <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
               <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
@@ -105,7 +105,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="lg:block hidden lg:w-6/12 w-full text-center lg:mt-0 mt-12">
+          <div className="lg:block hidden lg:w-6/12 w-full  text-center lg:mt-0 mt-12">
             <Image
                 src={Illustration}
                 alt="Logo"
@@ -115,8 +115,9 @@ const Home = () => {
         </div>
 
         <div className="w-full custom-bg-color text-white px-4">
-          <div className="container mx-auto  py-8 flex lg:flex-row flex-col justify-between">
-            <div className="lg:w-6/12 w-full flex items-center lg:flex-row flex-col">
+          <div className="container mx-auto mt-8  py-8 flex lg:flex-row flex-col justify-between">
+            <div className="lg:w-6/12 w-full ">
+             <div className="w-4/5 mx-auto flex items-center lg:flex-row flex-col">
               <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale opacity-75 lg:mb-0 mb-4">
               <Image
                   src={arrowDown}
@@ -124,33 +125,38 @@ const Home = () => {
                   layout="fill"
               />
               </span>
-              <span className="lg:w-72 opacity-75 lg:text-left text-center"> 
+              <span className="lg:w-72 opacity-75 lg:text-left text-center text-base"> 
                 Building a stronger and more trusted financing industry in the Philippines with the following affiliates
               </span>
+              </div>
             </div>
-            <div className="lg:w-6/12 w-full flex lg:flex-row md:flex-row flex-col items-center lg:space-x-12 md:space-x-4 justify-end relative ">
-            
-            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative lg:h-4/6 md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75" >
-            <Image
-                  src={eccp}
-                  alt="Logo"
-                  layout="fill"
-              />
-            </div>
-            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative  xl:h-4/6 md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75">
-            <Image
-                  src={affi}
-                  alt="Logo"
-                  layout="fill"
-              />
-            </div>
-            <div className="xl:w-40 lg:w-10/12 md:w-3/5 w-2/5  relative lg:h-4/6  md:h-20 h-16 lg:mt-0 mt-8 filter grayscale opacity-75">
-            <Image
-                  src={fa}
-                  alt="Logo"
-                  layout="fill"
-              />
-            </div>
+            <div className="lg:w-6/12 w-full">
+              <div className="w-4/5 h-full mx-auto flex lg:flex-row md:flex-row flex-col items-center lg:space-x-12 md:space-x-4 lg:justify-end md:justify-center relative">
+                <div className="lg:mt-0 mt-8 filter grayscale opacity-75" >
+                <Image
+                      src={eccp}
+                      alt="Logo"
+                      width={96}
+                      height={38}
+                  />
+                </div>
+                <div className="lg:mt-0 mt-8 filter grayscale opacity-75">
+                <Image
+                      src={affi}
+                      alt="Logo"
+                      width={137}
+                      height={38}
+                  />
+                </div>
+                <div className="lg:mt-0 mt-8 filter grayscale opacity-75">
+                <Image
+                      src={fa}
+                      alt="Logo"
+                      width={135}
+                      height={40}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -158,8 +164,8 @@ const Home = () => {
       <div className="w-full bg-gray-50 py-12">
         <div className="container mx-auto  text-center px-4">
           <h1 className="lg:text-6xl text-4xl font-bold">Merchants</h1>
-          <p className="text-base mt-4">Shop from your favourite merchants across the country and <br/> enjoy 0% interest for 5 monthly installment.</p>
-          <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
+          <p className="text-base mt-4 lg:mx-auto lg:w-1/3">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p>
+          <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#EADDBB'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
@@ -193,7 +199,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="lg:flex flex-row justify-center lg:space-x-8 mt-12 md:grid md:grid-rows-2 md:grid-flow-col md:gap-8">
+
+          <div className="lg:flex flex-row justify-center lg:space-x-8 mt-12 md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0">
             <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
@@ -227,6 +234,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <button 
             onClick={()=> { Router.push('/merchant') }}
             className="
@@ -395,7 +403,8 @@ const Home = () => {
         </div>
       </div>
       <div className="w-full bg-gray-50 py-12 ">
-        <div className="container mx-auto  text-center lg:px-0 px-12">
+        <div className="container mx-auto  text-center">
+        <div className="w-4/5 mx-auto">
           <h1 className="text-4xl font-bold">Be our partner merchant</h1>
           <p className="text-lg mt-4">Get more customers and increase your sales by signing up now!</p>
           <button 
@@ -411,6 +420,7 @@ const Home = () => {
             ">
                 Apply as merchant
           </button>
+          </div>
         </div>
       </div>
       </Layout>

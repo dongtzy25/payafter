@@ -74,14 +74,14 @@ const Header  = ()  => {
         <div className="
             container
             py-4
-            mx-auto
             flex flex-wrap flex-row
             items-center
             justify-between
             px-4
+            mx-auto
             "
         >
-            <div className="relative lg:flexs flex lg:items-centers items-center">
+            <div className="relative lg:flexs flex lg:items-centers items-center ">
                 <ul className="list-none flex items-center ">
                     <li className="inline-block lg:mr-8  mr-4">
                      <Link href="/"> 
@@ -116,31 +116,32 @@ const Header  = ()  => {
                         'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
                     ><Link href="/privacy">Privacy</Link></li>
                 </ul>
+             
+            </div>
+            <div className="lg:space-x-6 space-x-2">
                 <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-gray-600 p-1" onClick={() => setMobileOpen(true) }>
                     <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                 </button>
-            </div>
-            <div className="space-x-6">
-                <a className="font-extrabold" href="mailto:hello@payafter.ph">hello@payafter.ph</a>
+                <a className="font-extrabold lg:inline-block md:inline-block hidden" href="mailto:hello@payafter.ph">hello@payafter.ph</a>
                 <button 
                 onClick={() =>openModal()}
                 className="
-                    inline-block 
                     px-4 
                     py-2
                     custom-button-color
                     rounded 
                     text-white
+                    lg:inline-block md:inline-block hidden
                 ">
                     Apply as merchant
                 </button>
             </div> 
         </div>    
       </nav>
-      <div className="fixed top-0 left-0 z-10 h-screen flex transition duration-300 ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0"}}>
-        <div className="bg-white p-12 w-10/12 h-screen shadow-2xl" style={{ "display": mobileOpen ? "block" : "none"}}>
+      <div className="fixed top-0 left-0 z-10 h-screen flex transition-all ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
+        <div className="bg-white p-12 w-10/12 h-screen shadow-2xl transition-all duration-500" style={{ "opacity": mobileOpen ? "1" : "0"}}>
             <ul className="list-none flex items-start flex-col space-y-4">
-                <li className="inline-block lg:mr-8 mr-4 relative">
+                <li className="inline-block lg:mr-8 mr-4 relative mb-4">
                     <div className="relative w-20 h-20">
                         <Link href="/"> 
                         <a >
@@ -157,22 +158,24 @@ const Header  = ()  => {
                 </li>
                 <li 
                     className={currentPath === '/merchant' ? 
-                    'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
                 ><Link href="/merchant">Merchants</Link></li>
                 <li
-                    className={currentPath === '?contact' ? 
-                    'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    onClick={() => setMobileOpen(false) }
+                    className={hashtag === '?contact' ? 
+                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
                 ><Link href="/?contact">Contact us</Link></li>
                 <li
-                  className={currentPath === '/terms' ? 
-                  'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
-                  'inline-block mr-8 '}
-                ><Link href="/?terms">Terms</Link></li>
+                    onClick={() => setMobileOpen(false) }
+                    className={hashtag === '?terms' ? 
+                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mr-8 '}
+                ><Link href="/privacy?terms">Terms</Link></li>
                 <li 
-                 className={currentPath === '/privacy' ? 
-                 'inline-block mr-8 mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                 className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
+                 'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                  'inline-block mr-8 '}
                 ><Link href="/privacy">Privacy</Link></li>
             </ul>
@@ -205,13 +208,15 @@ const Header  = ()  => {
                     />
                 </svg>
             </button>
-            <div className="mt-4">
+            <div className="mt-8">
+                <a className="font-extrabold " href="mailto:hello@payafter.ph">hello@payafter.ph</a>
                 <button 
                 onClick={() =>openModal()}
                 className="
                     block 
                     px-4 
                     py-2
+                    mt-4
                     custom-button-color
                     rounded 
                     text-white
