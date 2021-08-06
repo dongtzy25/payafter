@@ -164,7 +164,7 @@ const Home = () => {
       <div className="w-full bg-gray-50 py-12">
         <div className="container mx-auto  text-center px-4">
           <h1 className="lg:text-6xl text-4xl font-bold">Merchants</h1>
-          <p className="text-base mt-4 lg:mx-auto lg:w-1/3">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p>
+          <p className="text-base mt-4 mx-auto xl:w-1/3 lg:w-2/5">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p>
           <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#EADDBB'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
@@ -256,7 +256,7 @@ const Home = () => {
           <div className="lg:w-6/12 w-full lg:text-left text-center mx-auto">
             <div className="w-4/5 mx-auto">
               <h1 className="text-4xl">We’re always <br/> happy to help!</h1>
-              <p className="mt-8 lg:mr-auto lg:w-4/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
+              <p className="mt-8 lg:mr-auto xl:w-4/6 lg:w-5/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
               <p className="mt-8">Or send us a direct email at</p>
               <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
                 <a href="mailto:hello@payafter.ph" className="flex items-center ">
