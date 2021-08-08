@@ -110,7 +110,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12 electronics">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics & gadgets</h1>
-                        <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:place-content-center md:gap-8 lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div 
                             onClick={()=> { Router.push('/merchants/aiwa') }}
                             className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
@@ -151,6 +151,8 @@ const Merchant = () =>{
                                     />
                                 </div>
                             </div>
+                        </div>
+                        <div className="lg:flex  lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div 
                             onClick={()=> { Router.push('/merchants/jbl') }}
                             className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
