@@ -67,7 +67,7 @@ const Header  = ()  => {
           bg-white
           mb-3
           w-full
-          z-10
+          z-20
           top-0
         "
       >
@@ -96,24 +96,24 @@ const Header  = ()  => {
                      </Link>
                     </li>
                     <li 
-                        className={currentPath === '/merchant' ? 
+                        className={currentPath === '/merchant' || currentPath.includes('merchants') ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
-                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
+                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 hover:text-red-500 transition-all ease-in duration-300'}
                     ><Link href="/merchant" >Merchants</Link></li>
                     <li 
                         className={hashtag === '?contact' ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
+                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 transition-all ease-in duration-300'}
                     ><Link href="/?contact">Contact us</Link></li>
                     <li 
                         className={hashtag === '?terms' ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 '}
+                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 transition-all ease-in duration-300'}
                     ><Link href="/privacy?terms">Terms</Link></li>
                     <li 
                         className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 '}
+                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 hover:text-red-500 transition-all ease-in duration-300'}
                     ><Link href="/privacy">Privacy</Link></li>
                 </ul>
              
@@ -132,6 +132,10 @@ const Header  = ()  => {
                     rounded 
                     text-white
                     lg:inline-block md:inline-block hidden
+                    hover:bg-red-500
+                    hover:shadow-md
+                    transition-all
+                    duration-300
                 ">
                     Apply as merchant
                 </button>
@@ -157,7 +161,7 @@ const Header  = ()  => {
                     
                 </li>
                 <li 
-                    className={currentPath === '/merchant' ? 
+                    className={currentPath === '/merchant' || currentPath.includes('merchants') ? 
                     'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block mr-8 '}
                 ><Link href="/merchant">Merchants</Link></li>
@@ -220,6 +224,10 @@ const Header  = ()  => {
                     custom-button-color
                     rounded 
                     text-white
+                    hover:bg-red-500
+                    hover:shadow-md
+                    transition-all
+                    duration-300
                 ">
                     Apply as merchant
                 </button>

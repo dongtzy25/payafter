@@ -28,6 +28,15 @@ body {
   height: 218px;
   width: 260px;
 }
+
+.merchant-coco-size {
+  height: 218px;
+  width: 352px;
+}
+.merchant-ohcrop-size {
+  width: 352px;
+  height: 352px;
+}
 .ModalWrapperAlert {
   max-width: 60%;
   height: 100%;
@@ -41,11 +50,6 @@ body {
   border-radius: 10px;
   margin: auto;
 }
-@media screen and (max-width: 600px) {
-  .ModalWrapperAlert {
-    max-width: 80%;
-  }
-}
 .custom-select-arrow {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -58,4 +62,66 @@ body {
   background-repeat: no-repeat;
   background-position-y: 50%;
   background-position-x: 96%;
+}
+.border-solid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  background-color: #00263e;
+  height: calc(100% - 27px);
+  width: 2px;
+  z-index: -1;
+}
+.custom-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  z-index: -1;
+}
+.cocotel-color::after {
+  background-color: rgba(142, 186, 62, 1);
+}
+.fresh-color::after {
+  background-color: rgba(244, 153, 46, 1);
+}
+.ohcrop-color::after {
+  background-color: rgba(234, 221, 187, 1);
+}
+.rosie-color::after {
+  background-color: rgba(253, 172, 145, 1);
+}
+.omowhite-color::after {
+  background-color: rgba(210, 224, 250, 1);
+}
+@media screen and (max-width: 600px) {
+  .ModalWrapperAlert {
+    max-width: 80%;
+  }
+  .custom-banner::after {
+    width: 30%;
+    @apply shadow-xl;
+  }
+  .cocotel-color::after {
+    background-color: rgba(142, 186, 62, 0.9);
+  }
+  .fresh-color::after {
+    background-color: rgba(244, 153, 46, 0.9);
+  }
+  .ohcrop-color::after {
+    background-color: rgba(234, 221, 187, 0.9);
+  }
+  .rosie-color::after {
+    background-color: rgba(253, 172, 145, 0.9);
+  }
+  .omowhite-color::after {
+    background-color: rgba(210, 224, 250, 0.9);
+  }
+  .merchant-coco-size {
+    height: 180px;
+    width: 100%;
+  }
 }

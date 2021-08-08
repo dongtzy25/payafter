@@ -245,6 +245,10 @@ const Home = () => {
                 rounded 
                 text-white
                 mt-12
+                hover:bg-red-500
+                hover:shadow-md
+                transition-all
+                duration-300
             ">
                 See more merchants
           </button>
@@ -393,6 +397,10 @@ const Home = () => {
                   disabled:opacity-75
                   lg:mx-0 mx-auto
                   lg:mt-0 mt-4
+                  hover:bg-red-500
+                  hover:shadow-md
+                  transition-all
+                  duration-300
                   "> 
                  {loading ? "Sending....": "Submit"}
                 </button>
@@ -417,6 +425,10 @@ const Home = () => {
                 rounded 
                 text-white
                 mt-12
+                hover:bg-red-500
+                hover:shadow-md
+                transition-all
+                duration-300
             ">
                 Apply as merchant
           </button>
