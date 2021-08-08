@@ -123,7 +123,7 @@ const Merchant = () =>{
                             </div>
                             <div 
                             onClick={()=> { Router.push('/merchants/chuwi') }}
-                            className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                            className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
                                         src={chuwi}
