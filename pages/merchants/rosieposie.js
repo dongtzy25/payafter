@@ -10,7 +10,7 @@ import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
 
 
-const roisePage = () =>{
+const RoisePage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -120,4 +120,4 @@ const roisePage = () =>{
     )
 }
 
-export default roisePage;
+export default RoisePage;

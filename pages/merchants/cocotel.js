@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Modal } from '../../component/modal'
 // import { useSpring, animated } from 'react-spring'
 
-const cocotelPage = () =>{
+const CocotelPage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -121,4 +121,4 @@ const cocotelPage = () =>{
     )
 }
 
-export default cocotelPage;
+export default CocotelPage;

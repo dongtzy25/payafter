@@ -12,7 +12,7 @@ import { useSpring, animated } from 'react-spring'
 import axios from 'axios';
 
 
-const ohcropPage = () =>{
+const OhcropPage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -146,4 +146,4 @@ const ohcropPage = () =>{
 
 
 
-export default ohcropPage;
+export default OhcropPage;

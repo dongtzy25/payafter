@@ -12,7 +12,7 @@ import Link from "next/link";
 import { Modal } from '../../component/modal'
 
 
-const omoWhitePage = () =>{
+const OmoWhitePage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -123,4 +123,4 @@ const omoWhitePage = () =>{
     )
 }
 
-export default omoWhitePage;
+export default OmoWhitePage;
