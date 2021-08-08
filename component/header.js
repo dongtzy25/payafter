@@ -77,7 +77,7 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            px-4
+            md:px-0 px-4
             mx-auto
             "
         >
@@ -137,7 +137,7 @@ const Header  = ()  => {
                     transition-all
                     duration-300
                 ">
-                    Apply as merchant
+                    Be our partner now!
                 </button>
             </div> 
         </div>    
@@ -229,7 +229,7 @@ const Header  = ()  => {
                     transition-all
                     duration-300
                 ">
-                    Apply as merchant
+                    Be our partner now!
                 </button>
             </div> 
         </div>

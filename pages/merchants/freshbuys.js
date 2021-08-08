@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Freshbuys from '../../public/assets/images/freshbuys/freshbuys.png'
-import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
+import Freshbuys1 from '../../public/assets/images/freshbuys/freshbuys-1.png'
 import Link from "next/link";
 import { useSpring, animated } from 'react-spring'
 import { Modal } from '../../component/modal'
@@ -27,14 +27,15 @@ const FreshbuysPage = () =>{
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner fresh-color">
-                <animated.div style={animation} className="lg:w-6/12 w-full h-full text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-24 -right-64 transform scale-105 z-0 lg:block hidden">
+                <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
                         src={Freshbuys}
                         alt="Logo"
+                        layout="fill"
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 w-full text-left xl:pl-28 md:pl-20 pl-12 pr-4 z-10">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
                         <h1 className="text-5xl font-bold">Buy fresh goods from</h1>
                         <h1 className="text-5xl font-bold mt-4">FreshBuys using PayAfter</h1>
                         <p className="mt-4">Don’t let those fresh items perish in your cart. Checkout now following these easy steps:</p>
@@ -64,6 +65,7 @@ const FreshbuysPage = () =>{
                             </div>
                         </div>
                     </div>
+                   
                 </div>
             </div> 
             <div className="w-full bg-gray-50 py-12 ">
@@ -78,9 +80,9 @@ const FreshbuysPage = () =>{
                         Plan out your produce with Fresh Buys. We can get the appropriate amount of vegetables to you fresh. Let’s help our farmers and frontliners by being healthy.
                         </p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-coco-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-fresh-size transform transition duration-500 hover:scale-105">
                                     <Image
-                                        src={CocoTel1}
+                                        src={Freshbuys1}
                                         alt="Logo"
                                         layout="fill"
                                     />

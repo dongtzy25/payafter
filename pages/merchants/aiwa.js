@@ -1,16 +1,17 @@
 import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CocoTel from '../../public/assets/images/cocotel/cocotel.png'
-import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
-import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
-import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
+import Aiwa from '../../public/assets/images/aiwa/aiwa.png'
+import Aiwa1 from '../../public/assets/images/aiwa/aiwa-01.png'
+import Aiwa2 from '../../public/assets/images/aiwa/aiwa-02.png'
+import Aiwa3 from '../../public/assets/images/aiwa/aiwa-03.png'
 import Link from "next/link";
 
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
 
-const CocotelPage = () =>{
+
+const AiwaPage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -29,25 +30,19 @@ const CocotelPage = () =>{
     return (
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
-            <div className="w-full py-24 relative overflow-hidden custom-banner cocotel-color">
-                {/* <animated.div style={animation} className="lg:w-6/12 w-full h-full text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-24 -right-64 transform scale-105 z-0 lg:block hidden">
+            <div className="w-full py-24 relative overflow-hidden custom-banner aiwa-color">
+                 <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
-                        src={CocoTel}
-                        alt="Logo"
-                    />
-                </animated.div> */}
-                <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
-                    <Image
-                        src={CocoTel}
+                        src={Aiwa}
                         alt="Logo"
                         layout="fill"
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
-                        <h1 className="text-5xl font-bold">Book an escape at</h1>
-                        <h1 className="text-5xl font-bold mt-4">Cocotel with PayAfter!</h1>
-                        <p className="mt-4">Follow these five easy steps to start your beautiful adventures at Cocotel:</p>
+                        <h1 className="text-5xl font-bold">Legendary quality.</h1> 
+                        <h1 className="text-5xl font-bold mt-4">Premium Japan technology</h1>
+                        <p className="mt-4">Avail Aiwa products now for greater convenience and quality of life with PayAfter.</p>
                         <div className="relative block lg:w-9/12 md:w-9/12 border-solid">
                             <div className="relative pl-12 mt-4">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">1</span>
@@ -58,15 +53,15 @@ const CocotelPage = () =>{
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                <p className="mb-4 pt-1">Go to <Link href="https://www.cocotel.com.ph"><a className="text-blue-500 underline"  >www.cocotel.com.ph</a></Link> and select your preferred booking dates.</p>
-                            </div>
+                                <p className="mb-4 pt-1">Visit Aiwa Philippines’ Facebook page  <Link href="https://www.facebook.com/AiwaPhilippines/"><a className="text-blue-500 underline"  >@AiwaPhilippines</a></Link></p>
+                            </div>  
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
-                                <p className="mb-4 pt-1">Fill in checkout information and follow checkout instructions as needed.</p>
+                                <p className="mb-4 pt-1">Send them a direct message via Facebook Messenger that contains your order details. Don’t forget to indicate PayAfter as your payment method.</p>
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">4</span>
-                                <p className="mb-4 pt-1">Choose PayAfter as your payment method.</p>
+                                <p className="mb-4 pt-1">Once your order has been confirmed, Aiwa Philippines will send to you the PayAfter link.</p>
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">5</span>
@@ -79,26 +74,27 @@ const CocotelPage = () =>{
             <div className="w-full bg-gray-50 py-12 ">
                 <div className="container mx-auto  text-center">
                     <div className="w-4/5 mx-auto">
-                        <h1 className="text-4xl font-bold">About Cocotel</h1>
-                        <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Cocotel is a technology hotel and property management aggregator company aiming to empower tourism in the Philippines by partnering with local hotels and resort owners by offering quality and affordable three-star accommodation at a fraction of a cost. From overnight stays to long weekends, enjoy the scent of salty sea air and the comfort of a cozy beach haven paradise.</p>
+                        <h1 className="text-4xl font-bold">About Aiwa</h1>
+                        <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">The passionate pursuit of bringing people together around entertainment. We have a simple formula for delivering good quality - our passion for quality rooted in our Japanese heritage, our money into the highest quality components, and our world class customer service.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-coco-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105
+                            ">
                                     <Image
-                                        src={CocoTel1}
+                                        src={Aiwa1}
                                         alt="Logo"
                                         layout="fill"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-coco-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
-                                        src={CocoTel2}
+                                        src={Aiwa2}
                                         alt="Logo"
                                         layout="fill"
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-coco-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                 <Image
-                                    src={CocoTel3}
+                                    src={Aiwa3}
                                     alt="Logo"
                                     layout="fill"
                                 />
@@ -119,7 +115,7 @@ const CocotelPage = () =>{
                                 transition-all
                                 duration-300
                             ">
-                                Visit Cocotel’s website
+                                Visit Aiwa’s website
                         </button>
                     </div>
                 </div>
@@ -128,4 +124,6 @@ const CocotelPage = () =>{
     )
 }
 
-export default CocotelPage;
+
+
+export default AiwaPage;

@@ -37,6 +37,10 @@ body {
   width: 352px;
   height: 352px;
 }
+.merchant-fresh-size {
+  width: 702px;
+  height: 314px;
+}
 .ModalWrapperAlert {
   max-width: 60%;
   height: 100%;
@@ -97,6 +101,34 @@ body {
 .omowhite-color::after {
   background-color: rgba(210, 224, 250, 1);
 }
+.itel-color::after {
+  background-color: rgba(114, 207, 212, 1);
+}
+.jbl-color::after {
+  background-color: rgba(255, 52, 0, 1);
+}
+.haier-color::after {
+  background-color: rgba(10, 92, 168, 1);
+}
+.chuwi-color::after {
+  background-color: rgba(255, 107, 0, 1);
+}
+.aiwa-color::after {
+  background-color: rgba(119, 20, 41, 1);
+}
+.custom-right-width {
+  width: 19% !important;
+  right: 11% !important;
+  height: 80% !important;
+}
+.custom-imagepos {
+  width: 880px;
+  height: 550px;
+  right: -10%;
+}
+.custom-height {
+  height: 652px !important;
+}
 @media screen and (max-width: 600px) {
   .ModalWrapperAlert {
     max-width: 80%;
@@ -120,8 +152,62 @@ body {
   .omowhite-color::after {
     background-color: rgba(210, 224, 250, 0.9);
   }
+  .itel-color::after {
+    background-color: rgba(114, 207, 212, 0.9);
+  }
+  .jbl-color::after {
+    background-color: rgba(255, 52, 0, 0.9);
+  }
+  .haier-color::after {
+    background-color: rgba(10, 92, 168, 0.9);
+  }
+  .chuwi-color::after {
+    background-color: rgba(255, 107, 0, 0.9);
+  }
+  .aiwa-color::after {
+    background-color: rgba(119, 20, 41, 0.9);
+  }
   .merchant-coco-size {
     height: 180px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .merchant-fresh-size {
+    width: 100%;
+    height: 314px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1038px) {
+  .custom-imagepos {
+    right: -45%;
+    height: 520px;
+  }
+}
+@media screen and (min-width: 1040px) and (max-width: 1189px) {
+  .custom-imagepos {
+    right: -42%;
+    height: 520px;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1249px) {
+  .custom-imagepos {
+    right: -30%;
+    height: 520px;
+  }
+}
+@media screen and (min-width: 1250px) and (max-width: 1319px) {
+  .custom-imagepos {
+    right: -25%;
+    height: 520px;
+  }
+}
+
+@media screen and (min-width: 1320px) and (max-width: 1426px) {
+  .custom-imagepos {
+    right: -15%;
+    height: 520px;
   }
 }

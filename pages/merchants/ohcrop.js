@@ -52,14 +52,21 @@ const OhcropPage = () =>{
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner ohcrop-color">
-                <animated.div style={animation,{width: '19%', right: '11%'}} className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden">
+                {/* <animated.div style={animation,{width: '19%', right: '11%'}} className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden">
                     <Image
                         src={OhCrop}
                         alt="Logo"
                     />
+                </animated.div> */}
+                 <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
+                    <Image
+                        src={OhCrop}
+                        alt="Logo"
+                        layout="fill"
+                    />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 w-full text-left xl:pl-28  md:pl-20 pl-12 z-10">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
                         <h1 className="text-5xl font-bold">Make the switch with</h1>
                         <h1 className="text-5xl font-bold mt-4">Oh Crop! and PayAfter</h1>
                         <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
