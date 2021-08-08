@@ -8,7 +8,7 @@ import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
 import Link from "next/link";
 
 import { Modal } from '../../component/modal'
-import { useSpring, animated } from 'react-spring'
+// import { useSpring, animated } from 'react-spring'
 
 const cocotelPage = () =>{
     const [showModal, setShowModal] = useState(false);
@@ -18,24 +18,24 @@ const cocotelPage = () =>{
         document.querySelector("body").style.overflow = "hidden";
     };
 
-    const animation = useSpring({
-        from: { transform: 'translateX(100%)' },
-        to: { transform: 'translateX(0)' },
-        config: {
-            duration: 300,
-            tension: 500, friction: 80
-        },
-      });
+    // const animation = useSpring({
+    //     from: { transform: 'translateX(100%)' },
+    //     to: { transform: 'translateX(0)' },
+    //     config: {
+    //         duration: 300,
+    //         tension: 500, friction: 80
+    //     },
+    //   });
     return (
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner cocotel-color">
-                <animated.div style={animation} className="lg:w-6/12 w-full h-full text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-24 -right-64 transform scale-105 z-0 lg:block hidden">
+                <div className="lg:w-6/12 w-full h-full text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-24 -right-64 transform scale-105 z-0 lg:block hidden">
                     <Image
                         src={CocoTel}
                         alt="Logo"
                     />
-                </animated.div>
+                </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 w-full text-left xl:pl-28 md:pl-20 pl-12 pr-4 z-10">
                         <h1 className="text-5xl font-bold">Book an escape at</h1>
