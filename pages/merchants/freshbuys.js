@@ -8,7 +8,7 @@ import { useSpring, animated } from 'react-spring'
 import { Modal } from '../../component/modal'
 
 
-const Freshbuys = () =>{
+const FreshbuysPage = () =>{
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -110,4 +110,4 @@ const Freshbuys = () =>{
         </Layout>
     )
 }
-export default Freshbuys;
+export default FreshbuysPage;
