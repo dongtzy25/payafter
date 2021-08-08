@@ -77,7 +77,7 @@ const Merchant = () =>{
                                 >
                                 <option value="">Select category</option>
                                 <option value="beauty">Beauty</option>
-                                <option value="electronics">Electronics</option>
+                                <option value="electronics">Electronics & gadgets</option>
                                 <option value="food">Food</option>
                                 <option value="hotelsandresorts">Hotels and resorts</option>
                             </select>
