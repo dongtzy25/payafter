@@ -1,14 +1,14 @@
-import React, { useRef, useEffect, useCallback,useState } from 'react'
-import { useSpring, animated } from 'react-spring'
-import styled from 'styled-components'
-import Illustration from '../public/assets/images/Illustration-modal.svg'
+import React, { useRef, useEffect, useCallback,useState } from 'react';
+import { useSpring, animated } from 'react-spring';
+import styled from 'styled-components';
+import Illustration from '../public/assets/images/Illustration-modal.svg';
 
-import Image from 'next/image'
-import { useForm } from "react-hook-form"
-import homestyle from '../styles/Home.module.css'
+import Image from 'next/image';
+import { useForm } from "react-hook-form";
+import homestyle from '../styles/Home.module.css';
 
-import { Alert } from '../component/alert'
-import axios from 'axios'
+import { Alert } from '../component/alert';
+import axios from 'axios';
 
 
 const Background = styled.div`

@@ -1,4 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { useSpring, animated } from 'react-spring'
+
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Omowhite from '../../public/assets/images/omowhite/omowhite.png'
@@ -8,7 +10,6 @@ import Omowhite3 from '../../public/assets/images/omowhite/omowhite-03.png'
 import Link from "next/link";
 
 import { Modal } from '../../component/modal'
-import { useSpring, animated } from 'react-spring'
 
 
 const omoWhitePage = () =>{
