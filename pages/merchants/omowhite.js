@@ -31,7 +31,8 @@ const omoWhitePage = () =>{
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner omowhite-color">
-                <animated.div style={animation}  className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden" style={{width: '19%', right: '11%'}}>
+                <animated.div style={animation,{width: '19%', right: '11%'}}  className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden" 
+                >
                     <Image
                         src={Omowhite}
                         alt="Logo"
