@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React , {useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Rosie from '../../public/assets/images/rosie/rosieposie.png'
@@ -8,15 +8,38 @@ import Rosie3 from '../../public/assets/images/rosie/rosieposie-03.png'
 import Link from "next/link";
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
+import axios from 'axios';
+
 
 
 const RoisePage = () =>{
     const [showModal, setShowModal] = useState(false);
+    const [loadedImage, setLoadedImage] = useState([]);
+    const loadImaged = [];
 
     const openModal = () => {
         setShowModal(prev => !prev);
         document.querySelector("body").style.overflow = "hidden";
     };
+
+    const getImageInstagram = async () => {
+        const result = await axios.get("/api/getImage",{
+            params: {
+                id: 39649340411
+            }
+          });
+        if(result.status == 200){
+            const { edges } = result.data.data.user.edge_owner_to_timeline_media
+            edges.forEach(element => {
+                loadImaged.push(element.node.thumbnail_src)
+            });
+            setLoadedImage(loadImaged)
+        }
+    };
+
+    useEffect(() => {
+        getImageInstagram();
+    }, [])
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -81,7 +104,7 @@ const RoisePage = () =>{
                         <h1 className="text-4xl font-bold">About Rosie Posie</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Rosie Posie offers a gentle whitening skin set that’s got all the products you need on the daily. Not to mention, Rosie Posie combines all natural ingredients delivering the highest potency of skin whitening without having to use harsh chemicals. Plus, it’s Halal-certified, cruelty-free, non-GMO, and paraben-free.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie1}
                                         alt="Logo"
@@ -101,7 +124,21 @@ const RoisePage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div>
+                            </div> */}
+                              { loadedImage.map( (item, index) => {
+                                return(
+                                    <>
+                                        <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                                            <Image
+                                                src={item}
+                                                alt="Logo"
+                                                layout="fill"
+                                                className="rounded-lg"
+                                            />
+                                         </div>   
+                                    </>
+                                ) 
+                            })}
                         </div>
                         <button 
                             onClick={() =>openModal()}

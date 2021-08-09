@@ -12,6 +12,5 @@ export default async(_req: NextApiRequest, res: NextApiResponse) => {
       }
     }
   );
-  console.log(_req)
   return res.status(result.status).send(result.data);
 };

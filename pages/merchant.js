@@ -17,7 +17,7 @@ import freshbuyers from '../public/assets/images/Merchant Brand Logos/freshbuys-
 import aiwa from '../public/assets/images/Merchant Brand Logos/download.png'
 import rosieposie from '../public/assets/images/Merchant Brand Logos/rosie posie.jpg'
 import itel from '../public/assets/images/Merchant Brand Logos/itel.png'
-import jbl from '../public/assets/images/Merchant Brand Logos/jbl.svg'
+import jbl from '../public/assets/images/Merchant Brand Logos/jbl.png'
 
 
 const Merchant = () =>{
@@ -155,7 +155,9 @@ const Merchant = () =>{
                         <div className="lg:flex  lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div 
                             onClick={()=> { Router.push('/merchants/jbl') }}
+                            style={{backgroundColor: 'rgb(254,88,42)'}}
                             className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                            
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
                                         src={jbl}
@@ -168,6 +170,17 @@ const Merchant = () =>{
                     <div className="block mt-12 food">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Food</h1>
                         <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div 
+                            onClick={()=> { Router.push('/merchants/freshbuys') }}
+                            className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                            style={{backgroundColor:'#F6EEDA'}}>
+                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                    <Image
+                                        src={freshbuyers}
+                                        alt="Logo"
+                                    />
+                                </div>
+                            </div>
                             <div
                             onClick={()=> { Router.push('/merchants/ohcrop') }}
                             className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
@@ -175,17 +188,6 @@ const Merchant = () =>{
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
                                         src={ohCrop}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div 
-                            onClick={()=> { Router.push('/merchants/freshbuys') }}
-                            className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
-                            style={{backgroundColor:'#F6EEDA'}}>
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={freshbuyers}
                                         alt="Logo"
                                     />
                                 </div>

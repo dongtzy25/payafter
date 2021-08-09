@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from 'react-spring'
 
 import Layout from '../../layout/layout'
@@ -10,15 +10,37 @@ import Omowhite3 from '../../public/assets/images/omowhite/omowhite-03.png'
 import Link from "next/link";
 
 import { Modal } from '../../component/modal'
+import axios from 'axios';
 
 
 const OmoWhitePage = () =>{
     const [showModal, setShowModal] = useState(false);
+    const [loadedImage, setLoadedImage] = useState([]);
+    const loadImaged = [];
 
     const openModal = () => {
         setShowModal(prev => !prev);
         document.querySelector("body").style.overflow = "hidden";
     };
+
+    const getImageInstagram = async () => {
+        const result = await axios.get("/api/getImage",{
+            params: {
+                id: 6061382140
+            }
+          });
+        if(result.status == 200){
+            const { edges } = result.data.data.user.edge_owner_to_timeline_media
+            edges.forEach(element => {
+                loadImaged.push(element.node.thumbnail_src)
+            });
+            setLoadedImage(loadImaged)
+        }
+    };
+
+    useEffect(() => {
+        getImageInstagram();
+    }, [])
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -27,6 +49,7 @@ const OmoWhitePage = () =>{
             tension: 500, friction: 80
         },
       });
+    //   6061382140
     return (
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
@@ -84,7 +107,7 @@ const OmoWhitePage = () =>{
                         <h1 className="text-4xl font-bold">About OMO! White™</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">OMO! White™ is a Korean-inspired brand that has its finger on the pulse of asian beauty. Embracing the spirit of innovation, they bring the best and latest trends in skincare. Expect only effective products, playful packaging, and a unique beauty experience.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Omowhite1}
                                         alt="Logo"
@@ -104,7 +127,21 @@ const OmoWhitePage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div>
+                            </div> */}
+                              { loadedImage.map( (item, index) => {
+                                return(
+                                    <>
+                                        <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                                            <Image
+                                                src={item}
+                                                alt="Logo"
+                                                layout="fill"
+                                                className="rounded-lg"
+                                            />
+                                         </div>   
+                                    </>
+                                ) 
+                            })}
                         </div>
                         <button 
                             onClick={() =>openModal()}

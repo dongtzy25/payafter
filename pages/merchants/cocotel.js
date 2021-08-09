@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import CocoTel from '../../public/assets/images/cocotel/cocotel.png'
@@ -9,9 +9,11 @@ import Link from "next/link";
 
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
+import axios from 'axios';
 
 const CocotelPage = () =>{
     const [showModal, setShowModal] = useState(false);
+ 
 
     const openModal = () => {
         setShowModal(prev => !prev);
@@ -26,6 +28,9 @@ const CocotelPage = () =>{
             tension: 500, friction: 80
         },
       });
+
+   
+
     return (
         <Layout>
             <Modal showModal={showModal} setShowModal={setShowModal} />
