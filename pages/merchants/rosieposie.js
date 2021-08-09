@@ -29,7 +29,7 @@ const RoisePage = () =>{
             }
           });
         if(result.status == 200){
-            const { edges } = result.data.data.user.edge_owner_to_timeline_media
+            const { edges } = result.data?.data?.user?.edge_owner_to_timeline_media
             edges.forEach(element => {
                 loadImaged.push(element.node.thumbnail_src)
             });
