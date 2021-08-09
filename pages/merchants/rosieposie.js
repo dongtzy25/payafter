@@ -104,7 +104,9 @@ const RoisePage = () =>{
                         <h1 className="text-4xl font-bold">About Rosie Posie</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Rosie Posie offers a gentle whitening skin set that’s got all the products you need on the daily. Not to mention, Rosie Posie combines all natural ingredients delivering the highest potency of skin whitening without having to use harsh chemicals. Plus, it’s Halal-certified, cruelty-free, non-GMO, and paraben-free.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                           { loadImaged.length < 0 ?
+                           (<>
+                           <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie1}
                                         alt="Logo"
@@ -124,8 +126,9 @@ const RoisePage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div> */}
-                              { loadedImage.map( (item, index) => {
+                            </div>
+                            </>)
+                           : (loadedImage.map( (item, index) => {
                                 return(
                                     <>
                                         <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
@@ -138,7 +141,7 @@ const RoisePage = () =>{
                                          </div>   
                                     </>
                                 ) 
-                            })}
+                            }))}
                         </div>
                         <button 
                             onClick={() =>openModal()}
