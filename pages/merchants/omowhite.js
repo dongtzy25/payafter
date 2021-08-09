@@ -107,7 +107,7 @@ const OmoWhitePage = () =>{
                         <h1 className="text-4xl font-bold">About OMO! White™</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">OMO! White™ is a Korean-inspired brand that has its finger on the pulse of asian beauty. Embracing the spirit of innovation, they bring the best and latest trends in skincare. Expect only effective products, playful packaging, and a unique beauty experience.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Omowhite1}
                                         alt="Logo"
@@ -127,8 +127,8 @@ const OmoWhitePage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div> */}
-                              { loadedImage.map( (item, index) => {
+                            </div>
+                              {/* { loadedImage.map( (item, index) => {
                                 return(
                                     <>
                                         <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
@@ -141,7 +141,7 @@ const OmoWhitePage = () =>{
                                          </div>   
                                     </>
                                 ) 
-                            })}
+                            })} */}
                         </div>
                         <button 
                             onClick={() =>openModal()}

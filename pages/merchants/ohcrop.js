@@ -105,7 +105,7 @@ const OhcropPage = () =>{
                         <h1 className="text-4xl font-bold">About Oh Crop!</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Oh Crop! is committed to release recipes and food ventions that are not only aesthetically instagrammable, but are also truly delicious. They are here to debunk the naysayers who make the road to healthy dark and bleak. Oh Crop! will be the light right up your grocery alley and will make sure your palate is satisfied.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={OhCrop1}
@@ -126,8 +126,8 @@ const OhcropPage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div> */}
-                            { loadedImage.map( (item, index) => {
+                            </div>
+                            {/* { loadedImage.map( (item, index) => {
                                 return(
                                     <>
                                         <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
@@ -140,7 +140,7 @@ const OhcropPage = () =>{
                                          </div>   
                                     </>
                                 ) 
-                            })}
+                            })} */}
                         </div>
                         <button 
                             onClick={() =>openModal()}
