@@ -29,7 +29,15 @@ const RoisePage = () =>{
             }
           });
         if(result.status == 200){
-            const { edges } = result.data?.data?.user?.edge_owner_to_timeline_media
+            const { 
+                data:{
+                    user:{
+                        edge_owner_to_timeline_media:{
+                            edges
+                        }
+                    }
+                }
+            } = result.data
             edges.forEach(element => {
                 loadImaged.push(element.node.thumbnail_src)
             });
@@ -130,16 +138,15 @@ const RoisePage = () =>{
                             </>)
                            : (loadedImage.map( (item, index) => {
                                 return(
-                                    <>
-                                        <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
-                                            <Image
-                                                src={item}
-                                                alt="Logo"
-                                                layout="fill"
-                                                className="rounded-lg"
-                                            />
-                                         </div>   
-                                    </>
+                                <div key={index} className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                                    <Image
+                                        src={item}
+                                        alt="Logo"
+                                        layout="fill"
+                                        className="rounded-lg"
+                                    />
+                                    </div>   
+                                 
                                 ) 
                             }))}
                         </div>
