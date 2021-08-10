@@ -166,7 +166,7 @@ const Home = () => {
           <h1 className="lg:text-6xl text-4xl font-bold">Merchants</h1>
           <p className="text-base mt-4 mx-auto xl:w-1/3 lg:w-2/5">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p>
           <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0  flex-row justify-center lg:space-x-8 mt-12 lg:text-auto text-center">
-            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#EADDBB'}}>
+            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#EADDBB'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={ohCrop}
@@ -174,7 +174,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
+            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={chuwi}
@@ -182,7 +182,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#F0F0F0'}}>
+            <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F0F0F0'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={cocologo}
@@ -190,7 +190,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
+            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
                 <Image
                     src={omowhite}
@@ -201,7 +201,7 @@ const Home = () => {
           </div>
 
           <div className="lg:flex flex-row justify-center lg:space-x-8 mt-12 md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0">
-            <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
+            <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={Haierlogo}
@@ -209,7 +209,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size" style={{backgroundColor:'#F6EEDA'}}>
+            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F6EEDA'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={freshbuyers}
@@ -217,7 +217,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex bg-white items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
+            <div className="shadow-lg flex bg-white items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={aiwa}
@@ -225,7 +225,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size">
+            <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
                 <Image
                     src={rosieposie}
