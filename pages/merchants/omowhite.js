@@ -23,7 +23,7 @@ const OmoWhitePage = () =>{
     };
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
-        to: { transform: 'translateX(0)',right: '10%' },
+        to: { transform: 'translateX(0)',right: '11%' },
         config: {
             duration: 300,
             tension: 500, friction: 80
