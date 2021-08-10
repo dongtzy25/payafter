@@ -8,49 +8,19 @@ import Rosie3 from '../../public/assets/images/rosie/rosieposie-03.png'
 import Link from "next/link";
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
-import axios from 'axios';
 
 
-
-const RoisePage = () =>{
+const RoisePage = ({result}) =>{
     const [showModal, setShowModal] = useState(false);
-    const [loadedImage, setLoadedImage] = useState([]);
-    const loadImaged = [];
 
     const openModal = () => {
         setShowModal(prev => !prev);
         document.querySelector("body").style.overflow = "hidden";
     };
 
-    const getImageInstagram = async () => {
-        const result = await axios.get("/api/getImage",{
-            params: {
-                id: 39649340411
-            }
-          });
-        if(result.status == 200){
-            const { 
-                data:{
-                    user:{
-                        edge_owner_to_timeline_media:{
-                            edges
-                        }
-                    }
-                }
-            } = result.data
-            edges.forEach(element => {
-                loadImaged.push(element.node.thumbnail_src)
-            });
-            setLoadedImage(loadImaged)
-        }
-    };
-
-    useEffect(() => {
-        getImageInstagram();
-    }, [])
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
-        to: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(0)',right: '10%' },
         config: {
             duration: 300,
             tension: 500, friction: 80
@@ -66,23 +36,24 @@ const RoisePage = () =>{
                         alt="Logo"
                     />
                 </animated.div> */}
-                <animated.div style={animation} className="custom-imagepos custom-right-width absolute top-24 transform scale-105 z-0 lg:flex hidden">
-                    <Image
-                        src={Rosie}
-                        alt="Logo"
-                        layout="fill"
-                    />
+                <animated.div style={animation} className="absolute top-20 lg:flex hidden">
+                        <Image
+                            src={Rosie}
+                            alt="Logo"
+                            width={320}
+                            height={630}
+                        />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
-                        <h1 className="text-5xl font-bold">Get your Rosie Posie</h1> 
-                        <h1 className="text-5xl font-bold mt-4">skincare with PayAfter</h1>
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 pr-4 z-10">
+                        <h1 className="lg:text-5xl text-4xl font-bold">Get your Rosie Posie</h1> 
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4">skincare with PayAfter</h1>
                         <p className="mt-4">Spoil your self and practice self-care by availing Rosie Posie Kit with PayAfter. Make sure to follow these steps:</p>
                         <div className="relative block lg:w-9/12 md:w-9/12 border-solid">
                             <div className="relative pl-12 mt-4">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">1</span>
                                 <p className="mb-4 pt-1">Activate your PayAfter membership.</p>
-                                <div className=" p-4 bg-gray-100 rounded shadow-sm">
+                                <div className=" p-4 bg-gray-100 rounded">
                                     <div>To enjoy perks and benefits, make sure your company is in partnership with PayAfter.</div>
                                 </div>
                             </div>
@@ -112,43 +83,29 @@ const RoisePage = () =>{
                         <h1 className="text-4xl font-bold">About Rosie Posie</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Rosie Posie offers a gentle whitening skin set that’s got all the products you need on the daily. Not to mention, Rosie Posie combines all natural ingredients delivering the highest potency of skin whitening without having to use harsh chemicals. Plus, it’s Halal-certified, cruelty-free, non-GMO, and paraben-free.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                           {/* { loadImaged.length < 0 &&
-                           (<> */}
-                           <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                         
+                           <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie1}
                                         alt="Logo"
                                         layout="fill"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie2}
                                         alt="Logo"
                                         layout="fill"
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Rosie3}
                                     alt="Logo"
                                     layout="fill"
                                 />
                             </div>
-                            {/* </>) */}
-                        {/* //    : (loadedImage.map( (item, index) => { 
-                        //         return(
-                        //         <div key={index} className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
-                        //             <Image
-                        //                 src={item}
-                        //                 alt="Logo"
-                        //                 layout="fill"
-                        //                 className="rounded-lg"
-                        //             />
-                        //             </div>   
-                                 
-                        //         ) 
-                        //     }))}*/}
+                      
                         </div>
                         <button 
                             onClick={() =>openModal()}

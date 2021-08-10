@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Illustration from '../public/assets/images/Illustration-modal.svg';
 
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { useForm } from "react-hook-form";
 import homestyle from '../styles/Home.module.css';
 
@@ -192,11 +194,10 @@ export const Modal = ({ showModal, setShowModal }) => {
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                           <label htmlFor="number" className="block text-base mb-2">Mobile number</label>
-                          <div className="flex items-center justify-between relative">
+                          <div className="flex items-center justify-between relative ">
                               <span 
-                               className= {errors.number 
-                                ? "bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center flex items-center pointer-events-none border-red-500 border-2 border-r-0 rounded-r-none" 
-                                : "bg-gray-100 absolute top-0 left-0 h-full rounded text-black px-2 text-center flex items-center pointer-events-none"} 
+                               
+                               className= "bg-gray-100 block top-0 left-0 h-full text-black  text-center flex items-center pointer-events-none p-3 border border-r-0 rounded-l"
                              >+63</span>
                               <input 
                               {...register("number", { required: true,pattern: /^[789][0-9]{9}$/  })}
@@ -205,8 +206,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                               type="text" 
                               autoComplete="off" 
                               className= {errors.number 
-                                ? "w-full rounded px-4 py-3 pl-14 text-black custom-border-color " 
-                                : "w-full rounded px-4 py-3 pl-14 text-black border"}
+                                ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                                : "w-full rounded-r px-4 py-3 text-black border"}
                               placeholder="9xxxxxxxxx"
                               required />
                                
@@ -304,7 +305,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                           <div className={homestyle.formgroup2}>
                             <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                             <label htmlFor="agree" className="flex items-center">
-                              <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span>
+                              {/* <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span> */}
+                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500"><u>Terms & Conditions</u></a></Link>  and  <Link href="/privacy"><a className="text-red-500"><u> Privacy Policy</u></a></Link>.</span>
                             </label>
                           </div>
                           <button 

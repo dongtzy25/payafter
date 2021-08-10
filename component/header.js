@@ -137,12 +137,12 @@ const Header  = ()  => {
                     transition-all
                     duration-300
                 ">
-                    Be our partner now!
+                   Apply as merchant
                 </button>
             </div> 
         </div>    
       </nav>
-      <div className="fixed top-0 left-0 z-10 h-screen flex transition-all ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
+      <div className="fixed top-0 left-0 z-50 h-screen flex transition-all ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
         <div className="bg-white p-12 w-10/12 h-screen shadow-2xl transition-all duration-500" style={{ "opacity": mobileOpen ? "1" : "0"}}>
             <ul className="list-none flex items-start flex-col space-y-4">
                 <li className="inline-block lg:mr-8 mr-4 relative mb-4">
@@ -229,7 +229,7 @@ const Header  = ()  => {
                     transition-all
                     duration-300
                 ">
-                    Be our partner now!
+                    Apply as merchant
                 </button>
             </div> 
         </div>

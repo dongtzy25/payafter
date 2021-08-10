@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSpring, animated } from 'react-spring'
 
 import Layout from '../../layout/layout'
@@ -10,7 +10,6 @@ import Omowhite3 from '../../public/assets/images/omowhite/omowhite-03.png'
 import Link from "next/link";
 
 import { Modal } from '../../component/modal'
-import axios from 'axios';
 
 
 const OmoWhitePage = () =>{
@@ -22,28 +21,9 @@ const OmoWhitePage = () =>{
         setShowModal(prev => !prev);
         document.querySelector("body").style.overflow = "hidden";
     };
-
-    const getImageInstagram = async () => {
-        const result = await axios.get("/api/getImage",{
-            params: {
-                id: 6061382140
-            }
-          });
-        if(result.status == 200){
-            const { edges } = result.data.data.user.edge_owner_to_timeline_media
-            edges.forEach(element => {
-                loadImaged.push(element.node.thumbnail_src)
-            });
-            setLoadedImage(loadImaged)
-        }
-    };
-
-    useEffect(() => {
-        getImageInstagram();
-    }, [])
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
-        to: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(0)',right: '10%' },
         config: {
             duration: 300,
             tension: 500, friction: 80
@@ -61,17 +41,18 @@ const OmoWhitePage = () =>{
                         alt="Logo"
                     />
                 </animated.div> */}
-                <animated.div style={animation} className="custom-imagepos custom-right-width absolute top-24 transform scale-105 z-0 lg:flex hidden">
-                    <Image
-                        src={Omowhite}
-                        alt="Logo"
-                        layout="fill"
-                    />
+                <animated.div style={animation} className="absolute top-20 lg:flex hidden">
+                        <Image
+                            src={Omowhite}
+                            alt="Logo"
+                            width={320}
+                            height={630}
+                        />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
-                        <h1 className="text-5xl font-bold">Achieve that korean</h1>
-                        <h1 className="text-5xl font-bold mt-4">skin with OMO! White™</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold">Achieve that korean</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4">skin with OMO! White™</h1>
                         <p className="mt-4">Start investing in skincare regimens with PayAfter. Make sure to follow these five easy steps:</p>
                         <div className="relative block lg:w-9/12 md:w-9/12 border-solid">
                             <div className="relative pl-12 mt-4">
@@ -128,20 +109,6 @@ const OmoWhitePage = () =>{
                                     layout="fill"
                                 />
                             </div>
-                              {/* { loadedImage.map( (item, index) => {
-                                return(
-                                    <>
-                                        <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
-                                            <Image
-                                                src={item}
-                                                alt="Logo"
-                                                layout="fill"
-                                                className="rounded-lg"
-                                            />
-                                         </div>   
-                                    </>
-                                ) 
-                            })} */}
                         </div>
                         <button 
                             onClick={() =>openModal()}

@@ -30,8 +30,23 @@ const Merchant = () =>{
 
     const _handleChange = (event) => {
        if(event.target.value != ''){
-         window.scrollTo({ top: window.scrollY + document.querySelector(`.${event.target.value}`).getBoundingClientRect().top - 120, behavior: 'smooth' })
-
+        //  window.scrollTo({ top: window.scrollY + document.querySelector(`.${event.target.value}`).getBoundingClientRect().top - 120, behavior: 'smooth' })
+        const content = document.querySelectorAll('.category');
+         if(event.target.value == 'all'){
+            content.forEach((c)=>{
+                c.classList.remove('hidden')
+                c.classList.add('block')
+            });
+         }else{
+            content.forEach((c)=>{
+                if(c.classList.value.includes(event.target.value)){
+                    c.classList.remove('hidden')
+                    c.classList.add('block')
+                }else{
+                    c.classList.add('hidden')
+                }
+            });
+         }
        }
     }
     return (
@@ -75,7 +90,7 @@ const Merchant = () =>{
                                 style={{backgroundColor: '#fff'}}
                                 onChange={_handleChange}
                                 >
-                                <option value="">Select category</option>
+                                <option value="all">Select category</option>
                                 <option value="beauty">Beauty</option>
                                 <option value="electronics">Electronics & gadgets</option>
                                 <option value="food">Food</option>
@@ -83,7 +98,7 @@ const Merchant = () =>{
                             </select>
                         </div> 
                     </div>
-                    <div className="block mt-12 beauty">
+                    <div className="block mt-12 beauty category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Beauty</h1>
                         <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center ">
                             <div className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
@@ -108,7 +123,7 @@ const Merchant = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="block mt-12 electronics">
+                    <div className="block mt-12 electronics category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics & gadgets</h1>
                         <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:place-content-center md:gap-8 lg:place-content-start lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div 
@@ -167,7 +182,7 @@ const Merchant = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="block mt-12 food">
+                    <div className="block mt-12 food category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Food</h1>
                         <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                         <div 
@@ -194,7 +209,7 @@ const Merchant = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="block mt-12 hotelsandresorts">
+                    <div className="block mt-12 hotelsandresorts category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Hotels and resorts</h1>
                         <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 

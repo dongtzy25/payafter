@@ -40,8 +40,8 @@ const ChuwiPage = () =>{
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
-                        <h1 className="text-5xl font-bold"> Kickstart productivity</h1>
-                        <h1 className="text-5xl font-bold mt-4">with Chuwi</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold"> Kickstart productivity</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4">with Chuwi</h1>
                         <p className="mt-4">Purchase any of Chuwi’s products using PayAfter</p>
                         <div className="relative block lg:w-9/12 md:w-9/12 border-solid">
                             <div className="relative pl-12 mt-4">

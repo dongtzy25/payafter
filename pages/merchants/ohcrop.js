@@ -9,41 +9,17 @@ import Link from "next/link";
 
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
-import axios from 'axios';
-
 
 const OhcropPage = () =>{
     const [showModal, setShowModal] = useState(false);
-    const [loadedImage, setLoadedImage] = useState([]);
-    const loadImaged = [];
 
     const openModal = () => {
         setShowModal(prev => !prev);
         document.querySelector("body").style.overflow = "hidden";
     };
-
-    const getImageInstagram = async () => {
-        const result = await axios.get("/api/getImage",{
-            params: {
-                id: 43799574922
-            }
-          });
-        if(result.status == 200){
-            const { edges } = result.data.data.user.edge_owner_to_timeline_media
-            edges.forEach(element => {
-                loadImaged.push(element.node.thumbnail_src)
-            });
-            setLoadedImage(loadImaged)
-        }
-    };
-
-    useEffect(() => {
-        getImageInstagram();
-    }, [])
-
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
-        to: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(0)',right: '10%' },
         config: {
             duration: 300,
             tension: 500, friction: 80
@@ -59,17 +35,18 @@ const OhcropPage = () =>{
                         alt="Logo"
                     />
                 </animated.div> */}
-                 <animated.div style={animation} className="custom-imagepos custom-right-width absolute top-24 transform scale-105 z-0 lg:flex hidden">
+                 <animated.div style={animation} className="absolute top-24 lg:flex hidden">
                     <Image
                         src={OhCrop}
                         alt="Logo"
-                        layout="fill"
+                        width={320}
+                        height={630}
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
-                        <h1 className="text-5xl font-bold">Make the switch with</h1>
-                        <h1 className="text-5xl font-bold mt-4">Oh Crop! and PayAfter</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold">Make the switch with</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4">Oh Crop! and PayAfter</h1>
                         <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
                         <div className="relative block lg:w-9/12 md:w-9/12 border-solid">
                             <div className="relative pl-12 mt-4">
@@ -105,7 +82,7 @@ const OhcropPage = () =>{
                         <h1 className="text-4xl font-bold">About Oh Crop!</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Oh Crop! is committed to release recipes and food ventions that are not only aesthetically instagrammable, but are also truly delicious. They are here to debunk the naysayers who make the road to healthy dark and bleak. Oh Crop! will be the light right up your grocery alley and will make sure your palate is satisfied.</p>
                         <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            {/* <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105
+                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={OhCrop1}
@@ -126,19 +103,7 @@ const OhcropPage = () =>{
                                     alt="Logo"
                                     layout="fill"
                                 />
-                            </div> */}
-                            { loadedImage.map( (item, index) => {
-                                return(
-                                    <div key={index} className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-ohcrop-size transform transition duration-500 hover:scale-105">
-                                        <Image
-                                            src={item}
-                                            alt="Logo"
-                                            layout="fill"
-                                            className="rounded-lg"
-                                        />
-                                        </div>   
-                                ) 
-                            })}
+                            </div>
                         </div>
                         <button 
                             onClick={() =>openModal()}
