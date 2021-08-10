@@ -90,7 +90,7 @@ const Merchant = () =>{
                                 style={{backgroundColor: '#fff'}}
                                 onChange={_handleChange}
                                 >
-                                <option value="all">Select category</option>
+                                <option value="all">All</option>
                                 <option value="beauty">Beauty</option>
                                 <option value="electronics">Electronics & gadgets</option>
                                 <option value="food">Food</option>
