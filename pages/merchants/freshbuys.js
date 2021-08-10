@@ -5,16 +5,10 @@ import Freshbuys from '../../public/assets/images/freshbuys/freshbuys.png'
 import Freshbuys1 from '../../public/assets/images/freshbuys/freshbuys-1.png'
 import Link from "next/link";
 import { useSpring, animated } from 'react-spring'
-import { Modal } from '../../component/modal'
-
+import Router from 'next/router'
 
 const FreshbuysPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
+  
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -25,7 +19,6 @@ const FreshbuysPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner fresh-color">
                 <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -90,7 +83,7 @@ const FreshbuysPage = () =>{
                         
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.freshbuys.ph") }}
                             className="
                                 inline-block 
                                 px-4 

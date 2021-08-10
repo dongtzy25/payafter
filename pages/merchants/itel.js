@@ -7,17 +7,10 @@ import Itel2 from '../../public/assets/images/itel/itel-02.png'
 import Itel3 from '../../public/assets/images/itel/itel-03.png'
 import Link from "next/link";
 
-import { Modal } from '../../component/modal'
+import Router from 'next/router'
 import { useSpring, animated } from 'react-spring'
 
-
 const ItelPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
 
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
@@ -29,7 +22,6 @@ const ItelPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner itel-color">
                  <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -101,7 +93,7 @@ const ItelPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.facebook.com/itelglobal/") }}
                             className="
                                 inline-block 
                                 px-4 

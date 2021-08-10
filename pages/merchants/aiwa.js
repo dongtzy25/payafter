@@ -7,18 +7,11 @@ import Aiwa2 from '../../public/assets/images/aiwa/aiwa-02.png'
 import Aiwa3 from '../../public/assets/images/aiwa/aiwa-03.png'
 import Link from "next/link";
 
-import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
+import Router from 'next/router'
 
 
 const AiwaPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
-
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -29,7 +22,6 @@ const AiwaPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner aiwa-color">
                  <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -101,7 +93,7 @@ const AiwaPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.facebook.com/AiwaPhilippines/") }}
                             className="
                                 inline-block 
                                 px-4 

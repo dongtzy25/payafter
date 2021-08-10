@@ -6,17 +6,12 @@ import OhCrop1 from '../../public/assets/images/ohcrop/ohcrop-01.png'
 import OhCrop2 from '../../public/assets/images/ohcrop/ohcrop-02.png'
 import OhCrop3 from '../../public/assets/images/ohcrop/ohcrop-03.png'
 import Link from "next/link";
+import Router from 'next/router'
 
-import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
 
 const OhcropPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
+  
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)',right: '11%' },
@@ -27,7 +22,6 @@ const OhcropPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner ohcrop-color">
                 {/* <animated.div style={animation,{width: '19%', right: '11%'}} className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden">
                     <Image
@@ -106,7 +100,7 @@ const OhcropPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push('https://www.instagram.com/omowhiteph/') }}
                             className="
                                 inline-block 
                                 px-4 

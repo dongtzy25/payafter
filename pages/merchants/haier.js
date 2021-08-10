@@ -1,24 +1,17 @@
-import React,{useState} from "react";
+import React,{useState} from "react"
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Haier from '../../public/assets/images/haier/haier.png'
 import Haier1 from '../../public/assets/images/haier/haier-01.png'
 import Haier2 from '../../public/assets/images/haier/haier-02.png'
 import Haier3 from '../../public/assets/images/haier/haier-03.png'
-import Link from "next/link";
+import Link from "next/link"
 
-import { Modal } from '../../component/modal'
+import Router from 'next/router'
 import { useSpring, animated } from 'react-spring'
 
 
 const HaierPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
-
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -29,7 +22,6 @@ const HaierPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner haier-color">
                  <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -101,7 +93,7 @@ const HaierPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.facebook.com/Haier.Philippines/") }}
                             className="
                                 inline-block 
                                 px-4 

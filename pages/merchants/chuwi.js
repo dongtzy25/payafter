@@ -7,17 +7,10 @@ import Chuwi2 from '../../public/assets/images/chuwi/chuwi-02.png'
 import Chuwi3 from '../../public/assets/images/chuwi/chuwi-03.png'
 import Link from "next/link";
 
-import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
-
+import Router from 'next/router'
 
 const ChuwiPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
 
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
@@ -29,7 +22,6 @@ const ChuwiPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner chuwi-color">
                  <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -101,7 +93,7 @@ const ChuwiPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.facebook.com/chuwidotcom/") }}
                             className="
                                 inline-block 
                                 px-4 

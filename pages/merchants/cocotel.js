@@ -7,19 +7,10 @@ import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
 import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
 import Link from "next/link";
 
-import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
-import axios from 'axios';
+import Router from 'next/router'
 
 const CocotelPage = () =>{
-    const [showModal, setShowModal] = useState(false);
- 
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
-
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -28,12 +19,8 @@ const CocotelPage = () =>{
             tension: 500, friction: 80
         },
       });
-
-   
-
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner cocotel-color">
                 {/* <animated.div style={animation} className="lg:w-6/12 w-full h-full text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-24 -right-64 transform scale-105 z-0 lg:block hidden">
                     <Image
@@ -110,7 +97,7 @@ const CocotelPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push("https://www.cocotel.com.ph") }}
                             className="
                                 inline-block 
                                 px-4 

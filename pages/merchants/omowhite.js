@@ -8,19 +8,9 @@ import Omowhite1 from '../../public/assets/images/omowhite/omowhite-01.png'
 import Omowhite2 from '../../public/assets/images/omowhite/omowhite-02.png'
 import Omowhite3 from '../../public/assets/images/omowhite/omowhite-03.png'
 import Link from "next/link";
-
-import { Modal } from '../../component/modal'
-
+import Router from 'next/router'
 
 const OmoWhitePage = () =>{
-    const [showModal, setShowModal] = useState(false);
-    const [loadedImage, setLoadedImage] = useState([]);
-    const loadImaged = [];
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)',right: '11%' },
@@ -32,7 +22,6 @@ const OmoWhitePage = () =>{
     //   6061382140
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner omowhite-color">
                 {/* <animated.div style={animation,{width: '19%', right: '11%'}}  className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden" 
                 >
@@ -111,7 +100,7 @@ const OmoWhitePage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push('https://www.instagram.com/omowhiteph/') }}
                             className="
                                 inline-block 
                                 px-4 

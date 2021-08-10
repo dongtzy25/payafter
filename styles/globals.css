@@ -41,6 +41,7 @@ body {
   width: 702px;
   height: 314px;
 }
+
 .ModalWrapperAlert {
   max-width: 60%;
   height: 100%;
@@ -170,6 +171,20 @@ body {
   .merchant-coco-size {
     height: 180px;
     width: 100%;
+  }
+
+  .merchant-logo-size {
+    height: 218px;
+    width: 100%;
+  }
+
+  .merchant-ohcrop-size {
+    width: 100%;
+    height: 261px;
+  }
+  .merchant-fresh-size {
+    width: 100%;
+    height: 314px;
   }
 }
 

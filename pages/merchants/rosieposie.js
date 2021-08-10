@@ -8,15 +8,10 @@ import Rosie3 from '../../public/assets/images/rosie/rosieposie-03.png'
 import Link from "next/link";
 import { Modal } from '../../component/modal'
 import { useSpring, animated } from 'react-spring'
+import Router from 'next/router'
 
 
 const RoisePage = ({result}) =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
 
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
@@ -28,7 +23,6 @@ const RoisePage = ({result}) =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner rosie-color">
                 {/* <animated.div style={animation,{width: '19%', right: '11%'}}  className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden" >
                     <Image
@@ -108,7 +102,7 @@ const RoisePage = ({result}) =>{
                       
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push('https://www.instagram.com/rosieposie.ph/') }}
                             className="
                                 inline-block 
                                 px-4 

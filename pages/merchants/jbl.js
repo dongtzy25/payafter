@@ -7,18 +7,11 @@ import JBL2 from '../../public/assets/images/jbl/jbl-02.png'
 import JBL3 from '../../public/assets/images/jbl/jbl-03.png'
 import Link from "next/link";
 
-import { Modal } from '../../component/modal'
+import Router from 'next/router'
 import { useSpring, animated } from 'react-spring'
 
 
 const JBLPage = () =>{
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-        setShowModal(prev => !prev);
-        document.querySelector("body").style.overflow = "hidden";
-    };
-
     const animation = useSpring({
         from: { transform: 'translateX(100%)' },
         to: { transform: 'translateX(0)' },
@@ -29,7 +22,6 @@ const JBLPage = () =>{
       });
     return (
         <Layout>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="w-full py-24 relative overflow-hidden custom-banner jbl-color">
                  <animated.div style={animation} className="custom-imagepos custom-height absolute top-24 transform scale-105 z-0 lg:flex hidden">
                     <Image
@@ -101,7 +93,7 @@ const JBLPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={() =>openModal()}
+                            onClick={()=> { Router.push('https://www.facebook.com/JBLPhilippines/') }}
                             className="
                                 inline-block 
                                 px-4 
