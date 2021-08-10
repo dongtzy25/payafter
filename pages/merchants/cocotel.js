@@ -49,7 +49,7 @@ const CocotelPage = () =>{
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 pr-4 z-10">
                         <h1 className="lg:text-5xl text-4xl font-bold">Book an escape at</h1>
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4">Cocotel with PayAfter!</h1>
                         <p className="mt-4">Follow these five easy steps to start your beautiful adventures at Cocotel:</p>

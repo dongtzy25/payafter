@@ -39,7 +39,7 @@ const HaierPage = () =>{
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 pr-4 z-10">
                         <h1 className="lg:text-5xl text-4xl font-bold">Haier belongs to us,</h1>  
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4">and to the world</h1>
                         <p className="mt-4">Buy your own Haier with PayAfter with these five easy steps:</p>

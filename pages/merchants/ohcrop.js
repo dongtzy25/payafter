@@ -44,7 +44,7 @@ const OhcropPage = () =>{
                     />
                 </animated.div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left pl-12 pr-4 z-10">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 pr-4 z-10">
                         <h1 className="lg:text-5xl text-4xl font-bold">Make the switch with</h1>
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4">Oh Crop! and PayAfter</h1>
                         <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
