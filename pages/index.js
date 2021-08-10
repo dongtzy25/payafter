@@ -257,11 +257,11 @@ const Home = () => {
 
       <div className="w-full custom-bg-color text-white contact">
         <div className="container mx-auto py-20 lg:flex flex-row justify-around items-start">
-          <div className="lg:w-5/12 w-full lg:text-left text-center mx-auto">
+          <div className="lg:w-6/12 w-full lg:text-left text-center mx-auto">
             <div className="lg:pl-24 px-4 mx-auto">
               <h1 className="text-5xl font-bold">We’re always</h1>
               <h1 className="text-5xl font-bold mt-4"> happy to help!</h1>
-              <p className="mt-8 lg:mr-auto xl:w-4/6 lg:w-5/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
+              <p className="mt-8 lg:mr-auto xl:w-8/12 lg:w-5/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
               <p className="mt-8">Or send us a direct email at</p>
               <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
                 <a href="mailto:hello@payafter.ph" className="flex items-center ">
