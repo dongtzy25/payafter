@@ -43,8 +43,8 @@ const Footer = () => {
                         <div className="lg:w-1/3 w-full  lg:mt-0 mt-8">
                             <h1 className="font-bold text-xl mb-2">Legal</h1>
                             <ul className="list-none">
-                                <li className="mb-2 text-md"><Link href="/privacy">Privacy Policy</Link></li>
-                                <li className="mb-2 text-md"><Link href="/privacy?terms">Terms & Conditions</Link></li>
+                                {/* <li className="mb-2 text-md"><Link href="/privacy">Privacy Policy</Link></li> */}
+                                <li className="mb-2 text-md"><Link href="/privacy">Terms & Policy</Link></li>
                             </ul>
                         </div>
                     </div>

@@ -77,16 +77,16 @@ const Merchant = () =>{
             </div> 
             </div>
             <div className="w-full bg-gray-50 py-12 ">
-                <div className="container mx-auto lg:px-20 px-12">
+                <div className="container mx-auto  text-center px-4">
                     <div className="block">
-                        <div className="lg:w-1/2 w-full lg:mt-0 mt-4 flex lg:flex-row flex-col items-center space-x-4">
+                        <div className="lg:w-1/2 w-full lg:mt-0 mt-4 flex lg:flex-row flex-col items-center lg:space-x-4">
                             <label htmlFor="industry" className="lg:w-20 w-full text-base mb-2 lg:text-left text-center">Filter by</label>
                             <select 
                                 id="industry"
                                 name="industry" 
                                 type="text" 
                                 autoComplete="off" 
-                                className="lg:w-72 w-full rounded px-4 py-3 text-black border custom-select-arrow"
+                                className="lg:w-72 md:w-5/12 w-full rounded px-4 py-3 text-black border custom-select-arrow"
                                 style={{backgroundColor: '#fff'}}
                                 onChange={_handleChange}
                                 >
@@ -100,7 +100,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12 beauty category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Beauty</h1>
-                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center ">
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
                             <div className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
                                 onClick={()=> { Router.push('/merchants/omowhite') }}
                             >
@@ -125,7 +125,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12 electronics category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics & gadgets</h1>
-                        <div className="lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:place-content-center md:gap-8 lg:place-content-start lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
                             <div 
                             onClick={()=> { Router.push('/merchants/aiwa') }}
                             className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
@@ -166,25 +166,26 @@ const Merchant = () =>{
                                     />
                                 </div>
                             </div>
-                        </div>
-                        <div className="lg:flex  lg:gap-0 flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
                             <div 
                             onClick={()=> { Router.push('/merchants/jbl') }}
                             style={{backgroundColor: 'rgb(254,88,42)'}}
                             className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
                             
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                <div className="relative flex items-center justify-center">
                                     <Image
                                         src={jbl}
                                         alt="Logo"
+                                        width={140}
+                                        height={75}
                                     />
                                 </div>
                             </div>
                         </div>
+                      
                     </div>
                     <div className="block mt-12 food category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Food</h1>
-                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
                         <div 
                             onClick={()=> { Router.push('/merchants/freshbuys') }}
                             className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
@@ -211,7 +212,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12 hotelsandresorts category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Hotels and resorts</h1>
-                        <div className="lg:flex md:flex flex-row justify-start lg:space-x-12 mt-12 lg:text-auto text-center">
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
                             <div className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
                                 style={{backgroundColor:'#F0F0F0'}}
                                 onClick={()=> { Router.push('/merchants/cocotel') }}

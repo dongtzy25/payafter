@@ -105,21 +105,21 @@ const Header  = ()  => {
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
                     ><Link href="/?contact">Contact us</Link></li>
-                    <li 
+                    {/* <li 
                         className={hashtag === '?terms' ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
-                    ><Link href="/privacy?terms">Terms</Link></li>
+                    ><Link href="/privacy?terms">Terms</Link></li> */}
                     <li 
                         className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4 mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
-                    ><Link href="/privacy">Privacy</Link></li>
+                    ><Link href="/privacy">Terms & Policy</Link></li>
                 </ul>
              
             </div>
             <div className="lg:space-x-6 space-x-2">
-                <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-gray-600 p-1" onClick={() => setMobileOpen(true) }>
+                <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-black p-1" onClick={() => setMobileOpen(true) }>
                     <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                 </button>
                 <a className="font-extrabold lg:inline-block md:inline-block hidden" href="mailto:hello@payafter.ph">hello@payafter.ph</a>
@@ -142,9 +142,10 @@ const Header  = ()  => {
             </div> 
         </div>    
       </nav>
-      <div className="fixed top-0 left-0 z-50 h-screen flex transition-all ease-in-out" style={{"backgroundColor":"rgba(0,0,0,0.4)", "width": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
-        <div className="bg-white p-12 w-10/12 h-screen shadow-2xl transition-all duration-500" style={{ "opacity": mobileOpen ? "1" : "0"}}>
-            <ul className="list-none flex items-start flex-col space-y-4">
+
+      <div className="fixed top-0 left-0 z-50 w-screen flex transition-all ease-in-out" style={{ "height": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
+        <div className="bg-white p-12 w-full text-center h-screen shadow-2xl transition-all duration-500" style={{ "opacity": mobileOpen ? "1" : "0"}}>
+            <ul className="list-none flex items-start justify-center text-center flex-col space-y-8">
                 <li className="inline-block lg:mr-8 mr-4 relative mb-4">
                     <div className="relative w-20 h-20">
                         <Link href="/"> 
@@ -163,37 +164,37 @@ const Header  = ()  => {
                 <li 
                     className={currentPath === '/merchant' || currentPath.includes('merchants') ? 
                     'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
-                    'inline-block mr-8 '}
+                    'inline-block w-full '}
                 ><Link href="/merchant">Merchants</Link></li>
                 <li
                     onClick={() => setMobileOpen(false) }
                     className={hashtag === '?contact' ? 
                     'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
-                    'inline-block mr-8 '}
+                    'inline-block w-full '}
                 ><Link href="/?contact">Contact us</Link></li>
-                <li
+                {/* <li
                     onClick={() => setMobileOpen(false) }
                     className={hashtag === '?terms' ? 
                     'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
-                    'inline-block mr-8 '}
-                ><Link href="/privacy?terms">Terms</Link></li>
+                    'inline-block w-full '}
+                ><Link href="/privacy?terms">Terms</Link></li> */}
                 <li 
                  className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
                  'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
-                 'inline-block mr-8 '}
-                ><Link href="/privacy">Privacy</Link></li>
+                 'inline-block w-full '}
+                ><Link href="/privacy">Terms & Policy</Link></li>
             </ul>
             <button
                 className="
                     absolute
-                    top-2
-                    right-20
+                    top-12
+                    right-5
                     inline-flex
                     items-center
                     justify-center
                     p-2
                     rounded-md
-                    text-gray-400
+                    text-black-400
                 "
                 onClick={() => setMobileOpen(false) }
                 >
@@ -212,7 +213,7 @@ const Header  = ()  => {
                     />
                 </svg>
             </button>
-            <div className="mt-8">
+            <div className="mt-8 w-full">
                 <a className="font-extrabold " href="mailto:hello@payafter.ph">hello@payafter.ph</a>
                 <button 
                 onClick={() =>openModal()}
@@ -227,13 +228,14 @@ const Header  = ()  => {
                     hover:bg-red-500
                     hover:shadow-md
                     transition-all
-                    duration-300
+                    duration-300 
+                    mx-auto
                 ">
                     Apply as merchant
                 </button>
             </div> 
         </div>
-        <div className="w-2/12 bg-transaprent h-screen cursor-pointer" onClick={() => setMobileOpen(false) }></div>
+        {/* <div className="w-2/12 bg-transaprent h-screen cursor-pointer" onClick={() => setMobileOpen(false) }></div> */}
       </div>
       </>
     )

@@ -11,7 +11,7 @@ const Privacy = () => {
               PayAfter’s Data Privacy Policy
             </h1>
             <p className="mt-4">Last updated: July 30, 2021</p>
-            <p className="mt-12 text-justify lg:text-left">
+            <p className="mt-12 text-justify ">
               Welcome to PayAfter website. If you continue to browse and use
               this website you are agreeing to comply with and be bound by the
               following terms and conditions of use, which together with our
@@ -24,7 +24,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               License to Use Website and Mobile App
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               PayAfter owns the intellectual property rights in the website and
               all the data and contents found herein. The use of this website
               are limited and subject to the terms and conditions set forth. All
@@ -41,7 +41,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               Limitations of Use
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify">
               Access to certain areas of this website is restricted. PayAfter
               reserves the right to restrict access to other areas of this
               website or indeed this entire website at PayAfter discretion. If
@@ -55,7 +55,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               No Warranties
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               This website is provided “as is” without any representations or
               warranties, express or implied. PayAfter makes no representations
               or warranties in relation to this website or the information and
@@ -67,14 +67,14 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               Unenforceable Provisions
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               If any provision of this website disclaimer is, or is found to be,
               unenforceable under applicable law, that will not affect the
               enforceability of the other provisions of this website and mobile
               app.
             </p>
             <h1 className="lg:text-2xl text-xl font-bold mt-12">Indemnity</h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               You hereby indemnify PayAfter and undertake to keep PayAfter
               indemnified against any losses, damages, costs, liabilities and
               expenses incurred or suffered by PayAfter arising out of any
@@ -85,7 +85,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12 terms-page">
               Breaches of these Terms and Conditions
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               Without prejudice to PayAfter other rights under these terms and
               conditions, if you breach these terms and conditions in any way,
               PayAfter may take such action as PayAfter deems appropriate to
@@ -97,7 +97,7 @@ const Privacy = () => {
               against you.
             </p>
             <h1 className="lg:text-2xl text-xl font-bold mt-12">Amendments</h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               PayAfter may revise these terms and conditions from time-to-time.
               Revised terms and conditions will apply to the use of this website
               from the date of the publication of the revised terms and
@@ -105,7 +105,7 @@ const Privacy = () => {
               regularly to ensure you are familiar with the current version.
             </p>
             <h1 className="lg:text-2xl text-xl font-bold mt-12">Assignment</h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               PayAfter may transfer, sub-contract or otherwise deal with
               PayAfter rights and/or obligations under these terms and
               conditions without notifying you or obtaining your consent. You
@@ -115,7 +115,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               Law and Jurisdiction
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               These terms and conditions will be governed by and construed in
               accordance with PHILIPPINE LAWS, and any disputes relating to
               these terms and conditions will be subject to the exclusive
@@ -124,7 +124,7 @@ const Privacy = () => {
             <h1 className="lg:text-2xl text-xl font-bold mt-12">
               Electronic Communications Disclosure and Consent Agreement
             </h1>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               PayAfter is a tradename of Hallo Hallo Skylark Lending which is a
               registered lending company that focuses on salary loan with all
               transactions conducted through a full online platform. In line
@@ -147,7 +147,7 @@ const Privacy = () => {
               Electronic Communications applies to all Electronic Communications
               that we provide to you.
             </p>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               HARDWARE AND SOFTWARE REQUIREMENTS. By signing up and accessing
               the PayAfter website you affirm that you are capable of receiving
               information electronically. To access and retain the
@@ -156,19 +156,19 @@ const Privacy = () => {
               similar software, Adobe Acrobat and hardware capable of running
               this software.
             </p>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               WITHDRAWING CONSENT. You may withdraw your consent to receive
               Communications electronically by contacting us through email at
               the address listed in this website and mobile app. The legal
               validity and enforceability of prior electronic transactions and
               services will not be affected if you withdraw your consent.
             </p>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               CHANGES TO YOUR CONTACT INFORMATION. Please keep us informed of
               any changes in your email or mailing address so that you continue
               to receive all Communications without interruption.
             </p>
-            <p className="mt-4 mb-2 text-justify lg:text-left">
+            <p className="mt-4 mb-2 text-justify ">
               By signing up and accessing the PayAfter website you acknowledge
               that you agree to the Terms and Conditions of PayAfter website and
               consent to access to the electronic Communications in the

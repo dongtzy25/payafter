@@ -93,7 +93,7 @@
   transform: rotate(45deg) translateY(-50%);
 }
 .firstfold {
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   align-items: center;
   width: 100%;

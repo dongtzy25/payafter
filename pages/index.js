@@ -77,18 +77,39 @@ const Home = () => {
       <Modal showModal={showModal} setShowModal={setShowModal}/>
       <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'} great={'Okay, thanks!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
-      <div className={homestyle.firstfold}>
-        <div className="container mx-auto flex lg:flex-row flex-col items-center justify-around">
-          <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
-              <Image
-                  src={Illustration}
-                  alt="Logo"
-              />
+      <div className="custom-screen bg-red flex flex-col justify-between ">
+        <div className="w-full text-black xl:py-12 lg:py-8 py-4 lg:px-4">
+          <div className="container mx-auto py-8 flex lg:flex-row flex-col items-center justify-around">
+
+          <div className="md:w-7/12 w-10/12 xl:hidden lg:hidden flex">
+              <div className="xl:pr-24 lg:pl-8 h-full mx-auto flex  relative">
+                <div className="lg:mt-0 mt-8 " >
+                  <Image
+                      src={Illustration}
+                      alt="Logo"
+                      width={472}
+                      height={442}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
-              <div className="lg:pl-24 px-4 mx-auto">
-                <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later with NO interest!</h1>
-                <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">Shop on installment for up to 5 months from your favourite stores  - stress free. No credit card required. No hidden fees.</p>
+
+            <div className="w-full md:mt-8">
+             <div className="xl:pl-24 flex xl:items-start lg:items-start items-center flex-col">
+              <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later</h1>
+              <h1 className="lg:text-6xl text-4xl font-bold">with NO interest!</h1>
+                <div className="xl:block lg:block hidden lg:text-xl text-lg mt-8 pr-20 lg:pr-4">
+                Shop on installment for up to 5 months from your favourite stores <br className="xl:block lg:block hidden"/>- stress free. No credit card required. No hidden fees.
+                </div>
+                <div className="xl:hidden lg:hidden block md:w-1/2 w-10/12 text-center">
+                  <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">
+                    Shop on installment for up to 5 months from your favourite stores - stress free.
+                  </p>
+                  <p className="lg:text-xl text-lg lg:pr-6 block">
+                    No credit card required. No hidden fees.
+                  </p>
+                </div>
+
                 <div className="mt-12 ">
                   <button 
                       onClick={() =>openModal()}
@@ -105,33 +126,40 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:block hidden w-full text-center lg:mt-0 mt-12">
-              <Image
-                  src={Illustration}
-                  alt="Logo"
-              />
+
+            <div className="xl:w-8/12 lg:w-9/12 w-full xl:block lg:block hidden">
+              <div className="xl:pr-24 lg:pl-8 h-full mx-auto flex  relative">
+                <div className="lg:mt-0 mt-8 " >
+                  <Image
+                      src={Illustration}
+                      alt="Logo"
+                      width={472}
+                      height={442}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="w-full custom-bg-color text-white px-4">
-          <div className="container mx-auto mt-8  py-8 flex lg:flex-row flex-col justify-around">
+        <div className="w-full custom-bg-color text-white px-4 lg:px-8">
+          <div className="container mx-auto py-8 flex lg:flex-row flex-col justify-around">
             <div className="w-full">
-             <div className="lg:pl-24  mx-auto flex items-center lg:flex-row flex-col">
-              <span className="mr-4 relative lg:w-16 w-8/12 lg:h-5/12 h-12 filter grayscale opacity-75 lg:mb-0 mb-4">
+             <div className="xl:pl-24  mx-auto flex items-center xl:justify-start lg:justify-start justify-center flex-row">
+              <span className="mr-4 relative filter grayscale opacity-75 lg:mb-0 mb-4">
               <Image
                   src={arrowDown}
                   alt="Logo"
-                  layout="fill"
+                  width={20}
+                  height={34}
               />
               </span>
-              <span className="lg:w-72 opacity-75 lg:text-left text-center text-base"> 
+              <span className="w-72 opacity-75 lg:text-left text-center text-base"> 
                 Building a stronger and more trusted financing industry in the Philippines with the following affiliates
               </span>
               </div>
             </div>
             <div className="w-full">
-              <div className="lg:pr-24 h-full mx-auto flex lg:flex-row md:flex-row flex-col items-center lg:space-x-12 md:space-x-4 lg:justify-end md:justify-center relative">
+              <div className="xl:pr-24 h-full mx-auto flex lg:flex-row md:flex-row flex-col items-center lg:space-x-12 md:space-x-4 lg:justify-end md:justify-center relative">
                 <div className="lg:mt-0 mt-8 filter grayscale opacity-75" >
                 <Image
                       src={eccp}
@@ -160,12 +188,14 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
       
       <div className="w-full bg-gray-50 py-12">
-        <div className="container mx-auto  text-center px-4">
+        <div className="container mx-auto  text-center px-4 xl:mt-12 lg:mt-12">
           <h1 className="lg:text-6xl text-5xl font-bold">Merchants</h1>
           <p className="text-base mt-4 mx-auto xl:w-1/3 lg:w-2/5">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p>
-          <div className="lg:px-10 lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0 flex-row justify-evenly lg:space-x-8 mt-12 lg:text-auto text-center">
+        
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 xl:px-16 pt-10 place-content-center">
             <div className="shadow-lg flex items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#EADDBB'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
@@ -198,9 +228,6 @@ const Home = () => {
                 />
               </div>
             </div>
-          </div>
-
-          <div className="lg:px-10 lg:flex md:grid md:grid-rows-2 md:grid-flow-col md:gap-8 lg:gap-0 flex-row justify-evenly lg:space-x-8 mt-12 lg:text-auto text-center">
             <div className="shadow-lg flex bg-white  items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
@@ -217,7 +244,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex bg-white items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div className=" shadow-lg flex bg-white items-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={aiwa}
@@ -257,11 +284,13 @@ const Home = () => {
 
       <div className="w-full custom-bg-color text-white contact">
         <div className="container mx-auto py-20 lg:flex flex-row justify-around items-start">
-          <div className="lg:w-6/12 w-full lg:text-left text-center mx-auto">
+          <div className="lg:w-6/12 w-full xl:text-left  lg:text-left  text-center mx-auto">
             <div className="lg:pl-16 px-4 mx-auto">
-              <h1 className="text-5xl font-bold">We’re always</h1>
-              <h1 className="text-5xl font-bold mt-4"> happy to help!</h1>
-              <p className="mt-8 lg:mr-auto xl:w-8/12 lg:w-5/6">Your concerns are important to us. Complete the form and we will get back to you as soon as possible.</p>
+              <h1 className="xl:text-5xl lg:text-5xl md:text-5xl text-4xl font-bold">We’re always</h1>
+              <h1 className="xl:text-5xl lg:text-5xl md:text-5xl text-4xl font-bold mt-4"> happy to help!</h1>
+              <p className="mt-8 lg:mr-auto xl:px-0 lg:px-0 md:px-0 px-8">
+                Your concerns are important to us. 
+              <span className="xl:inline lg:inline md:inline block"> Complete the form <br className="xl:block lg:block md:block hidden"/>and we will get back to you as soon as possible.</span></p>
               <p className="mt-8">Or send us a direct email at</p>
               <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
                 <a href="mailto:hello@payafter.ph" className="flex items-center ">
@@ -276,7 +305,7 @@ const Home = () => {
             </div>
           </div>
           <div className="lg:w-5/12 w-full lg:mt-0 mt-8 mx-auto">
-          <div className="lg:pr-24 px-4 md:w-full mx-auto">
+          <div className="xl:pr-24 lg:pr-0  px-8 md:w-full mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4 w-full">
                 <label htmlFor="name" className="block text-md mb-2">Full Name</label>
@@ -285,6 +314,7 @@ const Home = () => {
                 id="name" 
                 name="name" 
                 type="text" 
+                maxLength="64"
                 autoComplete="off" 
                 className= {errors.name 
                   ? "w-full rounded px-4 py-3 text-black custom-border-color" 
@@ -304,6 +334,7 @@ const Home = () => {
                   name="email" 
                   type="text" 
                   autoComplete="off" 
+                  maxLength="64"
                   className= {errors.email 
                     ? "w-full rounded px-4 py-3 text-black custom-border-color" 
                     : "w-full rounded px-4 py-3 text-black"} 
@@ -327,6 +358,7 @@ const Home = () => {
                     id="number"
                     name="number" 
                     type="text" 
+                    maxLength="10"
                     autoComplete="off" 
                     className= {errors.number 
                       ? "w-full rounded px-4 py-3 text-black custom-border-color " 
@@ -351,6 +383,7 @@ const Home = () => {
                 name="subject" 
                 type="text" 
                 autoComplete="off" 
+                maxLength="64"
                 className= {errors.subject 
                   ? "w-full rounded px-4 py-3 text-black custom-border-color" 
                   : "w-full rounded px-4 py-3 text-black"} 
@@ -368,6 +401,7 @@ const Home = () => {
                 name="message" 
                 type="text" 
                 autoComplete="off" 
+                maxLength="300"
                 className= {errors.message 
                   ? "w-full rounded px-4 py-3 h-32 text-black custom-border-color" 
                   : "w-full rounded px-4 py-3 h-32 text-black"} 
@@ -381,21 +415,22 @@ const Home = () => {
                 <div className={homestyle.formgroup}>
                   <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                   <label htmlFor="agree" className="flex items-center">
-                    <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Conditions</u></Link>  and <Link href="/privacy"><u>Privacy Policy</u></Link>.</span>
+                    {/* <span className="ml-4 xl:block lg:block md:block hidden">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Conditions</u></Link>  and <Link href="/privacy"><u>Privacy Policy</u></Link></span> */}
+                    <span className="ml-4 ">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Policy</u></Link></span>
                   </label>
                 </div>
                 <button 
                   type="submit" 
                   disabled={!formState.isValid || loading}
                   className="block 
-                  px-8 
-                  py-2
+                  px-12 
+                  py-3
                   custom-button-color
                   rounded 
                   text-white
                   disabled:opacity-75
-                  lg:mx-0 mx-auto
-                  lg:mt-0 mt-4
+                  lg:mx-0 md:mx-0 mx-auto
+                  lg:mt-0 md:mt-0 mt-12
                   hover:bg-red-500
                   hover:shadow-md
                   transition-all
