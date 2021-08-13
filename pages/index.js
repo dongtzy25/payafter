@@ -78,7 +78,7 @@ const Home = () => {
       <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'} great={'Okay, thanks!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
       <div className="h-full bg-red flex flex-col justify-between ">
-        <div className="w-full text-black 2xl:py-0 xl:py-12 lg:py-8 py-4 lg:px-6">
+        <div className="w-full text-black 2xl:py-0 xl:py-16 lg:py-8 py-4 lg:px-6">
           <div className="container mx-auto py-8 flex lg:flex-row flex-col items-center justify-around">
 
           <div className="md:w-7/12 w-10/12 xl:hidden lg:hidden flex">
@@ -194,7 +194,7 @@ const Home = () => {
         <div className="container mx-auto  text-center px-4 xl:mt-8 lg:mt-12">
           <h1 className="lg:text-6xl text-5xl font-bold">Merchants</h1>
           {/* <p className="text-base mt-4 mx-auto xl:w-1/3 lg:w-2/5">Shop from your favourite merchants across the country and enjoy 0% interest <span className="xl:inline-block lg:inline-block  block">for 5 monthly installment.</span></p> */}
-          <p className="text-base mt-8 xl:w-full w-5/6 text-center mx-auto">Shop from your favourite stores across the country and <br className="xl:block hidden"/> enjoy  0% interest <span className="lg:inline sm:block">for 5 monthly installment.</span></p>
+          <p className="text-base mt-8 xl:w-1/3 lg:w-2/5 text-center mx-auto">Shop from your favourite stores across the country and <br className="xl:block hidden"/> enjoy  0% interest <span className="lg:inline sm:block">for 5 monthly installment.</span></p>
         
           <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 xl:px-16 pt-10 place-content-center">
             <div className="shadow-lg flex items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#EADDBB'}}>
