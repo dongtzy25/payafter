@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CocoTel from '../../public/assets/images/cocotel/img_cocotel/img_cocotel@3x.png'
+import CocoTel from '../../public/assets/images/cocotel/img_cocotel/img_cocotel@2x.png'
 import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
 import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
 import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
@@ -24,7 +24,7 @@ const CocotelPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner cocotel-color">
-                <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
+                <animated.div style={animation} className="custom-imageCocoSize absolute top-24 right-0 lg:flex hidden">
                     <Image
                         src={CocoTel}
                         alt="Logo"
@@ -101,28 +101,23 @@ const CocotelPage = () =>{
                         <h1 className="text-4xl font-bold">About Cocotel</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Cocotel is a technology hotel and property management aggregator company aiming to empower tourism in the Philippines by partnering with local hotels and resort owners by offering quality and affordable three-star accommodation at a fraction of a cost. From overnight stays to long weekends, enjoy the scent of salty sea air and the comfort of a cozy beach haven paradise.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white justify-self-center merchant-coco-size relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={CocoTel1}
                                         alt="Logo"
-                                        width={352}
-                                        height={218}
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center justify-self-center merchant-coco-size relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={CocoTel2}
                                         alt="Logo"
-                                        width={352}
-                                        height={218}
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-coco-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={CocoTel3}
                                     alt="Logo"
-                                    width={352}
-                                    height={218}
+
                                 />
                             </div>
                         </div>

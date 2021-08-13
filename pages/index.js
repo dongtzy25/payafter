@@ -145,7 +145,7 @@ const Home = () => {
           <div className="container mx-auto py-8 flex lg:flex-row flex-col justify-around">
             <div className="w-full">
              <div className="xl:pl-24  mx-auto flex items-center xl:justify-start lg:justify-start justify-center flex-row">
-              <span className="mr-4 relative filter grayscale opacity-75 lg:mb-0 mb-4">
+              <span className="mr-4 lg:mr-8 relative filter grayscale opacity-75 lg:mb-0 mb-4">
               <Image
                   src={arrowDown}
                   alt="Logo"

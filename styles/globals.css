@@ -37,6 +37,10 @@ body {
   width: 352px;
   height: 352px;
 }
+.merchant-customs-size {
+  width: 352px;
+  height: 352px;
+}
 .merchant-fresh-size {
   width: 702px;
   height: 314px;
@@ -126,14 +130,18 @@ body {
   height: 80% !important;
 }
 .custom-imagepos {
-  width: 880px;
-  height: 550px;
-  right: -10%;
+  width: 560px;
+  height: 512px;
+  right: 0;
 }
 
 .custom-imageSize {
   width: 597px;
   height: 543px;
+}
+.custom-imageCocoSize {
+  width: 600px;
+  height: 480px;
 }
 .custom-height {
   height: 652px !important;
@@ -173,6 +181,10 @@ body {
   .custom-screen {
     height: 100%;
   }
+  .merchant-customs-size {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -185,6 +197,26 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .merchant-ohcrop-size {
+    width: 290px;
+    height: 290px;
+  }
+  .merchant-fresh-size {
+    width: 702px;
+    height: 380px;
+  }
+  .custom-imagepos {
+    width: 450px;
+    height: 450px !important;
+    right: 0 !important;
+  }
+  .merchant-customs-size {
+    width: 260px;
+    height: 260px;
+  }
+}
+
 @media screen and (min-width: 1210px) {
   .custom-imageSize {
     width: 500px;
@@ -194,8 +226,14 @@ body {
     width: 20%;
   }
 }
+@media screen and (min-width: 1281px) and (max-width: 1535px) {
+  .merchant-customs-size {
+    width: 260px;
+    height: 260px;
+  }
+}
 
-@media screen and (min-width: 1024px) and (max-width: 1038px) {
+/* @media screen and (min-width: 1024px) and (max-width: 1038px) {
   .custom-imagepos {
     right: -45%;
     height: 520px;
@@ -218,10 +256,10 @@ body {
     right: -25%;
     height: 520px;
   }
-  /* .custom-imageSize {
+   .custom-imageSize {
     width: 500px;
     height: 490px;
-  } */
+  } 
 }
 
 @media screen and (min-width: 1320px) and (max-width: 1426px) {
@@ -229,4 +267,4 @@ body {
     right: -15%;
     height: 520px;
   }
-}
+} */

@@ -101,30 +101,24 @@ const JBLPage = () =>{
                     <div className="w-4/5 mx-auto">
                         <h1 className="text-4xl font-bold">About JBL</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">JBL has brought music to life in a way people can feel for over 70 years. From iconic concerts to the world’s biggest sporting events, our award-winning sound has powered the world’s most epic musicians, athletes and venues. We unleash the power of music so you can live life to the fullest wherever and whenever.</p>
-                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
+                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-4 mt-10">
+                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-customs-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={JBL1}
                                         alt="Logo"
-                                        width={352}
-                                        height={352}
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={JBL2}
                                         alt="Logo"
-                                        width={352}
-                                        height={352}
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-customs-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={JBL3}
                                     alt="Logo"
-                                    width={352}
-                                    height={352}
                                 />
                             </div>
                         </div>

@@ -77,7 +77,7 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            md:px-0 px-4
+            px-4
             mx-auto
             "
         >
@@ -143,8 +143,8 @@ const Header  = ()  => {
         </div>    
       </nav>
 
-      <div className="fixed top-0 left-0 z-50 w-screen flex transition-all ease-in-out" style={{ "height": mobileOpen ? "100%" : "0","pointerEvents":mobileOpen ? "initial":"none"}}>
-        <div className="bg-white p-12 w-full text-center h-screen shadow-2xl transition-all duration-500" style={{ "opacity": mobileOpen ? "1" : "0"}}>
+      <div className="fixed top-0 left-0 z-50 w-screen flex transition-all ease-in-out duration-500" style={{ "transform": mobileOpen ? "translateY(0)" : "translateY(-100%)","pointerEvents":mobileOpen ? "initial":"none"}}>
+        <div className="bg-white p-12 w-full text-center h-screen  transition-all duration-500">
             <ul className="list-none flex items-start justify-center text-center flex-col space-y-8">
                 <li className="inline-block lg:mr-8 mr-4 relative mb-4">
                     <div className="relative w-20 h-20">
@@ -163,7 +163,7 @@ const Header  = ()  => {
                 </li>
                 <li 
                     className={currentPath === '/merchant' || currentPath.includes('merchants') ? 
-                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block w-full '}
                 ><Link href="/merchant">Merchants</Link></li>
                 <li

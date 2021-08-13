@@ -101,30 +101,24 @@ const ItelPage = () =>{
                     <div className="w-4/5 mx-auto">
                         <h1 className="text-4xl font-bold">About itel</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Established over 10 years, itel is an entry level and reliable mobile phone brand for everyone. Adopting “Enjoy Better Life” as its brand philosophy, itel’s mission is to provide budget-friendly mobile communications technology to everyone. It democratises technology by giving entry to technology and connectedness to consumers without prior access to it, allowing them to get closer and benefit from their social connections. After more than 10 years’ development, itel has expanded its presence in more than 50 emerging markets globally.</p>
-                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
+                        <div className="grid xl:grid-cols-3 lg:grid-cols-3  grid-cols-1 gap-4 mt-10">
+                            <div className="shadow-lg flex bg-white relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={Itel1}
                                         alt="Logo"
-                                        width={352}
-                                        height={352}
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-center justify-self-center merchant-customs-size rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Itel2}
                                         alt="Logo"
-                                        width={352}
-                                        height={352}
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Itel3}
                                     alt="Logo"
-                                    width={352}
-                                    height={352}
                                 />
                             </div>
                         </div>

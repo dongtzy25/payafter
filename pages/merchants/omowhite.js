@@ -114,28 +114,25 @@ const OmoWhitePage = () =>{
                         <h1 className="text-4xl font-bold">About OMO! White™</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">OMO! White™ is a Korean-inspired brand that has its finger on the pulse of asian beauty. Embracing the spirit of innovation, they bring the best and latest trends in skincare. Expect only effective products, playful packaging, and a unique beauty experience.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
-                                    <Image
-                                        src={Omowhite1}
-                                        alt="Logo"
-                                        width={352}
-                                        height={352}
-                                    />
+                            <div className="shadow-lg flex  relative items-center justify-self-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                                <Image
+                                    src={Omowhite1}
+                                    alt="Logo"
+                                   
+                                />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-self-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Omowhite2}
                                         alt="Logo"
-                                        width={352}
-                                        height={352}
+                                      
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative justify-self-center items-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Omowhite3}
                                     alt="Logo"
-                                    width={352}
-                                    height={352}
+                                
                                 />
                             </div>
                         </div>

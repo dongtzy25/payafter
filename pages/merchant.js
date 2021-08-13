@@ -77,7 +77,7 @@ const Merchant = () =>{
             </div> 
             </div>
             <div className="w-full bg-gray-50 py-12 ">
-                <div className="container mx-auto  text-center px-4">
+                <div className="container mx-auto  text-center px-4 pl-12  relative">
                     <div className="block">
                         <div className="lg:w-1/2 w-full lg:mt-0 mt-4 flex lg:flex-row flex-col items-center lg:space-x-4">
                             <label htmlFor="industry" className="lg:w-20 w-full text-base mb-2 lg:text-left text-center">Filter by</label>
