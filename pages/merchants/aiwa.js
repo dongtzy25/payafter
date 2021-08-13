@@ -108,7 +108,7 @@ const AiwaPage = () =>{
                         <h1 className="text-4xl font-bold">About Aiwa</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">The passionate pursuit of bringing people together around entertainment. We have a simple formula for delivering good quality - our passion for quality rooted in our Japanese heritage, our money into the highest quality components, and our world class customer service.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 place-center">
-                            <div className="shadow-lg flex bg-white relative justify-self-center items-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105
+                            <div className="shadow-lg flex bg-white relative justify-self-center items-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={Aiwa1}
@@ -116,14 +116,14 @@ const AiwaPage = () =>{
                                       
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center justify-self-center  relative merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center justify-self-center  relative merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Aiwa2}
                                         alt="Logo"
                                      
                                     />
                             </div>
-                            <div className=" md:col-span-2 lg:col-span-1 justify-self-center xd:col-span-1 merchant-ohcrop-size shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className=" md:col-span-2 lg:col-span-1 justify-self-center xd:col-span-1 merchant-customs-size shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Aiwa3}
                                     alt="Logo"

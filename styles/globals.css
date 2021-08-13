@@ -161,8 +161,8 @@ body {
   }
 
   .merchant-ohcrop-size {
-    width: 100%;
-    height: 352px;
+    width: 280px;
+    height: 280px;
   }
   .merchant-fresh-size {
     width: 100%;
@@ -214,6 +214,12 @@ body {
   .merchant-customs-size {
     width: 260px;
     height: 260px;
+  }
+  .custom-screen {
+    height: calc(100vh - 156px);
+  }
+  .custom-block {
+    display: block;
   }
 }
 

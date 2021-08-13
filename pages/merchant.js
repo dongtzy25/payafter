@@ -64,7 +64,7 @@ const Merchant = () =>{
                 <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
                     <div className="w-4/5 mx-auto">
                         <h1 className="lg:text-6xl text-4xl font-bold">Available stores</h1>
-                        <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for 5 monthly installment.</p>
+                        <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for <span className="custom-block">5 monthly installment.</span></p>
                     </div>
                 </div>
                 <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">

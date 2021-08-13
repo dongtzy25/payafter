@@ -99,7 +99,7 @@ const Home = () => {
               <h1 className="lg:text-6xl text-4xl font-bold">Shop now, pay later</h1>
               <h1 className="lg:text-6xl text-4xl font-bold">with NO interest!</h1>
                 <div className="xl:block lg:block hidden lg:text-xl text-lg mt-8 pr-20 lg:pr-4">
-                Shop on installment for up to 5 months from your favourite stores <br className="xl:block lg:block hidden"/>- stress free. No credit card required. No hidden fees.
+                Shop on installment for up to 5 months from your favourite stores <br className="xl:block hidden"/>- stress free. No credit card required. No hidden fees.
                 </div>
                 <div className="xl:hidden lg:hidden block md:w-1/2 w-10/12 text-center">
                   <p className="lg:text-xl text-lg mt-8 lg:pr-6 ">
