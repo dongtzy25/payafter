@@ -54,18 +54,16 @@ const Merchant = () =>{
             <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className={homestyle.firstfold}>
              <div className="w-full lg:py-12">
-                <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
-                <div className="lg:hidden block  lg:w-6/12 w-11/12 lg:text-left text-center">
+                <div className="container mx-auto flex lg:flex-row flex-col items-start justify-between">
+                <div className="lg:hidden block lg:w-6/12 w-11/12 lg:text-left text-center">
                     <Image
                         src={merchant}
                         alt="Logo"
                     />
                 </div>
-                <div className="lg:w-6/12 w-full lg:mt-0 mt-8 md:text-center lg:text-left text-center">
-                    <div className="w-4/5 mx-auto">
+                <div className="xl:pl-24 flex xl:items-start lg:items-start items-center flex-col mt-8 lg:w-7/12">
                         <h1 className="lg:text-6xl text-4xl font-bold">Available stores</h1>
-                        <p className="lg:text-xl text-lg mt-8 lg:pr-6">Shop from your favourite stores across the country and enjoy 0% interest for <span className="custom-block">5 monthly installment.</span></p>
-                    </div>
+                        <p className="lg:text-xl text-lg mt-8 ">Shop from your favourite stores across the country and enjoy  <br className="xl:block hidden"/> 0% interest for 5 monthly installment.</p>
                 </div>
                 <div className="lg:block hidden lg:w-6/12 w-full text-center lg:px-0 px-20 lg:mt-0 mt-12">
                     <Image
@@ -80,7 +78,7 @@ const Merchant = () =>{
                 <div className="container mx-auto  text-center px-4 lg:pl-12  relative">
                     <div className="block">
                         <div className="lg:w-1/2 w-full lg:mt-0 mt-4 flex lg:flex-row flex-col items-center lg:space-x-4">
-                            <label htmlFor="industry" className="lg:w-20 w-full text-base mb-2 lg:text-left text-center">Filter by</label>
+                            <label htmlFor="industry" className="lg:w-32 w-full text-base lg:text-left text-center">Select category</label>
                             <select 
                                 id="industry"
                                 name="industry" 
@@ -125,7 +123,7 @@ const Merchant = () =>{
                     </div>
                     <div className="block mt-12 electronics category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics & gadgets</h1>
-                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
                             <div 
                             onClick={()=> { Router.push('/merchants/aiwa') }}
                             className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
