@@ -106,10 +106,10 @@ const Header  = ()  => {
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
                     ><Link href="/?contact">Contact us</Link></li>
                     {/* <li 
-                        className={hashtag === '?terms' ? 
+                        className={currentPath === '/news' ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
                         'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
-                    ><Link href="/privacy?terms">Terms</Link></li> */}
+                    ><Link href="/news">News</Link></li> */}
                     <li 
                         className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
                         'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
@@ -174,12 +174,12 @@ const Header  = ()  => {
                 ><Link href="/?contact">Contact us</Link></li>
                 {/* <li
                     onClick={() => setMobileOpen(false) }
-                    className={hashtag === '?terms' ? 
+                    className={currentPath === '/news' ? 
                     'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block w-full '}
-                ><Link href="/privacy?terms">Terms</Link></li> */}
+                ><Link href="/news">News</Link></li> */}
                 <li 
-                 className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
+                 className={currentPath === '/privacy' ? 
                  'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                  'inline-block w-full '}
                 ><Link href="/privacy">Terms & Policy</Link></li>

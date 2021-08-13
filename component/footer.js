@@ -33,18 +33,18 @@ const Footer = () => {
                             <p>Certificate of Authority No. 1228</p>
                         </div>
                         <div className="lg:w-1/3 w-full lg:mt-0 mt-8">
-                            <h1 className="font-bold text-xl mb-2">Links</h1>
+                            <h1 className="font-bold text-xl mb-4">Links</h1>
                             <ul>
-                                <li className="mb-2 text-md" onClick={()=>openModal()}><span className="cursor-pointer">Apply as merchant</span></li>
-                                <li className="mb-2 text-md"><Link href="/merchant">Merchants</Link></li>
-                                <li className="mb-2 text-md"><Link href="/?contact">Contact us</Link></li>
+                                <li className="mb-4 text-md" onClick={()=>openModal()}><span className="cursor-pointer">Apply as merchant</span></li>
+                                <li className="mb-4 text-md"><Link href="/merchant">Merchants</Link></li>
+                                <li className="mb-4 text-md"><Link href="/?contact">Contact us</Link></li>
                             </ul>
                         </div>
                         <div className="lg:w-1/3 w-full  lg:mt-0 mt-8">
-                            <h1 className="font-bold text-xl mb-2">Legal</h1>
+                            <h1 className="font-bold text-xl mb-4">Legal</h1>
                             <ul className="list-none">
                                 {/* <li className="mb-2 text-md"><Link href="/privacy">Privacy Policy</Link></li> */}
-                                <li className="mb-2 text-md"><Link href="/privacy">Terms & Policy</Link></li>
+                                <li className="mb-4 text-md"><Link href="/privacy">Terms & Policy</Link></li>
                             </ul>
                         </div>
                     </div>
