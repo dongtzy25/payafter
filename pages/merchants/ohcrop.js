@@ -64,7 +64,7 @@ const OhcropPage = () =>{
                     </Link>
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
                         <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Make the switch with</h1>
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">Oh Crop! and PayAfter</h1>
                         <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden block text-center">
