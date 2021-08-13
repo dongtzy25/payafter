@@ -112,19 +112,19 @@ const RoisePage = ({result}) =>{
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Rosie Posie offers a gentle whitening skin set that’s got all the products you need on the daily. Not to mention, Rosie Posie combines all natural ingredients delivering the highest potency of skin whitening without having to use harsh chemicals. Plus, it’s Halal-certified, cruelty-free, non-GMO, and paraben-free.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 auto-rows-auto">
                          
-                           <div className="shadow-lg flex relative items-center justify-self-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 transform transition duration-500 hover:scale-105">
+                           <div className="shadow-lg flex relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie1}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-self-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie2}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex  relative items-center justify-self-center merchant-ohcrop-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex  relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Rosie3}
                                     alt="Logo"
