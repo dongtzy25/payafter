@@ -77,7 +77,7 @@ const OmoWhitePage = () =>{
                                 height={447}
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 pl-12 relative" style={{zIndex:'1'}}>
                         <p className="mt-4">Start investing in skincare regimens with PayAfter. Make sure to follow these five easy steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">

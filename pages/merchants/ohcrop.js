@@ -75,7 +75,7 @@ const OhcropPage = () =>{
                                 height={447}
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 pl-12 relative" style={{zIndex:'1'}}>
                             <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
                             <div className="relative block xl:w-9/12 lg:w-9/12 w-full border-solid">
                                 <div className="relative pl-12 mt-4">
