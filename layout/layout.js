@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
  return (
      <>
     <Head>
-      <title>PayAfter</title>
+      <title>PayAfter - DEV</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Cebuanna Lhuillier PayAfter"/>
       <meta property="og:title" content="Cebuanna Lhuillier PayAfter"/>
