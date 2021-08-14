@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
       <meta property="og:description" content="Cebuanna Lhuillier PayAfter"/>
       <meta property="og:url" content="https://dev.payafter.ph/"/>
       <meta property="og:type" content="website"/>
+      {/* UAT */}
     </Head>
      <Header></Header>
         <main className="xl:mt-24 lg:mt-32 mt-24">{children}</main>
