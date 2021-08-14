@@ -6,12 +6,12 @@ const Layout = ({ children }) => {
  return (
      <>
     <Head>
-      <title>PayAfter - UAT</title>
+      <title>PayAfter</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Cebuanna Lhuillier PayAfter"/>
       <meta property="og:title" content="Cebuanna Lhuillier PayAfter"/>
       <meta property="og:description" content="Cebuanna Lhuillier PayAfter"/>
-      <meta property="og:url" content="https://dev.payafter.ph/"/>
+      <meta property="og:url" content="https://staging.payafter.ph/"/>
       <meta property="og:type" content="website"/>
     </Head>
      <Header></Header>
