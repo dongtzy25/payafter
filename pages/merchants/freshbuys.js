@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Freshbuys from '../../public/assets/images/freshbuys/img_freshbuys/img_freshbuys@3x.png'
+import Freshbuys from '../../public/assets/images/freshbuys/freshbuys.png'
 import Freshbuys1 from '../../public/assets/images/freshbuys/freshbuys-1.png'
 import Link from "next/link";
 import { useSpring, animated } from 'react-spring'
@@ -22,7 +22,7 @@ const FreshbuysPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner fresh-color">
-                <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
+                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Freshbuys}
                         alt="Logo"
@@ -54,15 +54,15 @@ const FreshbuysPage = () =>{
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Buy fresh goods from</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">FreshBuys using PayAfter</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden  block">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Buy fresh goods from</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">FreshBuys using PayAfter</h1>
+                        <div className=" py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block md-custom-height">
                             <Image
                                 src={Freshbuys}
                                 alt="Logo"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
                             <p className="mt-4">Don’t let those fresh items perish in your cart. Checkout now following these easy steps:</p>
                             <div className="relative block w-full border-solid">
                                 <div className="relative pl-12 mt-4">
@@ -105,12 +105,11 @@ const FreshbuysPage = () =>{
                         <p className="text-lg mt-8 lg:w-4/6 lg:mx-auto">
                         Plan out your produce with Fresh Buys. We can get the appropriate amount of vegetables to you fresh. Let’s help our farmers and frontliners by being healthy.
                         </p>
-                        <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-12 mt-12 lg:text-auto text-center">
-                            <div className="shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-fresh-size transform transition duration-500 hover:scale-105">
+                        <div className="grid grid-cols-1 gap-4 mt-12">
+                            <div className="shadow-lg flex bg-white relative items-center justify-center justify-self-center rounded-lg lg:mx-0 mx-auto max-w-2xl lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Freshbuys1}
                                         alt="Logo"
-                                        layout="fill"
                                     />
                             </div>
                         

@@ -24,7 +24,7 @@ const HaierPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner haier-color">
-                 <animated.div style={animation} className="custom-imagepos absolute top-24 transform scale-105 z-0 lg:flex hidden">
+                 <animated.div style={animation} className="custom-imagepos absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Haier}
                         alt="Logo"
@@ -56,15 +56,18 @@ const HaierPage = () =>{
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Haier belongs to us,</h1>  
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">and to the world</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden  block">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Haier belongs to us,</h1>  
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">and to the world</h1>
+                        <div className="py-8 
+                            2xl:hidden xl:hidden lg:hidden block
+                            xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
+                            md-custom-height">
                             <Image
                                 src={Haier}
                                 alt="Logo"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 xl:pl-0 lg:pl-0 pl-24 relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Buy your own Haier with PayAfter with these five easy steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
@@ -100,21 +103,21 @@ const HaierPage = () =>{
                     <div className="w-4/5 mx-auto">
                         <h1 className="text-4xl font-bold">About Haier</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Today Haier has spread all over Asia, Africa, Europe, North America and the Middle East, and all corners of the world. There are 10 R&D centers, 24 industrial parks, 66 marketing centers and 108 manufacturing plants in the world. New brands continue to join the Haier family, Aqua, Fischer Parker, GEA, Candy, have become a member of Haier. Haier, is crossing the culture, merging the brand, and coming to you quickly!</p>
-                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-customs-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
+                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
+                            <div className="shadow-lg flex bg-white relative  justify-self-end max-w-xs items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={Haier1}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative  justify-self-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Haier2}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-customs-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative  justify-self-start max-w-xs items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Haier3}
                                     alt="Logo"

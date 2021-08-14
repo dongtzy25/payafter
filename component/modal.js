@@ -187,10 +187,10 @@ export const Modal = ({ showModal, setShowModal }) => {
                           required />
                           {errors.email 
                             && errors.email.type === "required" 
-                            && <span className="custom-text-color font-semibold">Please enter email</span>}
+                            && <span className="custom-text-color">Please enter email</span>}
                             {errors.email 
                               && errors.email.type === "pattern" 
-                              && <span className="custom-text-color font-semibold">Please enter valid email</span> }
+                              && <span className="custom-text-color">Please enter valid email</span> }
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                           <label htmlFor="number" className="block text-base mb-2">Mobile number</label>
@@ -214,10 +214,10 @@ export const Modal = ({ showModal, setShowModal }) => {
                           </div>
                           {errors.number 
                                   && errors.number.type === "required" 
-                                  && <span className="custom-text-color font-semibold">Please enter mobile number</span>}
+                                  && <span className="custom-text-color ">Please enter mobile number</span>}
                                 {errors.number 
                                     && errors.number.type === "pattern" 
-                                    && <span className="custom-text-color font-semibold">Please enter valid mobile number</span> }
+                                    && <span className="custom-text-color">Please enter valid mobile number</span> }
                           </div> 
                       </div>
                       <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
@@ -236,7 +236,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               required />
                               {errors.company 
                                 && errors.company.type === "required" 
-                                && <span className="custom-text-color font-semibold">Please enter your company name</span>}
+                                && <span className="custom-text-color">Please enter your company name</span>}
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                               <label htmlFor="role" className="block text-base mb-2">Role</label>
@@ -253,7 +253,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               required />
                                 {errors.role 
                                 && errors.role.type === "required" 
-                                && <span className="custom-text-color font-semibold">Please enter your role</span>}
+                                && <span className="custom-text-color">Please enter your role</span>}
                           </div> 
                       </div>
                       <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
@@ -272,7 +272,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               required />
                                {errors.website 
                                 && errors.website.type === "required" 
-                                && <span className="custom-text-color font-semibold">Please enter your role</span>}
+                                && <span className="custom-text-color">Please enter your role</span>}
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                               <label htmlFor="industry" className="block text-base mb-2">Industry</label>
@@ -297,7 +297,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               required /> */}
                                {errors.industry 
                                 && errors.industry.type === "required" 
-                                && <span className="custom-text-color font-semibold">Please enter your role</span>}
+                                && <span className="custom-text-color">Please enter your role</span>}
                           </div> 
                       </div>
                       
