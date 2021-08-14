@@ -78,7 +78,7 @@ const Home = () => {
       <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'} great={'Okay, thanks!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
       <div className="h-full bg-red flex flex-col justify-between ">
-        <div className="w-full text-black 2xl:py-0 xl:py-16 lg:py-8 py-4 lg:px-6">
+        <div className="w-full text-black 2xl:py-0 xl:py-12 lg:py-4 py-4 lg:px-4">
           <div className="container mx-auto py-8 flex lg:flex-row flex-col items-center justify-around">
 
           <div className="md:w-7/12 w-10/12 xl:hidden lg:hidden flex">

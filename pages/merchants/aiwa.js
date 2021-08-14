@@ -23,7 +23,7 @@ const AiwaPage = () =>{
     return (
         <Layout>
             <div className="w-full relative overflow-hidden custom-banner aiwa-color pt-8">
-                <animated.div style={animation} className="custom-imageSize absolute top-24 right-0  lg:flex hidden">
+                <animated.div style={animation} className="custom-imageSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Aiwa}
                         alt="Logo"
@@ -56,15 +56,20 @@ const AiwaPage = () =>{
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between">
 
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4 ">Legendary quality.</h1> 
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4 " >Premium Japan technology</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden  block">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4 ">Legendary quality.</h1> 
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left  text-center pr-4 " >Premium Japan technology</h1>
+                        <div 
+                        className="
+                            py-8 
+                            2xl:hidden xl:hidden lg:hidden block
+                            xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
+                            md-custom-height">
                             <Image
                                 src={Aiwa}
                                 alt="Logo"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
                             <p className="mt-4">Avail Aiwa products now for greater convenience and quality of life with PayAfter.</p>
                             <div className="relative block w-full border-solid ">
                                 <div className="relative pl-12 mt-4">
@@ -93,13 +98,6 @@ const AiwaPage = () =>{
                             </div>
                         </div>
                     </div>
-
-                    <animated.div style={animation} className="custom-imageSize absolute top-24 right-0  lg:flex hidden">
-                        <Image
-                            src={Aiwa}
-                            alt="Logo"
-                        />
-                    </animated.div>
                 </div>
             </div> 
             <div className="w-full bg-gray-50 py-12 ">
@@ -107,8 +105,8 @@ const AiwaPage = () =>{
                     <div className="w-4/5 mx-auto">
                         <h1 className="text-4xl font-bold">About Aiwa</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">The passionate pursuit of bringing people together around entertainment. We have a simple formula for delivering good quality - our passion for quality rooted in our Japanese heritage, our money into the highest quality components, and our world class customer service.</p>
-                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 place-center">
-                            <div className="shadow-lg flex bg-white relative justify-self-center items-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105
+                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10 place-center">
+                            <div className="shadow-lg flex bg-white relative j justify-self-end max-w-xs  justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={Aiwa1}
@@ -116,14 +114,14 @@ const AiwaPage = () =>{
                                       
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center justify-self-center  relative merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center  justify-self-center max-w-xs  justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Aiwa2}
                                         alt="Logo"
                                      
                                     />
                             </div>
-                            <div className=" md:col-span-2 lg:col-span-1 justify-self-center xd:col-span-1 merchant-customs-size shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="justify-self-center xd:col-span-1  justify-self-start max-w-xs shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Aiwa3}
                                     alt="Logo"

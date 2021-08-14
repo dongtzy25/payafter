@@ -65,17 +65,16 @@ const OhcropPage = () =>{
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Make the switch with</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">Oh Crop! and PayAfter</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden block text-center">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Make the switch with</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Oh Crop! and PayAfter</h1>
+                        <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={OhCrop}
                                 alt="Logo"
-                                width={230}
-                                height={447}
+                                layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 pl-12 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
                             <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
                             <div className="relative block xl:w-9/12 lg:w-9/12 w-full border-solid">
                                 <div className="relative pl-12 mt-4">
@@ -115,22 +114,21 @@ const OhcropPage = () =>{
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Oh Crop! is committed to release recipes and food ventions that are not only aesthetically instagrammable, but are also truly delicious. They are here to debunk the naysayers who make the road to healthy dark and bleak. Oh Crop! will be the light right up your grocery alley and will make sure your palate is satisfied.</p>
                         </div>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative justify-self-center items-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
+                            <div className="shadow-lg flex bg-white relative justify-self-end items-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={OhCrop1}
                                         alt="Logo"
-                                        
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-self-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={OhCrop2}
                                         alt="Logo"
                                         
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-customs-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative justify-self-start max-w-xs items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={OhCrop3}
                                     alt="Logo"

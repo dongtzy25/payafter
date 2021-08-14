@@ -130,8 +130,8 @@ body {
   height: 80% !important;
 }
 .custom-imagepos {
-  width: 560px;
-  height: 512px;
+  width: 600px;
+  height: 545px;
   right: 0;
 }
 
@@ -140,12 +140,18 @@ body {
   height: 543px;
 }
 .custom-imageCocoSize {
-  width: 600px;
-  height: 480px;
+  width: 570px;
+  height: 471px;
 }
 .custom-height {
   height: 652px !important;
 }
+.tablet-mobile-size {
+  max-width: 345px;
+  height: 609px;
+  margin: 50px auto;
+}
+
 @media screen and (max-width: 600px) {
   .ModalWrapperAlert {
     max-width: 80%;
@@ -196,7 +202,34 @@ body {
     width: 30%;
   }
 }
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .md-custom-height {
+    height: 600px;
+  }
+  .md-custom-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+  }
+}
 
+@media screen and (min-width: 1024px) and (max-width: 1269px) {
+  .custom-imageCocoSize {
+    width: 457px;
+    height: 431px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .custom-imageCocoSize {
+    width: 577px;
+    height: 543px;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   .merchant-ohcrop-size {
     width: 290px;
@@ -222,6 +255,13 @@ body {
     display: block;
   }
 }
+/* 
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .custom-imageCocoSize {
+    width: 500px;
+    height: 480px;
+  }
+} */
 
 @media screen and (min-width: 1210px) {
   .custom-imageSize {

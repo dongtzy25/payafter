@@ -64,17 +64,16 @@ const RoisePage = ({result}) =>{
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Get your Rosie Posie</h1> 
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">skincare with PayAfter</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden block text-center">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Get your Rosie Posie</h1> 
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">skincare with PayAfter</h1>
+                        <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={Rosie}
                                 alt="Logo"
-                                width={230}
-                                height={447}
+                                layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 pl-12 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Spoil your self and practice self-care by availing Rosie Posie Kit with PayAfter. Make sure to follow these steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
@@ -112,19 +111,19 @@ const RoisePage = ({result}) =>{
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Rosie Posie offers a gentle whitening skin set that’s got all the products you need on the daily. Not to mention, Rosie Posie combines all natural ingredients delivering the highest potency of skin whitening without having to use harsh chemicals. Plus, it’s Halal-certified, cruelty-free, non-GMO, and paraben-free.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 auto-rows-auto">
                          
-                           <div className="shadow-lg flex relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 transform transition duration-500 hover:scale-105">
+                           <div className="shadow-lg flex relative items-center justify-self-end max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie1}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center relative justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center relative justify-self-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Rosie2}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex  relative items-center justify-self-center merchant-customs-size justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex  relative items-center justify-self-start max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-8  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Rosie3}
                                     alt="Logo"

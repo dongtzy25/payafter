@@ -56,7 +56,7 @@ const Merchant = () =>{
             <div className={homestyle.firstfold}>
              <div className="w-full lg:py-12">
                 <div className="container mx-auto flex lg:flex-row flex-col items-start justify-between">
-                    <div className="lg:hidden block lg:w-6/12 w-11/12 lg:text-left text-center">
+                    <div className="lg:hidden block lg:w-6/12 w-11/12 lg:text-left text-center mx-auto">
                         <Image
                             src={merchant}
                             alt="Logo"
@@ -241,7 +241,7 @@ const Merchant = () =>{
             <div className="w-full bg-white py-12 text-black px-12">
                 <div className="container mx-auto text-center lg:px-0 px-12 lg:flex flex-row items-start justify-between">
                     <div className="flex items-center justify-center text-center relative lg:w-6/12"> 
-                        <div className="relative lg:w-9/12 w-7/12">
+                        <div className="relative xl:w-6/12  lg:w-9/12 w-7/12">
                             <Image
                                 src={soon}
                                 alt="Logo"

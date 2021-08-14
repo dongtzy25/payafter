@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CocoTel from '../../public/assets/images/cocotel/img_cocotel/img_cocotel@2x.png'
+import CocoTel from '../../public/assets/images/cocotel/cocotel.png'
 import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
 import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
 import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
@@ -24,7 +24,7 @@ const CocotelPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner cocotel-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute top-24 right-0 lg:flex hidden">
+                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={CocoTel}
                         alt="Logo"
@@ -56,15 +56,18 @@ const CocotelPage = () =>{
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
                     <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left md:text-left text-center pr-4">Book an escape at</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left md:text-left text-center pr-4">Cocotel with PayAfter!</h1>
-                        <div className="py-8 xl:hidden lg:hidden md:hidden sm:hidden  block">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left  text-center pr-4">Book an escape at</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Cocotel with PayAfter!</h1>
+                        <div className="
+                            py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
+                            md-custom-height
+                        ">
                             <Image
                                 src={CocoTel}
                                 alt="Logo"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent md:bg-transparent sm:bg-transparent bg-white py-8 pr-8 relative" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
                             <p className="mt-4">Follow these five easy steps to start your beautiful adventures at Cocotel:</p>
                             <div className="relative block w-full border-solid">
                                 <div className="relative pl-12 mt-4">
@@ -100,24 +103,23 @@ const CocotelPage = () =>{
                     <div className="w-4/5 mx-auto">
                         <h1 className="text-4xl font-bold">About Cocotel</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Cocotel is a technology hotel and property management aggregator company aiming to empower tourism in the Philippines by partnering with local hotels and resort owners by offering quality and affordable three-star accommodation at a fraction of a cost. From overnight stays to long weekends, enjoy the scent of salty sea air and the comfort of a cozy beach haven paradise.</p>
-                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white justify-self-center merchant-coco-size relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-4 mt-10">
+                            <div className="shadow-lg flex bg-white justify-self-center  relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={CocoTel1}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex items-center justify-self-center merchant-coco-size relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex items-center justify-self-center relative justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={CocoTel2}
                                         alt="Logo"
                                     />
                             </div>
-                            <div className="shadow-lg flex bg-white relative justify-self-center merchant-coco-size items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex bg-white relative justify-self-center  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={CocoTel3}
                                     alt="Logo"
-
                                 />
                             </div>
                         </div>
