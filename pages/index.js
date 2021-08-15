@@ -78,7 +78,7 @@ const Home = () => {
       <Alert isAlert={isAlert} setIsAlert={setisAlert} title={'Message sent!'} great={'Okay, thanks!'}  message={'Thank you for reaching out to us. We will get back to your concern as soon as possible.'}/>
 
       <div className="h-full bg-red flex flex-col justify-between ">
-        <div className="w-full text-black 2xl:py-0 xl:py-12 lg:py-4 py-4 lg:px-4">
+        <div className="w-full text-black 2xl:py-24 xl:py-12 lg:py-4 py-4 lg:px-4">
           <div className="container mx-auto py-8 flex lg:flex-row flex-col items-center justify-around">
 
           <div className="md:w-7/12 w-10/12 xl:hidden lg:hidden flex">
@@ -324,7 +324,7 @@ const Home = () => {
                 required />
                 {errors.name 
                   && errors.name.type === "required" 
-                  && <span className="custom-text-color font-semibold">Please enter your fullname</span>}
+                  && <span className="custom-text-color">Please enter your fullname</span>}
               </div> 
               <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
                 <div className="lg:w-1/2 w-full">
@@ -343,10 +343,10 @@ const Home = () => {
                   required />
                    {errors.email 
                      && errors.email.type === "required" 
-                     && <span className="custom-text-color font-semibold">Please enter email</span>}
+                     && <span className="custom-text-color">Please enter email</span>}
                     {errors.email 
                       && errors.email.type === "pattern" 
-                      && <span className="custom-text-color font-semibold">Please enter valid email</span> }
+                      && <span className="custom-text-color">Please enter valid email</span> }
                 </div> 
                 <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                   <label htmlFor="number" className="block text-md mb-2">Mobile number</label>
@@ -370,10 +370,10 @@ const Home = () => {
                   </div>
                   {errors.number 
                       && errors.number.type === "required" 
-                      && <span className="custom-text-color font-semibold">Please enter mobile number</span>}
+                      && <span className="custom-text-color">Please enter mobile number</span>}
                      {errors.number 
                         && errors.number.type === "pattern" 
-                        && <span className="custom-text-color font-semibold">Please enter valid mobile number</span> }
+                        && <span className="custom-text-color">Please enter valid mobile number</span> }
                 </div> 
               </div>
               <div className="mb-4 w-full">
@@ -392,7 +392,7 @@ const Home = () => {
                 required />
                 {errors.subject 
                   && errors.subject.type === "required" 
-                  && <span className="custom-text-color font-semibold">Please enter subject</span>}
+                  && <span className="custom-text-color">Please enter subject</span>}
               </div> 
               <div className="mb-4 w-full">
                 <label htmlFor="message" className="block text-md mb-2">How can we help you?</label>
@@ -410,7 +410,7 @@ const Home = () => {
                 required />
                 {errors.message 
                   && errors.message.type === "required" 
-                  && <span className="custom-text-color font-semibold">Please write your message</span>}
+                  && <span className="custom-text-color">Please write your message</span>}
               </div> 
               <div className="lg:flex md:flex items-center justify-between lg:space-x-4 w-full ">
                 <div className={homestyle.formgroup}>
