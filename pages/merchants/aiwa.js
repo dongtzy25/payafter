@@ -111,17 +111,15 @@ const AiwaPage = () =>{
                                     <Image
                                         src={Aiwa1}
                                         alt="Logo"
-                                      
                                     />
                             </div>
                             <div className="shadow-lg flex items-center  justify-self-center max-w-xs  justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                     <Image
                                         src={Aiwa2}
                                         alt="Logo"
-                                     
                                     />
                             </div>
-                            <div className="justify-self-center xd:col-span-1  justify-self-start max-w-xs shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
+                            <div className=" justify-self-start max-w-xs shadow-lg flex bg-white relative items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Aiwa3}
                                     alt="Logo"

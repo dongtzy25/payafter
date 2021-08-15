@@ -76,7 +76,7 @@ const OmoWhitePage = () =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Start investing in skincare regimens with PayAfter. Make sure to follow these five easy steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
@@ -113,7 +113,7 @@ const OmoWhitePage = () =>{
                         <h1 className="text-4xl font-bold">About OMO! White™</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">OMO! White™ is a Korean-inspired brand that has its finger on the pulse of asian beauty. Embracing the spirit of innovation, they bring the best and latest trends in skincare. Expect only effective products, playful packaging, and a unique beauty experience.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex  relative items-center justify-self-end items-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex  relative items-center justify-self-end max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Omowhite1}
                                     alt="Logo"
