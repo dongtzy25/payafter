@@ -169,7 +169,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           required />
                           {errors.name 
                             && errors.name.type === "required" 
-                            && <span className="custom-text-color font-semibold">Please enter your full name</span>}
+                            && <span className="custom-text-color">Please enter your full name</span>}
                       </div> 
                       <div className="mb-4 lg:flex flex-row items-start w-full justify-between lg:space-x-4">
                           <div className="lg:w-1/2 w-full">
@@ -306,7 +306,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                             <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                             <label htmlFor="agree" className="flex items-center">
                               {/* <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span> */}
-                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500"><u>Terms & Conditions</u></a></Link>  and  <Link href="/privacy"><a className="text-red-500"><u> Privacy Policy</u></a></Link>.</span>
+                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500"><u>Terms & Policy</u></a></Link>.</span>
                             </label>
                           </div>
                           <button 
