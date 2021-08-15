@@ -73,7 +73,7 @@ const RoisePage = ({result}) =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8  relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Spoil your self and practice self-care by availing Rosie Posie Kit with PayAfter. Make sure to follow these steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
