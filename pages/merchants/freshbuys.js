@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Freshbuys from '../../public/assets/images/freshbuys/freshbuys.png'
+import Freshbuys01 from '../../public/assets/images/freshbuys/freshbuys01.png'
 import Freshbuys1 from '../../public/assets/images/freshbuys/freshbuys-1.png'
 import Link from "next/link";
 import { useSpring, animated } from 'react-spring'
@@ -58,7 +59,7 @@ const FreshbuysPage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">FreshBuys using PayAfter</h1>
                         <div className=" py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block md-custom-height">
                             <Image
-                                src={Freshbuys}
+                                src={Freshbuys01}
                                 alt="Logo"
                             />
                         </div>

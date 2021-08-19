@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import CocoTel from '../../public/assets/images/cocotel/cocotel.png'
+import CocoTel01 from '../../public/assets/images/cocotel/cocotel01.png'
 import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
 import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
 import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
@@ -63,7 +64,7 @@ const CocotelPage = () =>{
                             md-custom-height
                         ">
                             <Image
-                                src={CocoTel}
+                                src={CocoTel01}
                                 alt="Logo"
                             />
                         </div>

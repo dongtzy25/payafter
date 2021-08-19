@@ -152,7 +152,7 @@ const Privacy = () => {
               the PayAfter website you affirm that you are capable of receiving
               information electronically. To access and retain the
               Communications electronically, you will need to use a computer
-              with Internet Explorer 7.0 or above, Firefox 3.0 or above, or
+              with Internet Explorer 11 or any modern browser, Firefox 3.0 or above, or
               similar software, Adobe Acrobat and hardware capable of running
               this software.
             </p>

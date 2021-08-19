@@ -1,6 +1,7 @@
 import React , {  useState }  from 'react'
 import Layout from '../layout/layout'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Modal } from '../component/modal'
 
 import merchant from '../public/assets/images/Illustration-merchant.svg'
@@ -19,6 +20,9 @@ import aiwa from '../public/assets/images/Merchant Brand Logos/download.png'
 import rosieposie from '../public/assets/images/Merchant Brand Logos/rosie posie.jpg'
 import itel from '../public/assets/images/Merchant Brand Logos/itel.png'
 import jbl from '../public/assets/images/Merchant Brand Logos/jbl.png'
+import zonixx from '../public/assets/images/Merchant Brand Logos/zonixx.jpeg'
+import travelPro from '../public/assets/images/Merchant Brand Logos/travelPro.jpeg'
+
 
 
 const Merchant = () =>{
@@ -105,6 +109,8 @@ const Merchant = () =>{
                                 <option value="electronics">Electronics & gadgets</option>
                                 <option value="food">Food</option>
                                 <option value="hotelsandresorts">Hotels and resorts</option>
+                                <option value="sports">Sports</option>
+                                
                             </select>
                         </div> 
                     </div>
@@ -115,20 +121,28 @@ const Merchant = () =>{
                                 onClick={()=> { Router.push('/merchants/omowhite') }}
                             >
                                 <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
-                                    <Image
-                                        src={omowhite}
-                                        alt="Logo"
-                                    />
+                                    <Link href="/merchants/omowhite">
+                                        <a>
+                                        <Image
+                                            src={omowhite}
+                                            alt="Logo"
+                                        />
+                                        </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
                             onClick={()=> { Router.push('/merchants/rosieposie') }}
                             >
                                 <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
-                                    <Image
-                                        src={rosieposie}
-                                        alt="Logo"
-                                    />
+                                    <Link href="/merchants/rosieposie">
+                                        <a>
+                                        <Image
+                                            src={rosieposie}
+                                            alt="Logo"
+                                        />
+                                        </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -136,100 +150,163 @@ const Merchant = () =>{
                     <div className="block mt-12 electronics category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Electronics & gadgets</h1>
                         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mt-10">
-                            <div 
-                            onClick={()=> { Router.push('/merchants/aiwa') }}
-                            className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={aiwa}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div 
-                            onClick={()=> { Router.push('/merchants/chuwi') }}
-                            className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={chuwi}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div 
-                            onClick={()=> { Router.push('/merchants/haier') }}
-                            className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={Haierlogo}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div 
-                            onClick={()=> { Router.push('/merchants/itel') }}
-                            className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={itel}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div 
-                            onClick={()=> { Router.push('/merchants/jbl') }}
-                            style={{backgroundColor: 'rgb(254,88,42)'}}
-                            className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                            
-                                <div className="relative flex items-center justify-center">
-                                    <Image
-                                        src={jbl}
-                                        alt="Logo"
-                                        width={140}
-                                        height={75}
-                                    />
-                                </div>
-                            </div>
+                            <Link href="/merchants/aiwa">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/aiwa') }}
+                                    className="shadow-lg flex bg-white items-center  justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                            <Image
+                                                src={aiwa}
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                            <Link href="/merchants/chuwi">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/chuwi') }}
+                                    className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                        
+                                                <Image
+                                                    src={chuwi}
+                                                    alt="Logo"
+                                                />
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                            <Link href="/merchants/haier">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/haier') }}
+                                    className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                            <Image
+                                                src={Haierlogo}
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                            <Link href="/merchants/itel">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/itel') }}
+                                    className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                            <Image
+                                                src={itel}
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                            <Link href="/merchants/jbl">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/jbl') }}
+                                    style={{backgroundColor: 'rgb(254,88,42)'}}
+                                    className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                        <div className="relative flex items-center justify-center">
+                                                <Image
+                                                    src={jbl}
+                                                    alt="Logo"
+                                                    width={140}
+                                                    height={75}
+                                                />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                       
                     </div>
                     <div className="block mt-12 food category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Food</h1>
                         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                        <div 
-                            onClick={()=> { Router.push('/merchants/freshbuys') }}
-                            className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
-                            style={{backgroundColor:'#F6EEDA'}}>
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={freshbuyers}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
-                            <div
-                            onClick={()=> { Router.push('/merchants/ohcrop') }}
-                            className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
-                            style={{backgroundColor:'#EADDBB'}}>
-                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
-                                    <Image
-                                        src={ohCrop}
-                                        alt="Logo"
-                                    />
-                                </div>
-                            </div>
+                            <Link href="/merchants/freshbuys">
+                                <a>
+                                    <div 
+                                    onClick={()=> { Router.push('/merchants/freshbuys') }}
+                                    className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                                    style={{backgroundColor:'#F6EEDA'}}>
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                            <Link href="/merchants/freshbuys">
+                                                <a>
+                                                <Image
+                                                    src={freshbuyers}
+                                                    alt="Logo"
+                                                />
+                                                </a>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                            <Link href="/merchants/ohcrop">
+                                <a>
+                                    <div
+                                    onClick={()=> { Router.push('/merchants/ohcrop') }}
+                                    className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
+                                    style={{backgroundColor:'#EADDBB'}}>
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                                <Image
+                                                    src={ohCrop}
+                                                    alt="Logo"
+                                                />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="block mt-12 hotelsandresorts category">
                         <h1 className="text-4xl font-bold lg:text-left text-center">Hotels and resorts</h1>
                         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
-                                style={{backgroundColor:'#F0F0F0'}}
-                                onClick={()=> { Router.push('/merchants/cocotel') }}
-                            >
+                            <Link href="/merchants/cocotel">
+                                <a>
+                                    <div className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm" 
+                                        style={{backgroundColor:'#F0F0F0'}}
+                                        onClick={()=> { Router.push('/merchants/cocotel') }}
+                                    >
+                                        <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                                <Image
+                                                    src={cocologo}
+                                                    alt="Logo"
+                                                />
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="block mt-12 sports category">
+                        <h1 className="text-4xl font-bold lg:text-left text-center">Sports</h1>
+                        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+                            {/* onClick={()=> { Router.push('/merchants/zonixx') }} */}
+                            <div 
+                            className="shadow-lg flex bg-black  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
                                 <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                                     <Image
-                                        src={cocologo}
+                                        src={zonixx}
+                                        alt="Logo"
+                                    />
+                                </div>
+                            </div>
+                            {/* onClick={()=> { Router.push('/merchants/travelpro') }} */}
+                            <div 
+                            className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                                <div className="relative w-4/5 h-4/5 flex items-center justify-center">
+                                    <Image
+                                        src={travelPro}
                                         alt="Logo"
                                     />
                                 </div>

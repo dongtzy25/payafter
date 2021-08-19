@@ -197,7 +197,9 @@ const Home = () => {
           <p className="text-base mt-8 xl:w-1/3 lg:w-2/5 text-center mx-auto">Shop from your favourite stores across the country and <br className="xl:block hidden"/> enjoy  0% interest <span className="lg:inline sm:block">for 5 monthly installment.</span></p>
         
           <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 xl:px-16 pt-10 place-content-center">
-            <div className="shadow-lg flex items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#EADDBB'}}>
+            <div
+            onClick={()=> { Router.push('/merchants/ohcrop') }}
+            className="cursor-pointer shadow-lg flex items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#EADDBB'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={ohCrop}
@@ -205,7 +207,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div 
+            onClick={()=> { Router.push('/merchants/chuwi') }}
+            className="cursor-pointer shadow-lg flex items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={chuwi}
@@ -213,7 +217,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex bg-white  items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F0F0F0'}}>
+            <div
+            onClick={()=> { Router.push('/merchants/cocotel') }}
+            className="cursor-pointer shadow-lg flex bg-white  items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F0F0F0'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={cocologo}
@@ -221,7 +227,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div 
+            onClick={()=> { Router.push('/merchants/omowhite') }}
+            className="cursor-pointer shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
                 <Image
                     src={omowhite}
@@ -229,7 +237,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex bg-white  items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div 
+            onClick={()=> { Router.push('/merchants/haier') }}
+            className="cursor-pointer shadow-lg flex bg-white  items-center justify-self-center justify-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={Haierlogo}
@@ -237,7 +247,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F6EEDA'}}>
+            <div 
+            onClick={()=> { Router.push('/merchants/freshbuys') }}
+            className="cursor-pointer shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm" style={{backgroundColor:'#F6EEDA'}}>
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={freshbuyers}
@@ -245,7 +257,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className=" shadow-lg flex bg-white items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div 
+            onClick={()=> { Router.push('/merchants/aiwa') }}
+            className="cursor-pointer shadow-lg flex bg-white items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-4/5 h-4/5 flex items-center justify-center">
                 <Image
                     src={aiwa}
@@ -253,7 +267,9 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
+            <div 
+            onClick={()=> { Router.push('/merchants/rosieposie') }}
+            className="cursor-pointer shadow-lg flex items-center justify-center justify-self-center rounded lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size transform transition duration-500 hover:scale-105 hover:shadow-sm">
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded">
                 <Image
                     src={rosieposie}
@@ -294,7 +310,7 @@ const Home = () => {
               <span className="xl:inline lg:inline md:inline block"> Complete the form <br className="xl:block lg:block md:block hidden"/>and we will get back to you as soon as possible.</span></p>
               <p className="mt-8">Or send us a direct email at</p>
               <div className="mt-4 flex items-center space-x-2 lg:justify-start justify-center">
-                <a href="mailto:hello@payafter.ph" className="flex items-center ">
+                <a href="mailto:hello@payafter.ph" className="flex items-center">
                 <Image
                     src={Mail}
                     alt="Logo"
@@ -417,7 +433,7 @@ const Home = () => {
                   <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                   <label htmlFor="agree" className="flex items-center">
                     {/* <span className="ml-4 xl:block lg:block md:block hidden">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Conditions</u></Link>  and <Link href="/privacy"><u>Privacy Policy</u></Link></span> */}
-                    <span className="ml-4 ">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Policy</u></Link></span>
+                    <span className="ml-4 ">I agree with PayAfter’s <Link href="/privacy?terms" passHref><u>Terms & Policy</u></Link></span>
                   </label>
                 </div>
                 <button 

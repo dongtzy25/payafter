@@ -63,9 +63,9 @@ const RoisePage = ({result}) =>{
                     </Link>
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Get your Rosie Posie</h1> 
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">skincare with PayAfter</h1>
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left  z-10 relative">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Get your Rosie Posie</h1> 
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">skincare with PayAfter</h1>
                         <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={Rosie}
@@ -73,7 +73,7 @@ const RoisePage = ({result}) =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8  relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 relative md-custom-bg  xl:pl-24 lg:pl-24 pl-12" style={{zIndex:'1'}}>
                         <p className="mt-4">Spoil your self and practice self-care by availing Rosie Posie Kit with PayAfter. Make sure to follow these steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">

@@ -64,9 +64,9 @@ const OhcropPage = () =>{
                     </Link>
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Make the switch with</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Oh Crop! and PayAfter</h1>
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left z-10 relative">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Make the switch with</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Oh Crop! and PayAfter</h1>
                         <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={OhCrop}
@@ -74,7 +74,7 @@ const OhcropPage = () =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg xl:pl-24 lg:pl-24 pl-12" style={{zIndex:'1'}}>
                             <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
                             <div className="relative block xl:w-9/12 lg:w-9/12 w-full border-solid">
                                 <div className="relative pl-12 mt-4">
@@ -137,7 +137,7 @@ const OhcropPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> {  window.open("https://www.instagram.com/omowhiteph/").focus()  }}
+                            onClick={()=> {  window.open("https://www.instagram.com/ohcrop.ph/").focus()  }}
                             className="
                                 inline-block 
                                 px-4 

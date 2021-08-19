@@ -1,10 +1,10 @@
 import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import JBL from '../../public/assets/images/jbl/img_jbl/img_jbl@3x.png'
-import JBL1 from '../../public/assets/images/jbl/jbl-01.png'
+import JBL from '../../public/assets/images/jbl/img_jbl/img_jbl@3x_2.png'
+import JBL1 from '../../public/assets/images/jbl/jbl-01_2.png'
 import JBL2 from '../../public/assets/images/jbl/jbl-02.png'
-import JBL3 from '../../public/assets/images/jbl/jbl-03.png'
+import JBL3 from '../../public/assets/images/jbl/jbl-03_2.png'
 import Link from "next/link";
 
 import Router from 'next/router'
@@ -28,7 +28,7 @@ const JBLPage = () =>{
                     <Image
                         src={JBL}
                         alt="Logo"
-                        layout="fill"
+                        unoptimized={true}
                     />
                 </animated.div>
                 <div className="container mx-auto mb-8 lg:pl-24 pl-12">
@@ -66,6 +66,7 @@ const JBLPage = () =>{
                             <Image
                                 src={JBL}
                                 alt="Logo"
+                                unoptimized={true}
                             />
                         </div>
                         <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
@@ -80,7 +81,7 @@ const JBLPage = () =>{
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                    <p className="mb-4 pt-1">Visit JBL Philippines’s Facebook page <Link href="https://www.facebook.com/JBLPhilippines/"><a target="_blank" className="text-blue-500 underline"  > @JBLPhilippines</a></Link></p>
+                                    <p className="mb-4 pt-1">Visit JBL&apos;s authorized reseller&apos;s Facebook page. You can also check out their products <Link href="https://www.facebook.com/TechBytesITSolutions/"><a target="_blank" className="text-blue-500 underline"> here</a></Link>.</p>
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
@@ -107,26 +108,29 @@ const JBLPage = () =>{
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
                             <div className="shadow-lg flex bg-white relative justify-self-end max-w-xs items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
-                                    <Image
-                                        src={JBL1}
-                                        alt="Logo"
-                                    />
+                                <Image
+                                    src={JBL1}
+                                    alt="Logo"
+                                    unoptimized={true}
+                                />
                             </div>
                             <div className="shadow-lg flex items-center relative justify-self-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
-                                    <Image
-                                        src={JBL2}
-                                        alt="Logo"
-                                    />
+                                <Image
+                                    src={JBL2}
+                                    alt="Logo"
+                                    unoptimized={true}
+                                />
                             </div>
                             <div className="shadow-lg flex bg-white relative justify-self-start max-w-xs items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4  transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={JBL3}
                                     alt="Logo"
+                                    unoptimized={true}
                                 />
                             </div>
                         </div>
                         <button 
-                            onClick={()=> { window.open("https://www.facebook.com/JBLPhilippines/").focus()  }}
+                            onClick={()=> { window.open("https://www.facebook.com/TechBytesITSolutions/").focus()  }}
                             className="
                                 inline-block 
                                 px-4 

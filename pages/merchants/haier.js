@@ -2,9 +2,9 @@ import React,{useState} from "react"
 import Layout from '../../layout/layout'
 import Image from 'next/image'
 import Haier from '../../public/assets/images/haier/img_haier/img_haier@3x.png'
-import Haier1 from '../../public/assets/images/haier/haier-01.png'
-import Haier2 from '../../public/assets/images/haier/haier-02.png'
-import Haier3 from '../../public/assets/images/haier/haier-03.png'
+import Haier1 from '../../public/assets/images/haier/haier-01.jpg'
+import Haier2 from '../../public/assets/images/haier/haier-02.jpg'
+import Haier3 from '../../public/assets/images/haier/haier-03.jpg'
 import Link from "next/link"
 
 import Router from 'next/router'
@@ -67,7 +67,7 @@ const HaierPage = () =>{
                                 alt="Logo"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 xl:pl-0 lg:pl-0 pl-24 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8  relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Buy your own Haier with PayAfter with these five easy steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
@@ -79,7 +79,7 @@ const HaierPage = () =>{
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                <p className="mb-4 pt-1">Visit Haier Philippines’ Facebook page  <Link href="https://www.facebook.com/Haier.Philippines/"><a target="_blank" className="text-blue-500 underline"  >@Haier.Philippines</a></Link></p>
+                                <p className="mb-4 pt-1">Visit Haier&apos;s authorized dealer&apos;s <Link href="https://www.facebook.com/jmappliancesandgadgets"><a target="_blank" className="text-blue-500 underline"  >Facebook page</a></Link></p>
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
@@ -125,7 +125,7 @@ const HaierPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> { window.open("https://www.facebook.com/Haier.Philippines/").focus() }}
+                            onClick={()=> { window.open("https://www.facebook.com/jmappliancesandgadgets").focus() }}
                             className="
                                 inline-block 
                                 px-4 

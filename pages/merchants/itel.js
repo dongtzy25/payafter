@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Itel from '../../public/assets/images/itel/img_itel/img_itel@3x.png'
+import Itel from '../../public/assets/images/itel/img_itel/img_itel@3x_2.png'
 import Itel1 from '../../public/assets/images/itel/itel-01.png'
 import Itel2 from '../../public/assets/images/itel/itel-02.png'
 import Itel3 from '../../public/assets/images/itel/itel-03.png'
@@ -27,8 +27,9 @@ const ItelPage = () =>{
             <div className="w-full pt-8 relative overflow-hidden custom-banner itel-color">
                  <animated.div style={animation} className="custom-imagepos absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
                     <Image
-                        src={Itel}
-                        alt="Logo"
+                          src={Itel}
+                          alt="Logo"
+                          unoptimized={true}
                     />
                 </animated.div>
                 <div className="container mx-auto mb-8 lg:pl-24 pl-12">
@@ -66,6 +67,7 @@ const ItelPage = () =>{
                             <Image
                                 src={Itel}
                                 alt="Logo"
+                                unoptimized={true}
                             />
                         </div>
                         <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
@@ -80,7 +82,7 @@ const ItelPage = () =>{
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                    <p className="mb-4 pt-1">Visit Itel Global’s Facebook page <Link href="https://www.facebook.com/itelglobal/"><a target="_blank" className="text-blue-500 underline"  >@itelglobal</a></Link></p>
+                                    <p className="mb-4 pt-1">Visit itel&apos;s authorized distributor&apos;s <Link href="https://www.facebook.com/jmappliancesandgadgets"><a target="_blank" className="text-blue-500 underline"  >Facebook page</a></Link></p>
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
@@ -126,7 +128,7 @@ const ItelPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> { window.open("https://www.facebook.com/itelglobal/").focus()  }}
+                            onClick={()=> { window.open("https://www.facebook.com/jmappliancesandgadgets").focus()  }}
                             className="
                                 inline-block 
                                 px-4 

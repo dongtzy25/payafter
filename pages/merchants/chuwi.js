@@ -1,16 +1,17 @@
-import React,{useState} from "react";
+import React from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Chuwi from '../../public/assets/images/chuwi/img_chuwi/img_chuwi@3x.png'
-import Chuwi1 from '../../public/assets/images/chuwi/chuwi-01.png'
-import Chuwi2 from '../../public/assets/images/chuwi/chuwi-02.png'
-import Chuwi3 from '../../public/assets/images/chuwi/chuwi-03.png'
-import Home from '../../public/assets/images/home.svg'
-
 import Link from "next/link";
 
 import { useSpring, animated } from 'react-spring'
 import Router from 'next/router'
+
+import Chuwi from '../../public/assets/images/chuwi/img_chuwi/img_chuwi@3x.png'
+import Chuwi1 from '../../public/assets/images/chuwi/chuwi-01.png'
+import Chuwi2 from '../../public/assets/images/chuwi/chuwi-02.png'
+import Chuwi3 from '../../public/assets/images/chuwi/chuwi-03.png'
+
+import Home from '../../public/assets/images/home.svg'
 
 const ChuwiPage = () =>{
 
@@ -29,6 +30,7 @@ const ChuwiPage = () =>{
                     <Image
                         src={Chuwi}
                         alt="Logo"
+                        unoptimized={true}
                     />
                 </animated.div>
                 <div className="container mx-auto mb-8 lg:pl-24 pl-12">
@@ -66,6 +68,7 @@ const ChuwiPage = () =>{
                             <Image
                                 src={Chuwi}
                                 alt="Logo"
+                                unoptimized={true}
                             />
                         </div>
                         <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg" style={{zIndex:'1'}}>
@@ -80,7 +83,7 @@ const ChuwiPage = () =>{
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                    <p className="mb-4 pt-1">Visit Chuwi Global’s Facebook page  <Link href="https://www.facebook.com/chuwidotcom/"><a target="_blank" className="text-blue-500 underline"  >@chuwidotcom</a></Link></p>
+                                    <p className="mb-4 pt-1">Visit Chuwi&apos;s authorized distributor&apos;s <Link href="https://www.facebook.com/TechBytesITSolutions/"><a target="_blank" className="text-blue-500 underline"  >Facebook page</a></Link></p>
                                 </div> 
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
@@ -105,7 +108,7 @@ const ChuwiPage = () =>{
                         <h1 className="text-4xl font-bold">About Chuwi</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">Chuwi was founded in 2004 with the purpose of creating superior digital technology in a brand new way, and every day we get closer to our dreams. From the beginning we have strived to make a difference in people’s lives and accompany them on their path to success. We make products that help people reach and exceed their goals.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex bg-white relative  justify-self-end max-w-xs  items-center  justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
+                            <div className="shadow-lg flex bg-white relative  justify-self-end max-w-xs  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105
                             ">
                                     <Image
                                         src={Chuwi1}
@@ -126,7 +129,7 @@ const ChuwiPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> { Router.push("https://www.facebook.com/chuwidotcom/") }}
+                            onClick={()=> { Router.push("https://www.facebook.com/TechBytesITSolutions/") }}
                             className="
                                 inline-block 
                                 px-4 
