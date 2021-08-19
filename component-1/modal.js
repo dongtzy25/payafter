@@ -162,7 +162,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                           type="text"
                           {...register("name", { required: true })}
                           autoComplete="off" 
-                          maxLength="64"
                           className= {errors.name 
                             ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                             : "w-full rounded px-4 py-3 text-black border"}
@@ -181,7 +180,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                           type="text" 
                           {...register("email", { required: true,pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}
                           autoComplete="off" 
-                          maxLength="64"
                           className= {errors.email 
                             ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                             : "w-full rounded px-4 py-3 text-black border "}
@@ -207,7 +205,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="number" 
                               type="text" 
                               autoComplete="off" 
-                              maxLength="10"
                               className= {errors.number 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                                 : "w-full rounded-r px-4 py-3 text-black border"}
@@ -231,7 +228,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                               id="company" 
                               name="company" 
                               type="text" 
-                              maxLength="64"
                               autoComplete="off" 
                               className= {errors.company 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
@@ -250,7 +246,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="role" 
                               type="text" 
                               autoComplete="off" 
-                              maxLength="64"
                               className= {errors.role 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color" 
                                 : "w-full rounded px-4 py-3 text-black border"}
@@ -270,7 +265,6 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="website" 
                               type="text" 
                               autoComplete="off" 
-                              maxLength="64"
                               className= {errors.website 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                                 : "w-full rounded px-4 py-3 text-black border "}
@@ -282,7 +276,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                               <label htmlFor="industry" className="block text-base mb-2">Industry</label>
-                              {/* <select 
+                              <select 
                               {...register("industry", { required: true })}
                               id="industry"
                               name="industry" 
@@ -296,14 +290,14 @@ export const Modal = ({ showModal, setShowModal }) => {
                                 <option value="IT">I.T</option>
                                 <option value="Doctors">Doctors</option>
                                 <option value="Lawyers">Lawyers</option>
-                              </select> */}
-                              <input id="industry" name="industry" type="text" autoComplete="off" 
-                              className="w-full rounded px-4 py-3 text-black border" 
-                              maxLength="64"
-                              required placeholder="Your Industry" />
+                              </select>
+                              {/* <input id="industry" name="industry" type="text" autoComplete="off" 
+                              className="w-full rounded px-4 py-3 text-black border"
+                              placeholder="Select industry"
+                              required /> */}
                                {errors.industry 
                                 && errors.industry.type === "required" 
-                                && <span className="custom-text-color">Please enter your industry</span>}
+                                && <span className="custom-text-color">Please enter your role</span>}
                           </div> 
                       </div>
                       
@@ -312,7 +306,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                             <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                             <label htmlFor="agree" className="flex items-center">
                               {/* <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span> */}
-                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500 underline">Terms & Policy</a></Link>.</span>
+                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500"><u>Terms & Policy</u></a></Link>.</span>
                             </label>
                           </div>
                           <button 
