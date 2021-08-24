@@ -44,7 +44,7 @@ const Home = () => {
           <p>${data.message}</p>
           <br/>
           <br/>
-          <span>Sent using PayAfter webiste.</span>
+          <span>Sent using PayAfter website.</span>
     `;
 
     const payload = {
@@ -433,7 +433,7 @@ const Home = () => {
                   <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                   <label htmlFor="agree" className="flex items-center">
                     {/* <span className="ml-4 xl:block lg:block md:block hidden">I agree with PayAfter’s <Link href="/privacy?terms"><u>Terms & Conditions</u></Link>  and <Link href="/privacy"><u>Privacy Policy</u></Link></span> */}
-                    <span className="ml-4 ">I agree with PayAfter’s <Link href="/privacy?terms" passHref><u>Terms & Policy</u></Link></span>
+                    <span className="ml-4 ">I agree with PayAfter’s <Link href="/privacy" passHref><u>Terms & Policy</u></Link></span>
                   </label>
                 </div>
                 <button 

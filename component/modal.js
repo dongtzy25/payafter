@@ -104,7 +104,7 @@ export const Modal = ({ showModal, setShowModal }) => {
           <p><b>Website</b>: ${data.website}</p>
           <p><b>Industry</b>: ${data.industry}</p>
           <br/>
-          <span>Submitted from PayAfter webiste.</span>
+          <span>Submitted from PayAfter website.</span>
     `;
 
     const payload = {
@@ -297,10 +297,18 @@ export const Modal = ({ showModal, setShowModal }) => {
                                 <option value="Doctors">Doctors</option>
                                 <option value="Lawyers">Lawyers</option>
                               </select> */}
-                              <input id="industry" name="industry" type="text" autoComplete="off" 
-                              className="w-full rounded px-4 py-3 text-black border" 
+                              <input 
+                              id="industry" 
+                              name="industry" 
+                              type="text" 
+                              autoComplete="off" 
+                              className={errors.industry 
+                                ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                                : "w-full rounded px-4 py-3 text-black border "} 
                               maxLength="64"
-                              required placeholder="Your Industry" />
+                              {...register("industry", { required: true })}
+                              required 
+                              placeholder="Your Industry" />
                                {errors.industry 
                                 && errors.industry.type === "required" 
                                 && <span className="custom-text-color">Please enter your industry</span>}
@@ -312,7 +320,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                             <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                             <label htmlFor="agree" className="flex items-center">
                               {/* <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span> */}
-                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500 underline">Terms & Policy</a></Link>.</span>
+                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy"><a className="text-red-500 underline">Terms & Policy</a></Link>.</span>
                             </label>
                           </div>
                           <button 
