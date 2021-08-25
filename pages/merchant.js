@@ -22,6 +22,13 @@ import itel from "../public/assets/images/Merchant Brand Logos/itel.png";
 import jbl from "../public/assets/images/Merchant Brand Logos/jbl.png";
 import zonixx from "../public/assets/images/Merchant Brand Logos/zonixx.jpeg";
 import travelPro from "../public/assets/images/Merchant Brand Logos/travelPro.jpeg";
+import zagana from "../public/assets/images/Merchant Brand Logos/zagana logo.png";
+import condoCare from "../public/assets/images/Merchant Brand Logos/condocare logo.png";
+import saveLink from "../public/assets/images/Merchant Brand Logos/savelink logo.png";
+import CLJ from "../public/assets/images/Merchant Brand Logos/clj logo.png";
+import brickWood from "../public/assets/images/Merchant Brand Logos/brickwood logo.png";
+
+
 
 const Merchant = () => {
   const [showModal, setShowModal] = useState(false);
@@ -101,9 +108,13 @@ const Merchant = () => {
                 <option value="all">All</option>
                 <option value="beauty">Beauty</option>
                 <option value="electronics">Electronics & gadgets</option>
-                <option value="food">Food</option>
+                <option value="fashion">Fashion</option>
+                <option value="food">Groceries</option>
+                <option value="health">Health</option>
                 <option value="hotelsandresorts">Hotels and resorts</option>
-                <option value="sports">Sports</option>
+                <option value="restaurant">Restaurants</option>
+                <option value="services">Services</option>
+                <option value="sports">Transportation</option>
               </select>
             </div>
           </div>
@@ -185,9 +196,25 @@ const Merchant = () => {
               </Link>
             </div>
           </div>
+          <div className="block mt-12 fashion category">
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+             Fashion
+            </h1>
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+              <Link href="/merchants/cljewels">
+                <a
+                  className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                >
+                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                    <Image src={CLJ} alt="Logo" />
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
           <div className="block mt-12 food category">
             <h1 className="text-4xl font-bold lg:text-left text-center">
-              Food
+             Groceries
             </h1>
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
               <Link href="/merchants/freshbuys">
@@ -210,8 +237,19 @@ const Merchant = () => {
                     </div>
                   </a>
                 </Link>
+                <Link href="/merchants/zagana">
+                <a
+                  className="shadow-lg flex items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                  style={{ backgroundColor: "#FACC09" }}
+                >
+                    <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                      <Image src={zagana} alt="Logo" />
+                    </div>
+                  </a>
+                </Link>
             </div>
           </div>
+       
           <div className="block mt-12 hotelsandresorts category">
             <h1 className="text-4xl font-bold lg:text-left text-center">
               Hotels and resorts
@@ -232,11 +270,68 @@ const Merchant = () => {
               </Link>
             </div>
           </div>
-          <div className="block mt-12 sports category">
+          <div className="block mt-12 health category">
             <h1 className="text-4xl font-bold lg:text-left text-center">
-              Sports
+             Health
             </h1>
             <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+              <Link href="/merchants/savelink">
+                <a
+                  className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                >
+                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                    <Image src={saveLink} alt="Logo" />
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="block mt-12 restaurant category">
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+            Restaurants
+            </h1>
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+              <Link href="/merchants/brickwood">
+                <a
+                  className="shadow-lg flex bg-white items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                 
+                >
+                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                    <Image src={brickWood} alt="Logo" />
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="block mt-12 services category">
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+            Services
+            </h1>
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+              <Link href="/merchants/condocare">
+                <a
+                  className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm"
+                >
+                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                    <Image src={condoCare} alt="Logo" />
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="block mt-12 sports category">
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+              Transportation
+            </h1>
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10">
+            <Link href="/merchants/travelpro">
+                <a 
+                className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
+                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
+                    <Image src={travelPro} alt="Logo" />
+                  </div>
+                </a>
+              </Link>
               <Link href="/merchants/zonixx">
                 <a 
                 className="shadow-lg flex bg-black  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
@@ -245,14 +340,7 @@ const Merchant = () => {
                   </div>
                 </a>
               </Link>
-              <Link href="/merchants/travelpro">
-                <a 
-                className="shadow-lg flex bg-white  items-center justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 merchant-logo-size cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-sm">
-                  <div className="relative w-4/5 h-4/5 flex items-center justify-center mx-auto">
-                    <Image src={travelPro} alt="Logo" />
-                  </div>
-                </a>
-              </Link>
+            
             </div>
           </div>
         </div>

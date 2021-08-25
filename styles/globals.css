@@ -130,6 +130,21 @@ body {
 .travelpro-color::after {
   background-color: rgba(61, 95, 37, 1);
 }
+.cljewels-color::after {
+  background-color: rgba(35, 19, 86, 1);
+}
+.zagana-color::after {
+  background-color: rgba(40, 117, 62, 1);
+}
+.savedLink-color::after {
+  background-color: rgba(50, 167, 246, 1);
+}
+.brickwood-color::after {
+  background-color: rgba(242, 88, 101, 1);
+}
+.condocare-color::after {
+  background-color: rgba(23, 175, 254, 1);
+}
 .custom-right-width {
   width: 19% !important;
   right: 11% !important;
@@ -166,7 +181,9 @@ body {
     width: 50%;
     @apply shadow-xl;
   }
-
+  .cljewels-color::after {
+    background-color: rgba(35, 19, 86, 0.5);
+  }
   .merchant-coco-size {
     height: 180px;
     width: 100%;
