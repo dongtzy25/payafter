@@ -143,7 +143,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                 <div className="w-full text-black overflow-y-auto">
                   <div className="container mx-auto lg:px-20 px-8 py-20 lg:flex flex-row justify-between items-start">
                   <div className="lg:w-6/12 w-full lg:text-left text-center relative">
-                    <div className="absolute -top-8 right-0 z-3" onClick={() => setShowModal(prev => !prev)}>
+                    <div className="absolute -top-6 right-0 z-3" onClick={() => setShowModal(prev => !prev)}>
                       <svg
                           className="w-6 h-6 cursor-pointer"
                           fill="none"
