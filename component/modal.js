@@ -141,8 +141,8 @@ export const Modal = ({ showModal, setShowModal }) => {
                 {/* <ModalImg src={require('./modal.jpg')} alt='camera' /> */}
                
                 <ModalContent>
-                <div className="w-full text-black overflow-y-auto lg:mt-0 mt-6">
-                  <div className="lg:absolute lg:top-0 lg:right-0 relative p-8 z-3" onClick={() => setShowModal(prev => !prev)}>
+                <div className="w-full text-black overflow-y-auto ">
+                  <div className="lg:absolute lg:top-0 lg:right-0 relative lg:mt-0 mt-6 p-8 z-3" onClick={() => setShowModal(prev => !prev)}>
                     <svg
                         className="w-6 h-6 ml-auto cursor-pointer"
                         fill="none"
