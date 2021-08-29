@@ -142,7 +142,23 @@ export const Modal = ({ showModal, setShowModal }) => {
                 <ModalContent>
                 <div className="w-full text-black overflow-y-auto">
                   <div className="container mx-auto lg:px-20 px-8 py-20 lg:flex flex-row justify-between items-start">
-                  <div className="lg:w-6/12 w-full lg:text-left text-center">
+                  <div className="lg:w-6/12 w-full lg:text-left text-center relative">
+                    <div className="absolute -top-8 right-0 z-3" onClick={() => setShowModal(prev => !prev)}>
+                      <svg
+                          className="w-6 h-6 cursor-pointer"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                          <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                      </svg>
+                    </div>
                       <h1 className="lg:text-4xl text-2xl" style={{font:' normal normal 800 48px/66px Nunito Sans'}}>Join us now!</h1>
                       <p className="mt-4 lg:w-1/2 w-full ">Be our partner merchant and gain access to our Cebuana Lhuillier customer base.</p>
                       <div className="w-full xl:text-left text-center lg:px-0 px-12 mt-12">
@@ -345,7 +361,7 @@ export const Modal = ({ showModal, setShowModal }) => {
               </div>
                 </ModalContent>
               
-                <div className="absolute top-10 right-8 z-3" onClick={() => setShowModal(prev => !prev)}>
+                {/* <div className="absolute top-10 right-8 z-3" onClick={() => setShowModal(prev => !prev)}>
                   <svg
                       className="w-6 h-6 cursor-pointer"
                       fill="none"
@@ -360,7 +376,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                       d="M6 18L18 6M6 6l12 12"
                       ></path>
                   </svg>
-                </div>
+                </div> */}
               </ModalWrapper>
           </animated.div>
         </Background>
