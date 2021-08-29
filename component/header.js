@@ -169,7 +169,7 @@ const Header  = ()  => {
                 <li
                     onClick={() => setMobileOpen(false) }
                     className={hashtag === '?contact' ? 
-                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block w-full '}
                 ><Link href="/?contact">Contact us</Link></li>
                 {/* <li
@@ -179,7 +179,7 @@ const Header  = ()  => {
                 ><Link href="/news">News</Link></li> */}
                 <li 
                  className={currentPath === '/privacy' ? 
-                 'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                 'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                  'inline-block w-full '}
                 ><Link href="/privacy">Terms & Policy</Link></li>
             </ul>
@@ -187,7 +187,7 @@ const Header  = ()  => {
                 className="
                     absolute
                     top-12
-                    right-5
+                    right-10
                     inline-flex
                     items-center
                     justify-center

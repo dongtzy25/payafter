@@ -141,7 +141,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                 {/* <ModalImg src={require('./modal.jpg')} alt='camera' /> */}
                 <ModalContent>
                 <div className="w-full text-black overflow-y-auto">
-                  <div className="container mx-auto lg:px-20 px-8 lg:py-20 py-12 lg:flex flex-row justify-between items-start">
+                  <div className="container mx-auto lg:px-20 px-8 lg:py-20 py-16 lg:flex flex-row justify-between items-start">
                   <div className="lg:w-6/12 w-full lg:text-left text-center">
                       <h1 className="lg:text-4xl text-2xl" style={{font:' normal normal 800 48px/66px Nunito Sans'}}>Join us now!</h1>
                       <p className="mt-4 lg:w-1/2 w-full ">Be our partner merchant and gain access to our Cebuana Lhuillier customer base.</p>
@@ -345,7 +345,7 @@ export const Modal = ({ showModal, setShowModal }) => {
               </div>
                 </ModalContent>
               
-                <div className="pt-2 absolute top-4 right-8 z-3" onClick={() => setShowModal(prev => !prev)}>
+                <div className="pt-2 absolute top-8 right-8 z-3" onClick={() => setShowModal(prev => !prev)}>
                   <svg
                       className="w-6 h-6 cursor-pointer"
                       fill="none"
