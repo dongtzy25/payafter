@@ -38,6 +38,7 @@ const Footer = () => {
                                 <li className="mb-4 text-md" onClick={()=>openModal()}><span className="cursor-pointer">Apply as merchant</span></li>
                                 <li className="mb-4 text-md"><Link href="/merchant">Merchants</Link></li>
                                 <li className="mb-4 text-md"><Link href="/?contact">Contact us</Link></li>
+                                <li className="mb-4 text-md"><Link href="/news">News</Link></li>
                             </ul>
                         </div>
                         <div className="lg:w-1/3 w-full  lg:mt-0 mt-8">

@@ -6,9 +6,11 @@ import homestyle from '../styles/Home.module.css'
 import Payafterwhite from '../public/assets/images/logo_payafter.svg'
 import CLFC from '../public/assets/images/logo_clfc.png'
 import arrowRight from '../public/assets/images/arrow_right.svg'
+import { useRouter } from "next/router"
 
 
 const NewsPage = () => {
+    const router = useRouter();
     return(
         <Layout>
              <div className={homestyle.firstfold}>
@@ -23,7 +25,7 @@ const NewsPage = () => {
                         <div className="xl:pl-24 flex xl:items-start lg:items-start items-center flex-col mt-8 lg:w-7/12 mx-auto">
                             <h1 className="lg:text-6xl lg:pl-12 xl:pl-0 text-4xl font-bold">Stay in the loop</h1>
                             <p className="lg:text-xl text-lg mt-8 xl:w-full w-5/6 lg:text-left text-center mx-auto">Fear of missing out? Sign up to our newsroom to make sure you’re   <br className="xl:block hidden"/> always up to date.</p>
-                            <div className="mt-12 xl:flex lg:flex items-center justify-center gap-4">
+                            <div className="mt-12 xl:flex lg:flex items-center justify-center gap-4 lg:space-x-0 space-x-2 lg:text-left text-center">
                                 <input 
                                 id="name" 
                                 name="name" 
@@ -38,6 +40,7 @@ const NewsPage = () => {
                                         inline-block 
                                         px-5 
                                         py-3
+                                        lg:mt-0 mt-2
                                         custom-button-color
                                         rounded 
                                         text-white
@@ -59,7 +62,7 @@ const NewsPage = () => {
                 <div className="container mx-auto  text-center xl:px-24 lg:px-12 px-8  relative">
                     <div className=" xl:flex lg:flex items-center justify-between w-full">
                         <h1 className="text-5xl font-bold">Newsroom</h1>
-                        <div className="lg:mt-0 mt-4 flex xl:flex-row lg:flex-row flex-col items-center lg:space-x-4">
+                        {/* <div className="lg:mt-0 mt-4 flex xl:flex-row lg:flex-row flex-col items-center lg:space-x-4">
                             <label htmlFor="industry" className="text-base lg:text-left text-center">Sort by</label>
                             <select 
                                 id="industry"
@@ -71,24 +74,25 @@ const NewsPage = () => {
                                 >
                                 <option value="all">Latest release</option>
                             </select>
-                        </div> 
+                        </div>  */}
                     </div>
                     <br/>
                     <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 py-10 place-content-center">
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
+                        <div 
+                        onClick={() => router.push('/news/cebuana-lhuillier-unviels-payafter')}
+                        className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500"
+                        >
                             <div className="flex flex-row items-center justify-self-start">
                                 <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
+                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
                                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
                                         <Image
                                             src={Payafterwhite}
                                             alt="Logo"
-                                            width={130}
-                                            height={110}
                                         />
                                     </div>
                                 </div>
-                                <div 
+                                {/* <div 
                                     className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
                                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
                                         <Image
@@ -98,12 +102,12 @@ const NewsPage = () => {
                                             height={110}
                                         />
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
+                            <h1 className="lg:text-3xl text-2xl font-bold p-4 text-left">Cebuana Lhuillier unveils “PayAfter”</h1> 
                             <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
+                                <span className="text-base">Aug. 31, 2021</span>
+                                <Link href="/news/cebuana-lhuillier-unviels-payafter" >  
                                     <a className="cursor-pointer"  >
                                         <Image
                                         src={arrowRight}
@@ -115,208 +119,7 @@ const NewsPage = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
-                            <div className="flex flex-row items-center justify-self-start">
-                                <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={Payafterwhite}
-                                            alt="Logo"
-                                            width={130}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                                <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
-                                    <a className="cursor-pointer"  >
-                                        <Image
-                                        src={arrowRight}
-                                        alt="Logo"
-                                        width={45}
-                                        height={45}
-                                        />
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
-                            <div className="flex flex-row items-center justify-self-start">
-                                <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={Payafterwhite}
-                                            alt="Logo"
-                                            width={130}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                                <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
-                                    <a className="cursor-pointer"  >
-                                        <Image
-                                        src={arrowRight}
-                                        alt="Logo"
-                                        width={45}
-                                        height={45}
-                                        />
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
-                            <div className="flex flex-row items-center justify-self-start">
-                                <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={Payafterwhite}
-                                            alt="Logo"
-                                            width={130}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                                <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
-                                    <a className="cursor-pointer"  >
-                                        <Image
-                                        src={arrowRight}
-                                        alt="Logo"
-                                        width={45}
-                                        height={45}
-                                        />
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
-                            <div className="flex flex-row items-center justify-self-start">
-                                <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={Payafterwhite}
-                                            alt="Logo"
-                                            width={130}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                                <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
-                                    <a className="cursor-pointer"  >
-                                        <Image
-                                        src={arrowRight}
-                                        alt="Logo"
-                                        width={45}
-                                        height={45}
-                                        />
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500">
-                            <div className="flex flex-row items-center justify-self-start">
-                                <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tl-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={Payafterwhite}
-                                            alt="Logo"
-                                            width={130}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                                <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <h1 className="text-2xl font-bold p-4">CLFC launches its “Buy Now Pay Later” (BNPL) service, PayAfter</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
-                                <span className="text-base">Sep. 01, 2021</span>
-                                <Link href="/newsdetails" >  
-                                    <a className="cursor-pointer"  >
-                                        <Image
-                                        src={arrowRight}
-                                        alt="Logo"
-                                        width={45}
-                                        height={45}
-                                        />
-                                    </a>
-                                </Link>
-                            </div>
-                        </div>
-                        
-                       
+                      
                     </div>
                 </div>
             </div>    
