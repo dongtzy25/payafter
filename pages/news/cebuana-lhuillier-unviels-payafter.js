@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Modal } from '../../component/modal'
 
 import Layout from "../../layout/layout";
 import Home from "../../public/assets/images/home.svg";
@@ -15,10 +16,19 @@ import TW from "../../public/assets/images/social/Twitter.svg";
 import LK from "../../public/assets/images/social/Linkedin.svg";
 
 const NewsPage = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+      setShowModal((prev) => !prev);
+      document.querySelector("body").style.overflow = "hidden";
+    };
+
   return (
     <Layout>
-      <div className="w-full relative pt-8">
-        <div className="container mx-auto mb-8 xl:pl-24 lg:pl-0 pl-12">
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
+
+      <div className="w-full relative pt-8 xl:px-0 px-8">
+        <div className="container mx-auto mb-8 xl:pl-24 lg:pl-0 md:pl-0 pl-0">
           <Link href="/">
             <a className="cursor-pointer">
               <Image src={Home} alt="Logo" width={15} height={15} />
@@ -36,26 +46,26 @@ const NewsPage = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full bg-white relative">
+      <div className="w-full bg-white relative xl:px-0 px-8">
         {/* <div className="absolute top-2.5 right-20 z-10  flex-col items-center justify-center gap-4 xl:flex lg:flex hidden">
           <Image src={FB} alt="Logo" />
           <Image src={TW} alt="Logo" />
           <Image src={LK} alt="Logo" />
         </div> */}
 
-        <div className="container mx-auto flex lg:flex-row flex-col items-start justify-center mb-12">
-          <div className="xl:w-9/12 xl:mx-auto xl:px-0 lg:px-0 px-8">
-            <h1 className="lg:text-6xl text-3xl font-bold">
+        <div className="container mx-auto flex lg:flex-row flex-col items-start justify-center mb-12 ">
+          <div className="xl:w-9/12 xl:mx-auto  ">
+            <h1 className="lg:text-6xl text-3xl font-bold text-center">
               Cebuana Lhuillier unveils “PayAfter”
             </h1>
-            <p className=" xl:pr-12 lg:pr-12 mt-1 text-gray-600 text-justify">
+            <p className=" xl:pr-12 lg:pr-12 mt-1 text-center italic">
               New service under “Buy Now, Pay Later” to provide Filipinos easy,
-              more convenient, and more flexible payment option plans
+              more convenient, and more flexible payment option plans.
             </p>
-            <div className="py-4 hidden">
+            <div className="py-4">
               <Image src={Banner} alt="Logo" />
             </div>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
+            <p className="xl:pr-12 lg:pr-12 text-justify">
               Cebuana Lhuillier Finance Corporation (CLFC), the lending arm of
               microfinancial services giant Cebuana Lhuillier, has recently
               launched “PayAfter,” its new product under “Buy Now, Pay Later.”
@@ -97,7 +107,7 @@ const NewsPage = () => {
               underbanked and financially underserved.
             </p>
             <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
-              CLFC General Manager Jennie Tarrabago adds, <span className="italic">“The partnership
+              CLFC General Manager Jennie Tarrobago adds, <span className="italic">“The partnership
               between PayAfter and SMEs is expected to boost sales especially
               during these challenging times, by providing their clients with
               more purchasing power at checkout. This is just one of the many

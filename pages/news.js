@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import news from '../public/assets/images/Illustration-news.svg'
 import homestyle from '../styles/Home.module.css'
-import Payafterwhite from '../public/assets/images/logo_payafter.svg'
+import Payafterwhite from '../public/assets/images/PayAfter-Logo.svg'
 import CLFC from '../public/assets/images/logo_clfc.png'
 import arrowRight from '../public/assets/images/arrow_right.svg'
 import { useRouter } from "next/router"
@@ -36,6 +36,7 @@ const NewsPage = () => {
                                 placeholder="your@email.com"
                                 required />
                                 <button 
+                                    disabled
                                     className="
                                         inline-block 
                                         px-5 
@@ -44,6 +45,7 @@ const NewsPage = () => {
                                         custom-button-color
                                         rounded 
                                         text-white
+                                        disabled:opacity-75
                                     ">
                                     Subscribe
                                 </button>
@@ -77,18 +79,20 @@ const NewsPage = () => {
                         </div>  */}
                     </div>
                     <br/>
-                    <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 py-10 place-content-center">
+                    <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 py-10 place-content-center ">
                         <div 
                         onClick={() => router.push('/news/cebuana-lhuillier-unviels-payafter')}
-                        className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500"
+                        className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500 "
                         >
-                            <div className="flex flex-row items-center justify-self-start">
+                            <div className="flex flex-row items-center justify-self-start shadow-sm">
                                 <div 
-                                    className="custom-bg-color p-12 py-20 flex items-center justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
+                                    className="bg-white p-12 py-20 flex items-center justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
                                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
                                         <Image
                                             src={Payafterwhite}
                                             alt="Logo"
+                                            width={150}
+                                            height={110}
                                         />
                                     </div>
                                 </div>
@@ -104,8 +108,8 @@ const NewsPage = () => {
                                     </div>
                                 </div> */}
                             </div>
-                            <h1 className="lg:text-3xl text-2xl font-bold p-4 text-left">Cebuana Lhuillier unveils “PayAfter”</h1> 
-                            <div className="flex flex-row items-center justify-between p-4">
+                            <h1 className="lg:text-3xl text-2xl font-bold p-4 text-left ">Cebuana Lhuillier unveils “PayAfter”</h1> 
+                            <div className="flex flex-row items-center justify-between p-4 pt-0">
                                 <span className="text-base">Aug. 31, 2021</span>
                                 <Link href="/news/cebuana-lhuillier-unviels-payafter" >  
                                     <a className="cursor-pointer"  >

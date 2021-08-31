@@ -77,7 +77,7 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            px-4
+            lg:px-0 md:px-0 px-4
             mx-auto
             "
         >
