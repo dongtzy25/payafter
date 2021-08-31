@@ -62,7 +62,7 @@ const NewsPage = () => {
               New service under “Buy Now, Pay Later” to provide Filipinos easy,
               more convenient, and more flexible payment option plans.
             </p>
-            <div className="py-4">
+            <div className="py-4 lg:mt-4 mt-0">
               <Image src={Banner} alt="Logo" />
             </div>
             <p className="xl:pr-12 lg:pr-12 text-justify">
