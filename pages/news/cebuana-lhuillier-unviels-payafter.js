@@ -72,7 +72,7 @@ const NewsPage = () => {
               The product will allow clients to purchase products and services
               from any of CLFC’s merchant partners via installment.
             </p>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
+            <p className="mt-8 text-justify">
               The pandemic and the subsequent lockdown that followed have
               significantly changed the buying habits of many Filipinos, with a
               growing number preferring to buy products or procure services
@@ -81,7 +81,7 @@ const NewsPage = () => {
               purchases through easy and flexible installment plans, with no
               cash-out needed.
             </p>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
+            <p className="mt-8 text-justify">
             <span className="italic">“PayAfter is part of Cebuana Lhuillier’s key innovations this year
               and part of our continuing transformation as a “TechBrick”
               company. We recognize that our clients’ needs are constantly
@@ -91,23 +91,23 @@ const NewsPage = () => {
               network presence. PayAfter provides Ka-Cebuanas with the
               convenience to purchase what they need online, while also giving
               them easy access to credit,” </span> Cebuana Lhuillier President & CEO
-              Jean Henri Lhuillier explained.
+              <span className="font-bold"> Jean Henri Lhuillier</span> explained.
             </p>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
+            <p className="mt-8 text-justify">
               Offering a convenient and easy way to pay, PayAfter allows
               Filipino consumers to pay for purchases without using a credit
               card or shelling out cash right there and then enabling customers
               to make urgent purchases at flexible installment plans.
             </p>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
+            <p className="mt-8 text-justify">
               Aside from providing service to its customers, CLFC also aims to
               work with small and medium entrepreneurs (SMEs), which was the
               sector hardest hit by the pandemic. The partnership will provide
               SMEs with more channels to reach more customers, including the
               underbanked and financially underserved.
             </p>
-            <p className="mt-8 xl:pr-12 lg:pr-12 text-justify">
-              CLFC General Manager Jennie Tarrobago adds, <span className="italic">“The partnership
+            <p className="mt-8 text-justify">
+              CLFC General Manager<span className="font-bold">  Jennie Tarrobago </span> adds, <span className="italic">“The partnership
               between PayAfter and SMEs is expected to boost sales especially
               during these challenging times, by providing their clients with
               more purchasing power at checkout. This is just one of the many
