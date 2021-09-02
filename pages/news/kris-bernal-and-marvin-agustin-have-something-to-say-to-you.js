@@ -60,7 +60,7 @@ const SecondNewsPage = () => {
             </p>
             <div className="py-4 lg:mt-4 mt-0 text-center">
               <video controls className="w-auto mx-auto mb-4">
-                <source src="../assets/videos/video1.mp4" />
+                <source src="../assets/videos/video1.mp4#t=0.001" type="video/mp4" />
               </video>
               <span className=" text-gray-400 lg:pr-16">
                 Kris Bernal for OMO! White™
@@ -74,8 +74,8 @@ const SecondNewsPage = () => {
               the time!
             </p>
             <div className="py-4 lg:mt-4 mt-0 text-center">
-              <video controls className="w-auto mx-auto mb-4">
-                <source src="../assets/videos/video2.mp4" />
+              <video controls  className="w-auto mx-auto mb-4">
+                <source src="../assets/videos/video2.mp4#t=0.001" type="video/mp4" />
               </video>
               <span className=" text-gray-400 lg:pr-16">
                 Marvin Agustin for Oh Crop!
