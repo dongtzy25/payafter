@@ -52,8 +52,10 @@ const SecondNewsPage = () => {
             <h1 className="lg:text-6xl text-3xl font-bold text-center">
               LOOK: Kris Bernal and Marvin Agustin have something to say to you
             </h1>
-            <p className=" xl:pr-12 lg:pr-12 mt-8 text-justify">
-              Manila, September 01, 2021 - Take a look at Kris Bernal for OMO!
+            <p className=" xl:pr-12 lg:pr-12 mt-8 text-justify text-gray-600">Manila, September 01, 2021</p>
+
+            <p className=" xl:pr-12 lg:pr-12 mt-4 text-justify">
+              Take a look at Kris Bernal for OMO!
               White™, and Marvin Agustin, for Oh Crop! - as they invite you to
               Cebuana Lhuiller’s first ever buy now, pay later service -
               PayAfter’s launch on September 1, 2021.
