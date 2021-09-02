@@ -14,8 +14,10 @@ import SecondNews from "../../public/assets/images/new2.png";
 import FB from "../../public/assets/images/social/Facebook.svg";
 import TW from "../../public/assets/images/social/Twitter.svg";
 import LK from "../../public/assets/images/social/Linkedin.svg";
+import { useRouter } from "next/router";
 
 const NewsPage = () => {
+    const router = useRouter();
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -175,7 +177,7 @@ const NewsPage = () => {
             >
               <div className="flex flex-col items-center justify-self-start ">
                 <div className="bg-white flex items-center shadow-sm justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
-                  <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
+                  <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-t-lg">
                     <Image src={SecondNews} alt="Logo" height={425} />
                   </div>
                 </div>

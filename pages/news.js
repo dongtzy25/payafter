@@ -123,7 +123,7 @@ const NewsPage = () => {
                             <div className="flex flex-col items-center justify-self-start ">
                                 <div 
                                     className="bg-white flex items-center shadow-sm justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
+                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-t-lg">
                                         <Image
                                             src={SecondNews}
                                             alt="Logo"
