@@ -1,31 +1,27 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Modal } from '../../component/modal'
+import { Modal } from "../../component/modal";
 
 import Layout from "../../layout/layout";
 import Home from "../../public/assets/images/home.svg";
-import Banner from "../../public/assets/images/banner-news.png";
 import Payafterwhite from '../../public/assets/images/PayAfter-Logo.svg'
 import arrowRight from "../../public/assets/images/arrow_right.svg";
 import SecondNews from "../../public/assets/images/new2.png";
+import { useRouter } from "next/router";
 
+const SecondNewsPage = () => {
+  const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
 
-import FB from "../../public/assets/images/social/Facebook.svg";
-import TW from "../../public/assets/images/social/Twitter.svg";
-import LK from "../../public/assets/images/social/Linkedin.svg";
-
-const NewsPage = () => {
-    const [showModal, setShowModal] = useState(false);
-
-    const openModal = () => {
-      setShowModal((prev) => !prev);
-      document.querySelector("body").style.overflow = "hidden";
-    };
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+    document.querySelector("body").style.overflow = "hidden";
+  };
 
   return (
     <Layout>
-      <Modal showModal={showModal} setShowModal={setShowModal}/>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
 
       <div className="w-full relative pt-8 xl:px-0 px-8">
         <div className="container mx-auto mb-8 xl:pl-24 lg:pl-0 md:pl-0 pl-0">
@@ -39,10 +35,8 @@ const NewsPage = () => {
             <a className="cursor-pointer">News</a>
           </Link>
           <span className="px-4">/</span>
-          <Link href="/newsdetails">
-            <a className="cursor-pointer">
-              Cebuana Lhuillier unveils “PayAfter”
-            </a>
+          <Link href="/news/kris-bernal-and-marvin-agustin-have-something-to-say-to-you">
+            <a className="cursor-pointer">LOOK: Kris Bern…</a>
           </Link>
         </div>
       </div>
@@ -56,65 +50,82 @@ const NewsPage = () => {
         <div className="container mx-auto flex lg:flex-row flex-col items-start justify-center mb-12 ">
           <div className="xl:w-9/12 xl:mx-auto  ">
             <h1 className="lg:text-6xl text-3xl font-bold text-center">
-              Cebuana Lhuillier unveils “PayAfter”
+              LOOK: Kris Bernal and Marvin Agustin have something to say to you
             </h1>
-            <p className=" xl:pr-12 lg:pr-12 mt-1 text-center italic">
-              New service under “Buy Now, Pay Later” to provide Filipinos easy,
-              more convenient, and more flexible payment option plans.
+            <p className=" xl:pr-12 lg:pr-12 mt-1 text-center">
+              Manila, September 01, 2021 - Take a look at Kris Bernal for OMO!
+              White™, and Marvin Agustin, for Oh Crop! - as they invite you to
+              Cebuana Lhuiller’s first ever buy now, pay later service -
+              PayAfter’s launch on September 1, 2021.
             </p>
-            <div className="py-4 lg:mt-4 mt-0">
-              <Image src={Banner} alt="Logo" />
+            <div className="py-4 lg:mt-4 mt-0 text-center">
+              <video controls className="w-auto mx-auto mb-4">
+                <source src="../assets/videos/video1.mp4" />
+              </video>
+              <span className=" text-gray-400 lg:pr-16">
+                Kris Bernal for OMO! White™
+              </span>
             </div>
-            <p className="xl:pr-12 lg:pr-12 text-justify">
-              Cebuana Lhuillier Finance Corporation (CLFC), the lending arm of
-              microfinancial services giant Cebuana Lhuillier, has recently
-              launched “PayAfter,” its new product under “Buy Now, Pay Later.”
-              The product will allow clients to purchase products and services
-              from any of CLFC’s merchant partners via installment.
+            <p className="text-justify">
+              OMO! White™ has its finger on the pulse of asian beauty. Embracing
+              the spirit of innovation, they bring the best and latest trends in
+              skincare. That’s why actress Kris Bernal has been invested on this
+              Korean-inspired brand that keeps her skin fresh and glowing all
+              the time!
             </p>
-            <p className="mt-8 text-justify">
-              The pandemic and the subsequent lockdown that followed have
-              significantly changed the buying habits of many Filipinos, with a
-              growing number preferring to buy products or procure services
-              online. Along with it comes the allure of “Buy Now, Pay Later”
-              which provided consumers with the capability to make urgent
-              purchases through easy and flexible installment plans, with no
-              cash-out needed.
+            <div className="py-4 lg:mt-4 mt-0 text-center">
+              <video controls className="w-auto mx-auto mb-4">
+                <source src="../assets/videos/video2.mp4" />
+              </video>
+              <span className=" text-gray-400 lg:pr-16">
+                Marvin Agustin for Oh Crop!
+              </span>
+            </div>
+            <p className="text-justify">
+              On the other hand, actor-chef Marvin Agustin’s dedication on
+              keeping a healthy lifestyle led him to invest as a co-owner of Oh
+              Crop!, a brand that offers Adlai which is considered a super food
+              because it is said to have anti-cancer, anti-diabetes and
+              anti-allergic benefits. It is also rich in fiber, which improves
+              in digestion that could potentially help with weight loss. By
+              buying Oh Crop!’s Adlai rice, you’re not only buying a healthier
+              option to other sources of carbs but you are also supporting local
+              farmers.
             </p>
-            <p className="mt-8 text-justify">
-            <span className="italic">“PayAfter is part of Cebuana Lhuillier’s key innovations this year
-              and part of our continuing transformation as a “TechBrick”
-              company. We recognize that our clients’ needs are constantly
-              evolving, and I am proud to say that our organization is evolving
-              along with them as well by offering new products and services that
-              takes advantage of our very proprietary technology and wide
-              network presence. PayAfter provides Ka-Cebuanas with the
-              convenience to purchase what they need online, while also giving
-              them easy access to credit,” </span> Cebuana Lhuillier President & CEO
-              <span className="font-bold"> Jean Henri Lhuillier</span> explained.
+            <p className="mt-8  font-bold">
+              How to use PayAfter in purchasing these products?
             </p>
-            <p className="mt-8 text-justify">
-              Offering a convenient and easy way to pay, PayAfter allows
-              Filipino consumers to pay for purchases without using a credit
-              card or shelling out cash right there and then enabling customers
-              to make urgent purchases at flexible installment plans.
+
+            <p className="mt-2 ">
+              1. Activate your PayAfter membership. Make sure your company is in
+              partnership with PayAfter.
             </p>
-            <p className="mt-8 text-justify">
-              Aside from providing service to its customers, CLFC also aims to
-              work with small and medium entrepreneurs (SMEs), which was the
-              sector hardest hit by the pandemic. The partnership will provide
-              SMEs with more channels to reach more customers, including the
-              underbanked and financially underserved.
+            <p className="mt-2 ">
+              2. Follow{" "}
+              <Link href="https://www.instagram.com/omowhiteph/">
+                <a target="_blank" className="text-blue-500 ">
+                  {" "}
+                  OMO! White™{" "}
+                </a>
+              </Link>{" "}
+              and{" "}
+              <Link href="https://www.instagram.com/ohcrop.ph/">
+                <a target="_blank" className="text-blue-500 ">
+                  Oh Crop!’s{" "}
+                </a>
+              </Link>
+              Instagram pages.
             </p>
-            <p className="mt-8 text-justify">
-              CLFC General Manager<span className="font-bold">  Jennie Tarrobago </span> adds, <span className="italic">“The partnership
-              between PayAfter and SMEs is expected to boost sales especially
-              during these challenging times, by providing their clients with
-              more purchasing power at checkout. This is just one of the many
-              financing products that are currently in the pipeline this year,
-              and we are looking forward to introducing more innovations that
-              surely speak to the changing needs of Filipino consumers
-              nationwide.”</span>
+            <p className="mt-2 ">
+              3. To place your orders, send them a direct message containing the
+              items that you want and indicate PayAfter as your payment method.
+            </p>
+            <p className="mt-2">
+              4. Once your orders have been confirmed, they will send you the
+              PayAfter link.
+            </p>
+            <p className="mt-2 ">
+              5. Login with PayAfter to complete the transaction.
             </p>
           </div>
         </div>
@@ -234,4 +245,4 @@ const NewsPage = () => {
   );
 };
 
-export default NewsPage;
+export default SecondNewsPage;

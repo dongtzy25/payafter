@@ -4,7 +4,7 @@ import Link from 'next/link'
 import news from '../public/assets/images/Illustration-news.svg'
 import homestyle from '../styles/Home.module.css'
 import Payafterwhite from '../public/assets/images/PayAfter-Logo.svg'
-import CLFC from '../public/assets/images/logo_clfc.png'
+import SecondNews from '../public/assets/images/new2.png'
 import arrowRight from '../public/assets/images/arrow_right.svg'
 import { useRouter } from "next/router"
 
@@ -82,11 +82,11 @@ const NewsPage = () => {
                     <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 py-10 place-content-center ">
                         <div 
                         onClick={() => router.push('/news/cebuana-lhuillier-unviels-payafter')}
-                        className="block bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500 "
+                        className="flex flex-col justify-between bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500 "
                         >
-                            <div className="flex flex-row items-center justify-self-start shadow-sm">
+                            <div className="flex flex-col items-center justify-self-start ">
                                 <div 
-                                    className="bg-white p-12 py-20 flex items-center justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
+                                    className="bg-white shadow-sm p-12 py-20 flex items-center justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
                                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
                                         <Image
                                             src={Payafterwhite}
@@ -96,19 +96,10 @@ const NewsPage = () => {
                                         />
                                     </div>
                                 </div>
-                                {/* <div 
-                                    className="p-12 py-20 bg-white  flex items-center justify-center justify-self-center  lg:mx-0 mx-auto rounded-tr-lg">
-                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
-                                        <Image
-                                            src={CLFC}
-                                            alt="Logo"
-                                            width={150}
-                                            height={110}
-                                        />
-                                    </div>
-                                </div> */}
-                            </div>
+                              
                             <h1 className="lg:text-3xl text-2xl font-bold p-4 text-left ">Cebuana Lhuillier unveils “PayAfter”</h1> 
+                            </div>
+                            <div>
                             <div className="flex flex-row items-center justify-between p-4 pt-0">
                                 <span className="text-base">Aug. 31, 2021</span>
                                 <Link href="/news/cebuana-lhuillier-unviels-payafter" >  
@@ -121,6 +112,42 @@ const NewsPage = () => {
                                         />
                                     </a>
                                 </Link>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div 
+                        onClick={() => router.push('/news/kris-bernal-and-marvin-agustin-have-something-to-say-to-you')}
+                        className="flex flex-col justify-between  bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500 "
+                        >
+                            <div className="flex flex-col items-center justify-self-start ">
+                                <div 
+                                    className="bg-white flex items-center shadow-sm justify-center justify-self-center w-full  lg:mx-0 mx-auto rounded-t-lg">
+                                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
+                                        <Image
+                                            src={SecondNews}
+                                            alt="Logo"
+                                            height={445}
+                                        />
+                                    </div>
+                                </div>
+                             
+                                <h1 className="lg:text-3xl text-2xl font-bold p-4 text-left ">LOOK: Kris Bernal and Marvin Agustin have something to say to you</h1> 
+                            </div>
+                            <div>
+                                <div className="flex flex-row items-center justify-between p-4 pt-0">
+                                    <span className="text-base">Sep. 1, 2021</span>
+                                    <Link href="/news/kris-bernal-and-marvin-agustin-have-something-to-say-to-you" >  
+                                        <a className="cursor-pointer"  >
+                                            <Image
+                                            src={arrowRight}
+                                            alt="Logo"
+                                            width={45}
+                                            height={45}
+                                            />
+                                        </a>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                       
