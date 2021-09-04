@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useSpring, animated } from "react-spring";
 import Router from "next/router";
 
-import Chuwi from "../../public/assets/images/chuwi/img_chuwi/img_chuwi@3x.png";
+import Chuwi from "../../public/assets/images/chuwi/chuwi.png";
 import Chuwi1 from "../../public/assets/images/chuwi/chuwi-01.png";
 import Chuwi2 from "../../public/assets/images/chuwi/chuwi-02.png";
 import Chuwi3 from "../../public/assets/images/chuwi/chuwi-03.png";
@@ -28,7 +28,7 @@ const ChuwiPage = () => {
       <div className="w-full xl:py-12 lg:py-8 pt-8 relative overflow-hidden custom-banner chuwi-color ">
         <animated.div
           style={animation}
-          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 right-0 lg:flex md:flex sm:flex hidden"
+          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 -right-2 lg:flex md:flex sm:flex hidden"
         >
           <Image src={Chuwi} alt="Logo" unoptimized={true} />
         </animated.div>
@@ -59,7 +59,7 @@ const ChuwiPage = () => {
               className="py-8 
                             2xl:hidden xl:hidden lg:hidden block
                             xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
-                            md-custom-height"
+                            md-custom-height -mr-2"
             >
               <Image src={Chuwi} alt="Logo" unoptimized={true} />
             </div>

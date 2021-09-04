@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../layout/layout";
 import Image from "next/image";
-import Haier from "../../public/assets/images/haier/img_haier/img_haier@3x.png";
+import Haier from "../../public/assets/images/haier/haier.png";
 import Haier1 from "../../public/assets/images/haier/haier-01.jpg";
 import Haier2 from "../../public/assets/images/haier/haier-02.jpg";
 import Haier3 from "../../public/assets/images/haier/haier-03.jpg";
@@ -26,7 +26,7 @@ const HaierPage = () => {
       <div className="w-full xl:py-12 lg:py-8 pt-8 relative overflow-hidden custom-banner haier-color">
         <animated.div
           style={animation}
-          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 right-0 lg:flex md:flex sm:flex hidden"
+          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 -right-2 lg:flex md:flex sm:flex hidden"
         >
           <Image src={Haier} alt="Logo" />
         </animated.div>
@@ -57,7 +57,7 @@ const HaierPage = () => {
               className="py-8 
                             2xl:hidden xl:hidden lg:hidden block
                             xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
-                            md-custom-height"
+                            md-custom-height -mr-2"
             >
               <Image src={Haier} alt="Logo" />
             </div>

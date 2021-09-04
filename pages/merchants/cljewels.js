@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CLJ from '../../public/assets/images/clj/img_clj.png'
-import CLJ01 from '../../public/assets/images/clj/img_clj.png'
+import CLJ from '../../public/assets/images/clj/cljewels.png'
 import CLJ1 from '../../public/assets/images/clj/img_clj-01.png'
 import CLJ2 from '../../public/assets/images/clj/img_clj-02.png'
 import CLJ3 from '../../public/assets/images/clj/img_clj-03.png'
@@ -24,7 +23,7 @@ const CLjewelsPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner cljewels-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={CLJ}
                         alt="Logo"
@@ -60,10 +59,10 @@ const CLjewelsPage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Affordable.</h1>
                         <div className="
                             py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
-                            md-custom-height
+                            md-custom-height -mr-2
                         ">
                             <Image
-                                src={CLJ01}
+                                src={CLJ}
                                 alt="Logo"
                             />
                         </div>

@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Brickwood from '../../public/assets/images/brickwood/img_brickwood.png'
-import Brickwood01 from '../../public/assets/images/brickwood/img_brickwood.png'
+import Brickwood from '../../public/assets/images/brickwood/brickwood.png'
 import Brickwood1 from '../../public/assets/images/brickwood/img_brickwood-01.png'
 import Brickwood2 from '../../public/assets/images/brickwood/img_brickwood-02.png'
 import Brickwood3 from '../../public/assets/images/brickwood/img_brickwood-03.png'
@@ -24,7 +23,7 @@ const BrickWoodPage = () =>{
     return (
         <Layout>
             <div className="w-full xl:py-12 lg:py-8 pt-8 relative overflow-hidden custom-banner brickwood-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Brickwood}
                         alt="Logo"
@@ -60,10 +59,10 @@ const BrickWoodPage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">from home</h1> 
                         <div className="
                             py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
-                            md-custom-height
+                            md-custom-height -mr-2
                         ">
                             <Image
-                                src={Brickwood01}
+                                src={Brickwood}
                                 alt="Logo"
                             />
                         </div>

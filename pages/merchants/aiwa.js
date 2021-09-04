@@ -3,7 +3,7 @@ import Layout from "../../layout/layout";
 import Image from "next/image";
 import Link from "next/link";
 
-import Aiwa from "../../public/assets/images/aiwa/img_aiwa/img_aiwa_3x_2_copy.png";
+import Aiwa from "../../public/assets/images/aiwa/aiwa.png";
 import Aiwa1 from "../../public/assets/images/aiwa/aiwa-01.png";
 import Aiwa2 from "../../public/assets/images/aiwa/aiwa-02.png";
 import Aiwa3 from "../../public/assets/images/aiwa/aiwa-03.png";
@@ -26,7 +26,7 @@ const AiwaPage = () => {
       <div className="w-full xl:py-12 lg:py-8 pt-8 relative overflow-hidden custom-banner aiwa-color">
         <animated.div
           style={animation}
-          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 right-0 lg:flex md:flex sm:flex hidden"
+          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 -right-2 lg:flex md:flex sm:flex hidden"
         >
           <Image src={Aiwa} alt="Logo" unoptimized={true} />
         </animated.div>
@@ -58,7 +58,7 @@ const AiwaPage = () => {
                             py-8 
                             2xl:hidden xl:hidden lg:hidden block
                             xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
-                            md-custom-height"
+                            md-custom-height -mr-2"
             >
               <Image src={Aiwa} alt="Logo" unoptimized={true} />
             </div>

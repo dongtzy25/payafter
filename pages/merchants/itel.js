@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../layout/layout";
 import Image from "next/image";
-import Itel from "../../public/assets/images/itel/img_itel/img_itel@3x_2.png";
+import Itel from "../../public/assets/images/itel/itel.png";
 import Itel1 from "../../public/assets/images/itel/itel-01.png";
 import Itel2 from "../../public/assets/images/itel/itel-02.png";
 import Itel3 from "../../public/assets/images/itel/itel-03.png";
@@ -26,7 +26,7 @@ const ItelPage = () => {
       <div className="w-full xl:py-12 lg:py-8 pt-8 relative overflow-hidden custom-banner itel-color">
         <animated.div
           style={animation}
-          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 right-0 lg:flex md:flex sm:flex hidden"
+          className="custom-imageSize absolute xl:top-16 lg:top-16 top-52 -right-2 lg:flex md:flex sm:flex hidden"
         >
           <Image src={Itel} alt="Logo" unoptimized={true} />
         </animated.div>
@@ -57,7 +57,7 @@ const ItelPage = () => {
               className="py-8 
                             2xl:hidden xl:hidden lg:hidden block
                             xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 
-                            md-custom-height"
+                            md-custom-height -mr-2"
             >
               <Image src={Itel} alt="Logo" unoptimized={true} />
             </div>

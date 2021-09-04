@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Zagana from '../../public/assets/images/zagana/img_zagana.png'
-import Zagana01 from '../../public/assets/images/zagana/img_zagana.png'
+import Zagana from '../../public/assets/images/zagana/zagana.png'
 import Zagana1 from '../../public/assets/images/zagana/img_zagana-01.png'
 import Zagana2 from '../../public/assets/images/zagana/img_zagana-02.png'
 import Zagana3 from '../../public/assets/images/zagana/img_zagana-03.png'
@@ -24,7 +23,7 @@ const ZaganaPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner zagana-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Zagana}
                         alt="Logo"
@@ -61,10 +60,10 @@ const ZaganaPage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">produce from farm to your kitchen</h1>
                         <div className="
                             py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
-                            md-custom-height
+                            md-custom-height -mr-2
                         ">
                             <Image
-                                src={Zagana01}
+                                src={Zagana}
                                 alt="Logo"
                             />
                         </div>

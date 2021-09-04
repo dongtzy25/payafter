@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CondoCare from '../../public/assets/images/condocare/img_condocare.png'
-import CondoCare01 from '../../public/assets/images/condocare/img_condocare.png'
+import CondoCare from '../../public/assets/images/condocare/condocare.png'
 import CondoCare1 from '../../public/assets/images/condocare/img_condocare-01.png'
 import CondoCare2 from '../../public/assets/images/condocare/img_condocare-02.png'
 import CondoCare3 from '../../public/assets/images/condocare/img_condocare-03.png'
@@ -24,7 +23,7 @@ const CondoCarePage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner condocare-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={CondoCare}
                         alt="Logo"
@@ -60,10 +59,10 @@ const CondoCarePage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">safe home</h1>
                         <div className="
                             py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
-                            md-custom-height
+                            md-custom-height -mr-2
                         ">
                             <Image
-                                src={CondoCare01}
+                                src={CondoCare}
                                 alt="Logo"
                             />
                         </div>

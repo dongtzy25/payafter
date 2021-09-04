@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import Freshbuys from '../../public/assets/images/freshbuys/freshbuys.png'
+import Freshbuys from '../../public/assets/images/freshbuys/freshbuys1.png'
 import Freshbuys01 from '../../public/assets/images/freshbuys/freshbuys01.png'
 import Freshbuys1 from '../../public/assets/images/freshbuys/freshbuys-1.png'
 import Link from "next/link";
@@ -23,7 +23,7 @@ const FreshbuysPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner fresh-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={Freshbuys}
                         alt="Logo"
