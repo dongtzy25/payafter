@@ -41,7 +41,7 @@ const NewsPage = () => {
             <a className="cursor-pointer">News</a>
           </Link>
           <span className="px-4">/</span>
-          <Link href="/newsdetails">
+          <Link href="/news/cebuana-lhuillier-unveils-payafter">
             <a className="cursor-pointer">
               Cebuana Lhuillier unveils “PayAfter”
             </a>
@@ -130,7 +130,7 @@ const NewsPage = () => {
           <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-8 py-10 place-content-center ">
             <div
               onClick={() =>
-                router.push("/news/cebuana-lhuillier-unviels-payafter")
+                router.push("/news/cebuana-lhuillier-unveils-payafter")
               }
               className="flex flex-col justify-between bg-white max-w-md  rounded-lg shadow-lg cursor-pointer hover:shadow-sm transition-all duration-500 "
             >
@@ -153,7 +153,7 @@ const NewsPage = () => {
               <div>
                 <div className="flex flex-row items-center justify-between p-4 pt-0">
                   <span className="text-base">Aug. 31, 2021</span>
-                  <Link href="/news/cebuana-lhuillier-unviels-payafter">
+                  <Link href="/news/cebuana-lhuillier-unveils-payafter">
                     <a className="cursor-pointer">
                       <Image
                         src={arrowRight}
