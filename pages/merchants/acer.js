@@ -50,7 +50,7 @@ const AcerPage = () => {
         <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
           <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 pl-12 z-10 relative">
             <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">
-             Explore beyond limits
+              Explore beyond limits
             </h1>
             <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">
               with Acer
@@ -135,10 +135,12 @@ const AcerPage = () => {
           <div className="w-4/5 mx-auto">
             <h1 className="text-4xl font-bold">About Acer</h1>
             <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              aliquam quos unde veniam alias ullam sequi quidem beatae, earum
-              soluta accusamus in iste nihil, praesentium cupiditate nam? Fuga,
-              natus harum.
+              Acer EMEA launches the &quot;Explore Your Hidden Passions&quot; advertising
+              campaign, providing a powerful platform from which to introduce
+              the new Acer brand tagline &quot;explore beyond limits&quot; and to support
+              the sales of Acer mobile computers. Featuring the latest Aspire S5
+              Ultrabook™, this campaign is one of Acer&apos;s largest marketing
+              investments in terms of creative development and media coverage.
             </p>
             <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
               <div
