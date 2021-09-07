@@ -82,7 +82,7 @@ const Header  = ()  => {
             "
         >
             <div className="relative lg:flexs flex lg:items-centers items-center ">
-                <ul className="list-none flex items-center ">
+                <ul className="list-none flex items-center xl:space-x-6 lg:space-x-4">
                     <li className="inline-block md:mr-3 mr-8">
                      <Link href="/"> 
                         <a>

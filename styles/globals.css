@@ -145,6 +145,12 @@ body {
 .condocare-color::after {
   background-color: rgba(23, 175, 254, 1);
 }
+.acer-color::after {
+  background-color: rgb(129, 183, 19);
+}
+.asus-color::after {
+  background-color: rgb(170, 191, 186);
+}
 .custom-right-width {
   width: 19% !important;
   right: 11% !important;
