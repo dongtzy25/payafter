@@ -136,7 +136,7 @@ const AsusPage = () => {
             <h1 className="text-4xl font-bold">About Asus</h1>
             <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">
               ASUS, a technology-oriented company with a global staff of more
-              than ten thousand and blessed with one of the world's top R&D
+              than ten thousand and blessed with one of the world&apos;s top R&amp;D
               teams, is renowned for high-quality products and cutting-edge
               innovation. As a leading company in the new digital era, ASUS
               offers a complete product portfolio to compete in the new
