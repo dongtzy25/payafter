@@ -66,7 +66,7 @@ const AcerPage = () => {
               style={{ zIndex: "1" }}
             >
               <p className="mt-4">
-                Purchase any of Acer's products using PayAfter
+                Purchase any of Acer&apos;s products using PayAfter
               </p>
               <div className="relative block w-full border-solid">
                 <div className="relative pl-12 mt-4">
