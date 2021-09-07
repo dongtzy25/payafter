@@ -90,7 +90,7 @@ const AsusPage = () => {
                   <p className="mb-4 pt-1">
                     Place your order via Tech Bytes, an authorized distributor
                     of Asus, by clicking this&nbsp;
-                    <Link href="https://form.jotform.com/212332814555452">
+                    <Link href="#">
                       <a target="_blank" className="text-blue-500 underline">
                         link
                       </a>
@@ -157,9 +157,9 @@ const AsusPage = () => {
               </div>
             </div>
             <button
-              onClick={() => {
-                Router.push("https://form.jotform.com/212332814555452");
-              }}
+            //   onClick={() => {
+            //     Router.push("https://form.jotform.com/212332814555452");
+            //   }}
               className="
                                 inline-block 
                                 px-4 

@@ -158,9 +158,7 @@ const ChuwiPage = () => {
               </div>
             </div>
             <button
-              onClick={() => {
-                Router.push("https://form.jotform.com/212332814555452");
-              }}
+              onClick={()=> { window.open("https://form.jotform.com/212332814555452").focus()  }}
               className="
                                 inline-block 
                                 px-4 
