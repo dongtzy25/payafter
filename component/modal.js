@@ -31,7 +31,7 @@ const ModalWrapper = styled.div`
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
-  display: fles;
+  display: flex;
   position: relative;
   z-index: 10;
 `;
@@ -104,7 +104,7 @@ export const Modal = ({ showModal, setShowModal }) => {
           <p><b>Website</b>: ${data.website}</p>
           <p><b>Industry</b>: ${data.industry}</p>
           <br/>
-          <span>Submitted from PayAfter webiste.</span>
+          <span>Submitted from PayAfter website.</span>
     `;
 
     const payload = {
@@ -139,10 +139,43 @@ export const Modal = ({ showModal, setShowModal }) => {
            
               <ModalWrapper showModal={showModal}>
                 {/* <ModalImg src={require('./modal.jpg')} alt='camera' /> */}
+               
                 <ModalContent>
-                <div className="w-full text-black overflow-y-auto">
-                  <div className="container mx-auto lg:px-20 px-8 lg:py-20 py-12 lg:flex flex-row justify-between items-start">
-                  <div className="lg:w-6/12 w-full lg:text-left text-center">
+                <div className="w-full text-black overflow-y-auto ">
+                  <div className="lg:absolute lg:top-0 lg:right-0 relative lg:mt-0 mt-6 p-8 z-3" onClick={() => setShowModal(prev => !prev)}>
+                    <svg
+                        className="w-6 h-6 ml-auto cursor-pointer"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                    </svg>
+                  </div>
+                  <div className="container mx-auto lg:px-20 px-8 pb-12  lg:flex flex-row justify-between items-start">
+                  <div className="lg:w-6/12 w-full lg:text-left text-center relative">
+                    {/* <div className="absolute -top-6 right-0 z-3" onClick={() => setShowModal(prev => !prev)}>
+                      <svg
+                          className="w-6 h-6 cursor-pointer"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                      >
+                          <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                      </svg>
+                    </div> */}
                       <h1 className="lg:text-4xl text-2xl" style={{font:' normal normal 800 48px/66px Nunito Sans'}}>Join us now!</h1>
                       <p className="mt-4 lg:w-1/2 w-full ">Be our partner merchant and gain access to our Cebuana Lhuillier customer base.</p>
                       <div className="w-full xl:text-left text-center lg:px-0 px-12 mt-12">
@@ -162,6 +195,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           type="text"
                           {...register("name", { required: true })}
                           autoComplete="off" 
+                          maxLength="64"
                           className= {errors.name 
                             ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                             : "w-full rounded px-4 py-3 text-black border"}
@@ -180,6 +214,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           type="text" 
                           {...register("email", { required: true,pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}
                           autoComplete="off" 
+                          maxLength="64"
                           className= {errors.email 
                             ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                             : "w-full rounded px-4 py-3 text-black border "}
@@ -205,6 +240,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="number" 
                               type="text" 
                               autoComplete="off" 
+                              maxLength="10"
                               className= {errors.number 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                                 : "w-full rounded-r px-4 py-3 text-black border"}
@@ -228,6 +264,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               id="company" 
                               name="company" 
                               type="text" 
+                              maxLength="64"
                               autoComplete="off" 
                               className= {errors.company 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
@@ -246,6 +283,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="role" 
                               type="text" 
                               autoComplete="off" 
+                              maxLength="64"
                               className= {errors.role 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color" 
                                 : "w-full rounded px-4 py-3 text-black border"}
@@ -265,6 +303,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                               name="website" 
                               type="text" 
                               autoComplete="off" 
+                              maxLength="64"
                               className= {errors.website 
                                 ? "w-full rounded px-4 py-3 text-black custom-border-color " 
                                 : "w-full rounded px-4 py-3 text-black border "}
@@ -276,7 +315,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                           </div> 
                           <div className="lg:w-1/2 w-full lg:mt-0 mt-4">
                               <label htmlFor="industry" className="block text-base mb-2">Industry</label>
-                              <select 
+                              {/* <select 
                               {...register("industry", { required: true })}
                               id="industry"
                               name="industry" 
@@ -290,14 +329,22 @@ export const Modal = ({ showModal, setShowModal }) => {
                                 <option value="IT">I.T</option>
                                 <option value="Doctors">Doctors</option>
                                 <option value="Lawyers">Lawyers</option>
-                              </select>
-                              {/* <input id="industry" name="industry" type="text" autoComplete="off" 
-                              className="w-full rounded px-4 py-3 text-black border"
-                              placeholder="Select industry"
-                              required /> */}
+                              </select> */}
+                              <input 
+                              id="industry" 
+                              name="industry" 
+                              type="text" 
+                              autoComplete="off" 
+                              className={errors.industry 
+                                ? "w-full rounded px-4 py-3 text-black custom-border-color " 
+                                : "w-full rounded px-4 py-3 text-black border "} 
+                              maxLength="64"
+                              {...register("industry", { required: true })}
+                              required 
+                              placeholder="Your Industry" />
                                {errors.industry 
                                 && errors.industry.type === "required" 
-                                && <span className="custom-text-color">Please enter your role</span>}
+                                && <span className="custom-text-color">Please enter your industry</span>}
                           </div> 
                       </div>
                       
@@ -306,7 +353,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                             <input type="checkbox" id="agree"  {...register("check", { required: true })}/>
                             <label htmlFor="agree" className="flex items-center">
                               {/* <span className="ml-4">I agree with <u>PayAfter’s Terms & Conditions</u>  and <u>Privacy Policy</u>.</span> */}
-                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy?terms"><a className="text-red-500"><u>Terms & Policy</u></a></Link>.</span>
+                              <span className="ml-4">I agree with PayAfter’s <Link href="/privacy"><a className="text-red-500 underline">Terms & Policy</a></Link>.</span>
                             </label>
                           </div>
                           <button 
@@ -331,22 +378,7 @@ export const Modal = ({ showModal, setShowModal }) => {
               </div>
                 </ModalContent>
               
-                <div className="pt-2 absolute top-4 right-8 z-3" onClick={() => setShowModal(prev => !prev)}>
-                  <svg
-                      className="w-6 h-6 cursor-pointer"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                  >
-                      <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                      ></path>
-                  </svg>
-                </div>
+               
               </ModalWrapper>
           </animated.div>
         </Background>

@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react";
 import Layout from '../../layout/layout'
 import Image from 'next/image'
-import CocoTel from '../../public/assets/images/cocotel/cocotel.png'
+import CocoTel from '../../public/assets/images/cocotel/cocotel-1.png'
+import CocoTel01 from '../../public/assets/images/cocotel/cocotel01.png'
 import CocoTel1 from '../../public/assets/images/cocotel/img_cocotel-01.png'
 import CocoTel2 from '../../public/assets/images/cocotel/img_cocotel-02.png'
 import CocoTel3 from '../../public/assets/images/cocotel/img_cocotel-03.png'
@@ -24,7 +25,7 @@ const CocotelPage = () =>{
     return (
         <Layout>
             <div className="w-full pt-8 relative overflow-hidden custom-banner cocotel-color">
-                <animated.div style={animation} className="custom-imageCocoSize absolute xl:top-24 lg:top-24 top-52 right-0 lg:flex md:flex sm:flex hidden">
+                <animated.div style={animation} className="xl:max-w-screen-md customize md:max-w-3xl max-w-full max-h-full absolute xl:top-24 lg:top-24 top-52 -right-2 lg:flex md:flex sm:flex hidden">
                     <Image
                         src={CocoTel}
                         alt="Logo"
@@ -60,7 +61,7 @@ const CocotelPage = () =>{
                         <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Cocotel with PayAfter!</h1>
                         <div className="
                             py-8 2xl:hidden xl:hidden lg:hidden xl:opacity-0 lg:opacity-0 md:opacity-0 sm:opacity-0 opacity-1 block 
-                            md-custom-height
+                            md-custom-height -mr-1
                         ">
                             <Image
                                 src={CocoTel}

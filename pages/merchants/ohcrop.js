@@ -24,18 +24,18 @@ const OhcropPage = () =>{
       });
     return (
         <Layout>
-            <div className="w-full pt-8 relative overflow-hidden custom-banner ohcrop-color">
+            <div className="w-full xl:py-12 lg:py-8 pt-8  relative overflow-hidden custom-banner ohcrop-color">
                 {/* <animated.div style={animation,{width: '19%', right: '11%'}} className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden">
                     <Image
                         src={OhCrop}
                         alt="Logo"
                     />
                 </animated.div> */}
-                 <animated.div style={animation} className="absolute top-24 lg:flex hidden">
+                 <animated.div style={animation} className="absolute top-12 lg:flex hidden">
                     <Image
                         src={OhCrop}
                         alt="Logo"
-                        width={320}
+                        width={330}
                         height={630}
                     />
                 </animated.div>
@@ -64,9 +64,9 @@ const OhcropPage = () =>{
                     </Link>
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24 z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Make the switch with</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">Oh Crop! and PayAfter</h1>
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left z-10 relative">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Make the switch with</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Oh Crop! and PayAfter</h1>
                         <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={OhCrop}
@@ -74,7 +74,7 @@ const OhcropPage = () =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent bg-white py-8 pr-8 relative md-custom-bg xl:pl-24 lg:pl-24 pl-12" style={{zIndex:'1'}}>
                             <p className="mt-4">Who said being healthy will make you broke? Follow these steps to start your new journey with Oh Crop!:</p>
                             <div className="relative block xl:w-9/12 lg:w-9/12 w-full border-solid">
                                 <div className="relative pl-12 mt-4">
@@ -86,18 +86,27 @@ const OhcropPage = () =>{
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                    <p className="mb-4 pt-1">Visit their Instagram page <Link href="https://www.instagram.com/ohcrop.ph/"><a target="_blank" className="text-blue-500 underline"  >@ohcrop.ph</a></Link></p>
+                                    <p className="mb-4 pt-1">Place your orders via RCT5 Global by clicking these links:</p>
+                                    <div className=" p-4 bg-gray-100 rounded shadow-sm">
+                                        <p>
+                                            <Link href="https://form.jotform.com/211393228067455"><a target="_blank" className="text-blue-500 underline"  >Oh Crop! Prime: Subscription Packages</a></Link>
+                                        </p>
+                                        <p>
+                                            <Link href="https://form.jotform.com/210601139302439"><a target="_blank" className="text-blue-500 underline"  >Oh Crop! Same-day Delivery Products</a></Link>
+                                        </p>
+                                    </div>
+                                    {/* <p className="mb-4 pt-1">Place your orders via RCT5 Global by clicking these links:<Link href="https://www.instagram.com/ohcrop.ph/"><a target="_blank" className="text-blue-500 underline"  >@ohcrop.ph</a></Link></p> */}
                                 </div>
-                                <div className="relative pl-12 mt-8 ">
+                                {/* <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
                                     <p className="mb-4 pt-1">Send them a direct message that contains your order details. Don’t forget to indicate PayAfter as your payment method.</p>
                                 </div>
                                 <div className="relative pl-12 mt-8 ">
                                     <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">4</span>
                                     <p className="mb-4 pt-1">Once your order has been confirmed, Oh Crop! will send to you the PayAfter link.</p>
-                                </div>
+                                </div> */}
                                 <div className="relative pl-12 mt-8 ">
-                                    <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">5</span>
+                                    <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
                                     <p className="mb-4 pt-1">Login with PayAfter to complete the transaction.</p>
                                 </div>
                             </div>
@@ -137,7 +146,7 @@ const OhcropPage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> {  window.open("https://www.instagram.com/omowhiteph/").focus()  }}
+                            onClick={()=> {  window.open("https://www.instagram.com/ohcrop.ph/").focus()  }}
                             className="
                                 inline-block 
                                 px-4 
@@ -151,7 +160,8 @@ const OhcropPage = () =>{
                                 transition-all
                                 duration-300
                             ">
-                                Visit Oh Crop!’s Instagram
+                                {/* Visit Oh Crop!’s Instagram */}
+                                Shop now and pay later
                         </button>
                     </div>
                 </div>

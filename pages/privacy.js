@@ -125,12 +125,12 @@ const Privacy = () => {
               Electronic Communications Disclosure and Consent Agreement
             </h1>
             <p className="mt-4 mb-2 text-justify ">
-              PayAfter is a tradename of Hallo Hallo Skylark Lending which is a
+              PayAfter is a tradename of Cebuana Lhuillier Finance Corporation which is a
               registered lending company that focuses on salary loan with all
               transactions conducted through a full online platform. In line
               with the platform setup of PayAfter and to have full access to
-              your accounts and the products and services provided by Casha, and
-              to be able to receive electronic communications, YOU must consent
+              your accounts and the products and services provided by PayAfter, and
+              to be able to receive electronic communications, You must consent
               to receive disclosures in electronic format in accordance with
               this terms and conditions. By consenting to the terms and
               conditions, you agree to receive all such documents pertaining to
@@ -152,9 +152,7 @@ const Privacy = () => {
               the PayAfter website you affirm that you are capable of receiving
               information electronically. To access and retain the
               Communications electronically, you will need to use a computer
-              with Internet Explorer 7.0 or above, Firefox 3.0 or above, or
-              similar software, Adobe Acrobat and hardware capable of running
-              this software.
+              with any modern browser.
             </p>
             <p className="mt-4 mb-2 text-justify ">
               WITHDRAWING CONSENT. You may withdraw your consent to receive

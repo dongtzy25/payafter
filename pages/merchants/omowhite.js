@@ -24,7 +24,7 @@ const OmoWhitePage = () =>{
     //   6061382140
     return (
         <Layout>
-            <div className="w-full pt-8 relative overflow-hidden custom-banner omowhite-color">
+            <div className="w-full xl:py-12 lg:py-8 pt-8  relative overflow-hidden custom-banner omowhite-color">
                 {/* <animated.div style={animation,{width: '19%', right: '11%'}}  className="text-center lg:px-0 px-20 lg:mt-0 mt-12 absolute top-2/4 transform -translate-y-2/4 scale-105 z-0 lg:flex lg:items-center hidden" 
                 >
                     <Image
@@ -32,12 +32,12 @@ const OmoWhitePage = () =>{
                         alt="Logo"
                     />
                 </animated.div> */}
-                <animated.div style={animation} className="absolute top-20 lg:flex hidden">
+                <animated.div style={animation} className="absolute top-12 lg:flex hidden">
                         <Image
                             src={Omowhite}
                             alt="Logo"
                             width={320}
-                            height={630}
+                            height={590}
                         />
                 </animated.div>
 
@@ -66,9 +66,9 @@ const OmoWhitePage = () =>{
                     </Link>
                 </div>
                 <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between ">
-                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left lg:pl-24  z-10 relative">
-                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center pr-4">Achieve that korean</h1>
-                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center pr-4">skin with OMO! White™</h1>
+                    <div className="xl:w-6/12 lg:w-7/12 w-full text-left z-10 relative">
+                        <h1 className="lg:text-5xl text-4xl font-bold xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">Achieve that korean</h1>
+                        <h1 className="lg:text-5xl text-4xl font-bold mt-4 xl:text-left lg:text-left text-center lg:pr-4 xl:pl-24 lg:pl-24">skin with OMO! White™</h1>
                         <div className="py-8 xl:hidden lg:hidden block text-center relative tablet-mobile-size">
                             <Image
                                 src={Omowhite}
@@ -76,7 +76,7 @@ const OmoWhitePage = () =>{
                                 layout="fill"
                             />
                         </div>
-                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
+                        <div className="xl:bg-transparent lg:bg-transparent  bg-white py-8 pr-8  xl:pl-24 lg:pl-24 pl-12 relative md-custom-bg" style={{zIndex:'1'}}>
                         <p className="mt-4">Start investing in skincare regimens with PayAfter. Make sure to follow these five easy steps:</p>
                         <div className="relative block w-full border-solid">
                             <div className="relative pl-12 mt-4">
@@ -88,18 +88,18 @@ const OmoWhitePage = () =>{
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">2</span>
-                                <p className="mb-4 pt-1">Visit their Instagram page <Link href="https://www.instagram.com/omowhiteph/"><a target="_blank" className="text-blue-500 underline"  >@omowhiteph</a></Link></p>
+                                <p className="mb-4 pt-1"> Place your orders via RCT5 Global by clicking this <Link href="https://form.jotform.com/210601917512446"><a target="_blank" className="text-blue-500 underline"  >link</a></Link></p>
                             </div> 
-                            <div className="relative pl-12 mt-8 ">
+                            {/* <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
                                 <p className="mb-4 pt-1">Send them a direct message that contains your order details. Don’t forget to indicate PayAfter as your payment method.</p>
                             </div>
                             <div className="relative pl-12 mt-8 ">
                                 <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">4</span>
                                 <p className="mb-4 pt-1">Once your order has been confirmed, OMO! White™ will send to you the PayAfter link.</p>
-                            </div>
+                            </div> */}
                             <div className="relative pl-12 mt-8 ">
-                                <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">5</span>
+                                <span className="absolute top-0 left-0 rounded-full w-8 h-8 text-white flex items-center justify-center bg-gray-700">3</span>
                                 <p className="mb-4 pt-1">Login with PayAfter to complete the transaction.</p>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ const OmoWhitePage = () =>{
                         <h1 className="text-4xl font-bold">About OMO! White™</h1>
                         <p className="text-lg mt-4 lg:w-4/6 lg:mx-auto">OMO! White™ is a Korean-inspired brand that has its finger on the pulse of asian beauty. Embracing the spirit of innovation, they bring the best and latest trends in skincare. Expect only effective products, playful packaging, and a unique beauty experience.</p>
                         <div className="grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 gap-4 mt-10">
-                            <div className="shadow-lg flex  relative items-center justify-self-end items-center max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
+                            <div className="shadow-lg flex  relative items-center justify-self-end max-w-xs justify-center rounded-lg lg:mx-0 mx-auto lg:mb-0 mb-4 transform transition duration-500 hover:scale-105">
                                 <Image
                                     src={Omowhite1}
                                     alt="Logo"
@@ -135,7 +135,7 @@ const OmoWhitePage = () =>{
                             </div>
                         </div>
                         <button 
-                            onClick={()=> { window.open("https://www.instagram.com/omowhiteph/").focus()}}
+                            onClick={()=> { window.open("https://form.jotform.com/210601917512446").focus()}}
                             className="
                                 inline-block 
                                 px-4 
@@ -149,7 +149,8 @@ const OmoWhitePage = () =>{
                                 transition-all
                                 duration-300
                             ">
-                                Visit OMO! White™ on Instagram
+                                {/* Visit OMO! White™ on Instagram */}
+                                Shop now and pay later
                         </button>
                     </div>
                 </div>

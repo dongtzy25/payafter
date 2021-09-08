@@ -77,13 +77,13 @@ const Header  = ()  => {
             flex flex-wrap flex-row
             items-center
             justify-between
-            px-4
+            lg:px-0 md:px-0 px-4
             mx-auto
             "
         >
             <div className="relative lg:flexs flex lg:items-centers items-center ">
-                <ul className="list-none flex items-center ">
-                    <li className="inline-block lg:mr-8  mr-4">
+                <ul className="list-none flex items-center xl:space-x-6 lg:space-x-4">
+                    <li className="inline-block md:mr-3 mr-8">
                      <Link href="/"> 
                         <a>
                             <Image
@@ -97,32 +97,32 @@ const Header  = ()  => {
                     </li>
                     <li 
                         className={currentPath === '/merchant' || currentPath.includes('merchants') ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
-                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in-out duration-500'}
+                        'lg:inline-block md:inline-block hidden mr-3 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border ' :
+                        'lg:inline-block md:inline-block hidden md:mr-3 mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in-out duration-500'}
                     ><Link href="/merchant" >Merchants</Link></li>
                     <li 
                         className={hashtag === '?contact' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
+                        'lg:inline-block md:inline-block hidden mr-3 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-3  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
                     ><Link href="/?contact">Contact us</Link></li>
-                    {/* <li 
+                    <li 
                         className={currentPath === '/news' ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
-                    ><Link href="/news">News</Link></li> */}
+                        'lg:inline-block md:inline-block hidden mr-3 text-red-500 font-extrabold border-b-2 border-red-500  transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-3  mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
+                    ><Link href="/news">News</Link></li>
                     <li 
                         className={currentPath === '/privacy' && hashtag !== '?terms'  ? 
-                        'lg:inline-block md:inline-block hidden mr-8 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
-                        'lg:inline-block md:inline-block hidden md:mr-4 mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
+                        'lg:inline-block md:inline-block hidden mr-3 text-red-500 font-extrabold border-b-2 border-red-500 transition-colors ease-in duration-500 transition-border' :
+                        'lg:inline-block md:inline-block hidden md:mr-3 mr-8 hover:text-red-500 border-b-2 border-transparent hover:border-red-500 transition-all ease-in duration-300'}
                     ><Link href="/privacy">Terms & Policy</Link></li>
                 </ul>
              
             </div>
-            <div className="lg:space-x-6 space-x-2">
+            <div className="lg:space-x-6 space-x-1">
                 <button className="lg:hidden  md:hidden inline-block w-10 h-10 text-black p-1" onClick={() => setMobileOpen(true) }>
                     <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                 </button>
-                <a className="font-extrabold lg:inline-block md:inline-block hidden" href="mailto:hello@payafter.ph">hello@payafter.ph</a>
+                <Link href="mailto:hello@payafter.ph"><a className="font-extrabold lg:inline-block md:inline-block hidden"  target="_blank">hello@payafter.ph</a></Link>
                 <button 
                 onClick={() =>openModal()}
                 className="
@@ -169,18 +169,17 @@ const Header  = ()  => {
                 <li
                     onClick={() => setMobileOpen(false) }
                     className={hashtag === '?contact' ? 
-                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block w-full '}
                 ><Link href="/?contact">Contact us</Link></li>
-                {/* <li
-                    onClick={() => setMobileOpen(false) }
+                <li
                     className={currentPath === '/news' ? 
-                    'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                    'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                     'inline-block w-full '}
-                ><Link href="/news">News</Link></li> */}
+                ><Link href="/news">News</Link></li>
                 <li 
                  className={currentPath === '/privacy' ? 
-                 'inline-block  mr-8 text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
+                 'inline-block mx-auto text-red-500 border-b-2 font-extrabold border-red-500 transition-colors ease-in duration-500 transition-border' :
                  'inline-block w-full '}
                 ><Link href="/privacy">Terms & Policy</Link></li>
             </ul>
@@ -188,7 +187,7 @@ const Header  = ()  => {
                 className="
                     absolute
                     top-12
-                    right-5
+                    right-10
                     inline-flex
                     items-center
                     justify-center
@@ -214,7 +213,8 @@ const Header  = ()  => {
                 </svg>
             </button>
             <div className="mt-8 w-full">
-                <a className="font-extrabold " href="mailto:hello@payafter.ph">hello@payafter.ph</a>
+                <Link href="mailto:hello@payafter.ph"><a className="font-extrabold"  target="_blank">hello@payafter.ph</a></Link>
+                {/* <a className="font-extrabold " href="mailto:hello@payafter.ph">hello@payafter.ph</a> */}
                 <button 
                 onClick={() =>openModal()}
                 className="
