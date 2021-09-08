@@ -9,17 +9,10 @@ const Layout = ({ children }) => {
     <Head>
       <title>PayAfter</title>
       <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-      <meta name="description" content="Cebuanna Lhuillier PayAfter"/>
-      <meta property="og:title" content="Cebuanna Lhuillier PayAfter"/>
-      <meta property="og:description" content="Cebuanna Lhuillier PayAfter"/>
-      <meta property="og:url" content="https://staging.payafter.ph/"/>
-=======
       <meta name="description" content="Cebuana Lhuillier PayAfter"/>
       <meta property="og:title" content="Cebuana Lhuillier PayAfter"/>
       <meta property="og:description" content="Cebuana Lhuillier PayAfter"/>
       <meta property="og:url" content="https://www.payafter.ph/"/>
->>>>>>> master
       <meta property="og:type" content="website"/>
       <meta property="og:image" content="/ogimage.png" />
       <meta property="og:image:secure" content="/PayAfter-Original.png" />
