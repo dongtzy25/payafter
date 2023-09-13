@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev  --openssl-legacy-provider start",
     "build": "next build",
-    "start": "next start",
+    "start": "next start  --openssl-legacy-provider start",
     "lint": "next lint"
   },
   "dependencies": {
