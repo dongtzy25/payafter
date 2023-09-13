@@ -24,7 +24,7 @@ import omowhite from '../public/assets/images/Merchant Brand Logos/omo white.png
 import Haierlogo from '../public/assets/images/Merchant Brand Logos/Haier logo.png'
 import freshbuyers from '../public/assets/images/Merchant Brand Logos/freshbuys-logo.png'
 import aiwa from '../public/assets/images/Merchant Brand Logos/download.png'
-import rosieposie from '../public/assets/images/Merchant Brand Logos/rosie posie.jpg'
+import rosieposie from '../public/assets/images/Merchant Brand Logos/rosieposie2.png'
 import { Alert } from '../component/alert'
 
 const Home = () => {
@@ -47,7 +47,7 @@ const Home = () => {
           <span>Sent using PayAfter webiste.</span>
     `;
 
-    
+
     const payload = {
       message: messageData,
       subject: data.subject
